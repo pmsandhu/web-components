@@ -1,0 +1,48 @@
+* {
+  font-family: Arial, sans-serif;
+}
+template {
+  font-size: 14px;
+}
+
+.input-bar {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 110px;
+  padding: .25rem;
+  border: 1px solid rgba(0, 0, 0, .15);
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.dropdown {
+  position: absolute;
+  min-width: 120px;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin-top: 0;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, .15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  background-clip: padding-box;
+  border-radius: 0 0 4px 4px;
+}
+
+li {
+  list-style: none;
+  position: relative;
+  display: block;
+  padding: 2px 0 2px 4px;
+}
+
+svg {
+  margin-right: 5px;
+}
+
+.input-bar:hover,
+.dropdown:hover,
+.dropdown li:hover {
+  cursor: pointer;
+}

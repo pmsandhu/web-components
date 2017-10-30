@@ -2,7 +2,7 @@ const DOC = document.currentScript.ownerDocument
 const template = DOC.querySelector('#template')
 
 class DropDown extends HTMLElement {
-  connectedCallback(){
+  connectedCallback() {
     this.initShadowRoot()
     this.initSelectors()
     this.initListeners()

@@ -17,9 +17,9 @@ class UserCard extends HTMLElement {
     this.attachShadow({ mode: 'open' }).appendChild(instance)
 
     fetch(`${END_POINT}/${this.getAttribute('user-id')}`)
-      .then(res => res.text())
-      .then(res => this.render(JSON.parse(res)))
-      .catch(err => console.log(err))
+    .then(res => res.text())
+    .then(res => this.render(JSON.parse(res)))
+    .catch(err => console.log(err))
   }
 
   render(userData) {
@@ -27,7 +27,7 @@ class UserCard extends HTMLElement {
     this.qs('.card__user-name').innerHTML = userData.username
     this.qs('.card__website').innerHTML = userData.website
     this.qs('.card__address').innerHTML =
-    `<h4>Address</h4>
+      `<h4>Address</h4>
       ${userData.address.suite}, <br />
       ${userData.address.street},<br />
       ${userData.address.city},<br />

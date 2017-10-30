@@ -45,6 +45,7 @@ class MultiSelect extends HTMLElement {
   }
 
   fieldClickHandler() { this.isOpened ? this.close() : this.open() }
+
   listClickHandler(e) {
     let item = e.target
     while (item && item.tagName !== 'LI') {
@@ -56,12 +57,18 @@ class MultiSelect extends HTMLElement {
 
   keyDownHandler(e) {
     switch(e.which) {
-      case 8: return this.handleBackspaceKey()
-      case 13: return this.handleEnterKey()
-      case 27: return this.close() // escape
-      case 38: return this.handleArrowUpKey()
-      case 40: return this.handleArrowDownKey()
-      default: return e.preventDefault()
+      case 8:
+        return this.handleBackspaceKey()
+      case 13:
+        return this.handleEnterKey()
+      case 27:
+        return this.close() // escape
+      case 38:
+        return this.handleArrowUpKey()
+      case 40:
+        return this.handleArrowDownKey()
+      default:
+        return e.preventDefault()
     }
   }
 
@@ -119,6 +126,7 @@ class MultiSelect extends HTMLElement {
   }
 
   refreshFocusedItem() { this.itemElements()[this.focusedItemIndex].focus() }
+
   itemElements() { return this.querySelectorAll('li') }
 
   createPlaceholder() {

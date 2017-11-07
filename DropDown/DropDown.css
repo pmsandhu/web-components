@@ -7,7 +7,6 @@ template {
 }
 
 .input-bar {
-  font-family: Arial, sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +18,8 @@ template {
 
 .dropdown {
   position: absolute;
-  min-width: 120px;
+  min-width: 110px;
+  max-width: 115px;
   top: 0;
   left: 0;
   padding: 0;
@@ -31,12 +31,13 @@ template {
   border-radius: 0 0 4px 4px;
 }
 
-li {
+.dropdown, ::content li {
   list-style: none;
   position: relative;
   display: block;
-  padding: 2px 0 2px 4px;
+  padding: 2px 0 2px 2px;
 }
+
 
 svg {
   margin-right: 5px;
@@ -44,6 +45,6 @@ svg {
 
 .input-bar:hover,
 .dropdown:hover,
-.dropdown li:hover {
+.dropdown ::content li:hover {
   cursor: pointer;
 }

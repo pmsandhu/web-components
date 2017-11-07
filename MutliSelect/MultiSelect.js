@@ -2,19 +2,15 @@ const ownerDocument = document.currentScript.ownerDocument
 const template = ownerDocument.querySelector('#multiselectTemplate')
 
 class MultiSelect extends HTMLElement {
-  constructor() {
-    super()
-  }
-
   connectedCallback() {
     this.init()
     this.render()
   }
-
   init() {
     const root = this.createShadowRoot()
     root.appendChild(template.content.cloneNode(true))
     this.root = root
+
     this.options = { placeholder: this.getAttribute('placeholder') || 'Select' }
     this.control = this.root.querySelector('.multiselect')
     this.field = this.root.querySelector('.multiselect-field')
@@ -24,9 +20,17 @@ class MultiSelect extends HTMLElement {
 
   render() {
     this.attachHandlers()
-    this.refreshField()
     this.refreshItems()
+    this.createPlaceholder()
   }
+
+  attachHandlers() {
+    this.field.addEventListener('click', this.fieldClickHandler.bind(this))
+    this.list.addEventListener('click', this.listClickHandler.bind(this))
+    this.control.addEventListener('keydown', this.keyDownHandler.bind(this))
+  }
+
+  fieldClickHandler() { this.isOpened ? this.close() : this.open() }
 
   open() {
     this.togglePopup(true)
@@ -38,127 +42,90 @@ class MultiSelect extends HTMLElement {
     this.field.focus()
   }
 
-  attachHandlers() {
-    this.field.addEventListener('click', this.fieldClickHandler.bind(this))
-    this.list.addEventListener('click', this.listClickHandler.bind(this))
-    this.control.addEventListener('keydown', this.keyDownHandler.bind(this))
-  }
-
-  fieldClickHandler() { this.isOpened ? this.close() : this.open() }
-
-  listClickHandler(e) {
-    let item = e.target
-    while (item && item.tagName !== 'LI') {
-      item = item.parentNode
-      console.log(item)
-    }
-    this.selectItem(item)
-  }
-
-  keyDownHandler(e) {
-    switch(e.which) {
-      case 8:
-        return this.handleBackspaceKey()
-      case 13:
-        return this.handleEnterKey()
-      case 27:
-        return this.close() // escape
-      case 38:
-        return this.handleArrowUpKey()
-      case 40:
-        return this.handleArrowDownKey()
-      default:
-        return e.preventDefault()
-    }
-  }
-
-  handleEnterKey() {
-    if (this.isOpened)
-      this.selectItem(this.itemElements()[this.focusedItemIndex])
-  }
-
-  handleBackspaceKey() {
-    const selectedItemElements = this.querySelectorAll('li[selected]')
-    if (selectedItemElements.length) this.unselectItem(selectedItemElements[selectedItemElements.length - 1])
-  }
-
-  handleArrowDownKey() {
-    this.focusedItemIndex = this.focusedItemIndex < this.itemElements().length - 1
-      ? this.focusedItemIndex + 1
-      : 0
-    this.refreshFocusedItem()
-  }
-
-  handleArrowUpKey() {
-    this.focusedItemIndex = this.focusedItemIndex > 0
-      ? this.focusedItemIndex - 1
-      : this.itemElements().length - 1
-    this.refreshFocusedItem()
-  }
-
-  fireChangeEvent() {
-    const e = new CustomEvent('change')
-    this.dispatchEvent(e)
-  }
-
   togglePopup(show) {
     this.isOpened = show
     this.popup.style.display = show ? 'block' : 'none'
     this.control.setAttribute('aria-expanded', show)
   }
 
+  keyDownHandler(e) {
+    switch(e.which) {
+      case 8: //backspace
+        const tags = this.root.querySelectorAll('.multiselect-tag')
+        if (!tags.length) return
+        const lastTag = tags[tags.length - 1]
+        for (const i of this.itemElements())
+          if (i.textContent === lastTag.textContent) {
+            i.removeAttribute('selected')
+            i.setAttribute('aria-selected', false)
+            lastTag.remove()
+            this.refreshItems()
+            this.createPlaceholder()
+          }
+        break
+      case 27: // escape
+        return this.close()
+      case 38: // down arrow
+        this.focusedIdx = this.focusedIdx == 0 ? this.itemElementsDD().length - 1 : --this.focusedIdx
+        return this.refreshFocusedItem()
+      case 40: // up arrow
+        this.focusedIdx = this.focusedIdx == this.itemElementsDD().length - 1 ? 0 : ++this.focusedIdx
+        return this.refreshFocusedItem()
+      case 13: // enter
+        if (this.isOpened)
+          return this.selectItem(this.itemElementsDD()[this.focusedIdx])
+      default:
+        return e.preventDefault()
+    }
+  }
+
+  itemElements() { return this.querySelectorAll('li') }
+  itemElementsDD() { return this.querySelectorAll('li[style="display: block;"]') }
+  refreshFocusedItem() { this.itemElementsDD()[this.focusedIdx].focus() }
+
+  listClickHandler(e) {
+    let item = e.target
+    while (item && item.tagName !== 'LI') item = item.parentNode
+    this.selectItem(item)
+  }
+
   selectItem(item) {
+    this.removePlaceHolder()
     if (!item.hasAttribute('selected')) {
       item.setAttribute('selected', 'selected')
       item.setAttribute('aria-selected', true)
       this.fireChangeEvent()
-      this.refreshField()
+      this.field.appendChild(this.createTag(item))
     }
+    this.refreshItems()
     this.close()
   }
 
-  selectedItems() {
-    const result = []
-    const selectedItems = this.querySelectorAll('li[selected]')
-    for (const i of selectedItems)
-      result.push(i.hasAttribute('value') ? i.getAttribute('value') : i.textContent)
-    return result
-  }
-
-  refreshFocusedItem() { this.itemElements()[this.focusedItemIndex].focus() }
-
-  itemElements() { return this.querySelectorAll('li') }
-
-  createPlaceholder() {
-    const placeholder = document.createElement('div')
-    placeholder.className = 'multiselect-field-placeholder'
-    placeholder.textContent = this.options.placeholder
-    return placeholder
-  }
-
-  refreshField() {
-    this.field.innerHTML = ''
-    const selectedItems = this.querySelectorAll('li[selected]')
-    if (!selectedItems.length) return this.field.appendChild(this.createPlaceholder())
-    for (const i of selectedItems)
-      this.field.appendChild(this.createTag(i))
-
-  }
-
   refreshItems() {
-    const itemElements = this.itemElements()
-    for (const i of itemElements) {
+    for (const i of  this.itemElements()) {
       i.setAttribute('role', 'option')
       i.setAttribute('aria-selected', i.hasAttribute('selected'))
+      i.hasAttribute('selected')
+        ? i.style.display = 'none'
+        : i.style.display = 'block'
       i.setAttribute('tabindex', -1)
     }
-    this.focusedItemIndex = 0
+    this.focusedIdx = 0
   }
 
+  removeTag(tag, item, e) {
+    item.removeAttribute('selected')
+    item.setAttribute('aria-selected', false)
+    for (const i of this.field.children) if (item.textContent == i.textContent) i.remove()
+    this.fireChangeEvent()
+    this.createPlaceholder()
+    this.refreshItems()
+    e.stopPropagation()
+
+  }
   createTag(item) {
     const tag = document.createElement('div')
     tag.className = 'multiselect-tag'
-
     const content = document.createElement('div')
     content.className = 'multiselect-tag-text'
     content.textContent = item.textContent
@@ -173,19 +140,31 @@ class MultiSelect extends HTMLElement {
     return tag
   }
 
-  removeTag(tag, item, event) {
-    this.unselectItem(item)
-    event.stopPropagation()
+  createPlaceholder() {
+    if (this.querySelectorAll('li[selected]').length) return
+    const placeholder = document.createElement('div')
+    placeholder.className = 'multiselect-field-placeholder'
+    placeholder.textContent = this.options.placeholder
+    this.field.appendChild(placeholder)
+  }
+  removePlaceHolder() {
+    const placeholder = this.root.querySelector('.multiselect-field-placeholder')
+    if (placeholder) placeholder.remove()
   }
 
-  unselectItem(item) {
-    item.removeAttribute('selected')
-    item.setAttribute('aria-selected', false)
-    this.fireChangeEvent()
-    this.refreshField()
+  selectedItems() {
+    const result = []
+    const selectedItems = this.querySelectorAll('li[selected]')
+    for (const i of selectedItems)
+      result.push(i.hasAttribute('value') ? i.getAttribute('value') : i.textContent)
+    return result
   }
-
+  fireChangeEvent() {
+    const e = new CustomEvent('change')
+    this.dispatchEvent(e)
+  }
   attributeChangedCallback(optionName, oldValue, newValue) {
+    console.log('attributeChangedCallback')
     this.options[optionName] = newValue
     this.refreshField()
   }

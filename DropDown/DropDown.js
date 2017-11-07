@@ -2,9 +2,12 @@ const DOC = document.currentScript.ownerDocument
 const template = DOC.querySelector('#template')
 
 class DropDown extends HTMLElement {
+  qs(selector) { return this.root.querySelector(selector) }
+
   connectedCallback() {
     this.initShadowRoot()
-    this.initSelectors()
+    this.initDOMSelectors()
+    this.initGlobals()
     this.initListeners()
   }
 
@@ -14,26 +17,28 @@ class DropDown extends HTMLElement {
     this.root = root
   }
 
-  qs(selector) { return this.root.querySelector(selector) }
-
-  initSelectors() {
-    this.control = this.qs('.main')
-    this.toggle = this.qs('#toggle')
-    this.path = this.qs('#path')
+  initDOMSelectors() {
     this.inputBar = this.qs('.input-bar')
     this.label = this.qs('.label')
+    this.arrow = this.qs('.arrow')
     this.dropdown = this.qs('.dropdown')
-    this.max = this.dropdown.children.length - 1
-    this.i = -1
+    this.li = this.querySelectorAll('li')
   }
+
+  initGlobals() {
+    this.max = this.li.length - 1
+    this.i = 0
+    this.highlightItem(this.i)
+   }
+
 
   initListeners() {
     this.inputBar.addEventListener('click', this.inputBarClicked.bind(this))
     this.dropdown.addEventListener('click', this.setLabel.bind(this))
-    document.addEventListener('click', this.outsideClick.bind(this))
+    for (const i of this.li) i.addEventListener('mouseenter', this.mouseEnter.bind(this))
+
     document.addEventListener('keydown', this.handleKeyPress.bind(this))
-    for (let i = 0; i < this.max; i++)
-      this.dropdown.children[i].addEventListener('mouseenter', this.mouseEnter.bind(this))
+    document.addEventListener('click', this.outsideClick.bind(this))
   }
 
   inputBarClicked(e) {
@@ -48,50 +53,52 @@ class DropDown extends HTMLElement {
   }
 
   outsideClick() {
-    if (this.toggle.style.display === 'none') return
+    if (this.dropdown.style.display == 'none') return
     this.toggleDropDown()
   }
 
   toggleDropDown() {
-    this.toggle.style.display = this.toggle.style.display === 'none' ? 'block' : 'none'
-    this.path.getAttribute('transform')
-      ? this.path.removeAttribute('transform')
-      : this.path.setAttribute('transform', 'rotate(180, 5, 3)')
+    this.dropdown.style.display = this.dropdown.style.display === 'none'
+      ? 'block'
+      : 'none'
+    this.arrow.getAttribute('transform')
+      ? this.arrow.removeAttribute('transform')
+      : this.arrow.setAttribute('transform', 'rotate(180, 5, 3)')
   }
 
   mouseEnter(e) {
-    for (let i = 0; i < this.max; i++)
-      if (this.dropdown.children[i] === e.target) {
-        this.dropdown.children[this.i].style.background = ''
-        this.dropdown.children[this.i = i].style.background = 'rgba(0, 0, 0, .15)'
+    for (let i = 0; i < this.li.length; i++)
+      if (this.li[i] == e.target) {
+        this.li[this.i].style.background = ''
+        this.li[this.i = i].style.background = 'rgba(0, 0, 0, .15)'
       }
   }
 
   handleKeyPress(e) {
-    if (this.toggle.style.display === 'none' || ![40, 38, 27, 13].some(val => val == e.which)) return
-
-    if ((e.which == 40 || e.which == 13) && this.i == -1)
-      return this.dropdown.children[++this.i].style.background = 'rgba(0, 0, 0, .15)'
-
-    if (e.which == 38 && this.i == -1)
-      return this.dropdown.children[this.i = this.max].style.background = 'rgba(0, 0, 0, .15)'
-
-    if (e.which == 13) {
-      this.toggleDropDown()
-      return this.label.textContent = this.dropdown.children[this.i].textContent
+    if (this.dropdown.style.display == 'none') return
+    switch(e.which) {
+      case(13):
+        this.toggleDropDown()
+        return this.label.textContent = this.li[this.i].textContent
+      case(27):
+        this.highlightItem(this.i, '')
+        this.i = 0
+        return this.dropdown.style.display = 'none'
+      case(38):
+        this.highlightItem(this.i, '')
+        this.i = this.i == 0 ? this.max : --this.i
+        return this.highlightItem(this.i)
+      case(40):
+        this.highlightItem(this.i, '')
+        this.i = this.i == this.max ? 0 : ++this.i
+        return this.highlightItem(this.i)
+      default:
+        return
     }
+  }
 
-    if (e.which == 27) {
-      if (this.i != -1) this.dropdown.children[this.i].style.background = ''
-      this.i = -1
-      return this.toggleDropDown()
-    }
-
-    this.dropdown.children[this.i].style.background = ''
-    if (e.which == 40 && this.i == this.max) return this.dropdown.children[this.i = 0].style.background = 'rgba(0, 0, 0, .15)'
-    if (e.which == 38 && this.i == 0) return this.dropdown.children[this.i = this.max].style.background = 'rgba(0, 0, 0, .15)'
-    if (e.which == 40) return this.dropdown.children[++this.i].style.background = 'rgba(0, 0, 0, .15)'
-    if (e.which == 38) return this.dropdown.children[--this.i].style.background = 'rgba(0, 0, 0, .15)'
+  highlightItem(i, style='rgba(0, 0, 0, .15)') {
+    this.li[i].style.background = style
   }
 
 }

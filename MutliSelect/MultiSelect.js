@@ -44,6 +44,7 @@ class MultiSelect extends HTMLElement {
     this.li.forEach(val => val.style.display = val.hasAttribute('selected') ? 'none' : 'block')
     this.focusedIdx = 0
     this.setFocusedOptionElement()
+    this.toggleTagContainerPlaceholder()
   }
 
   open() {

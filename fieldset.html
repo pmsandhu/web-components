@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>DataList</title>
+  <style type="text/css"></style>
+
+</head>
+<body>
+<label>Choose a browser from this list:
+  <input list="browsers" name="myBrowser"/></label>
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Chromium">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+  <option value="Microsoft Edge">
+</datalist>
+<script>
+
+function toolTipPositionLogic() {
+    if (!this._target || !this.offsetParent)
+      return;
+    let offset = this.offset;
+    // If a marginTop has been provided by the user (pre 1.0.3), use it.
+    if (this.marginTop != 14 && this.offset == 14)
+      offset = this.marginTop;
+    const parentRect = this.offsetParent.getBoundingClientRect();
+    const targetRect = this._target.getBoundingClientRect();
+    const thisRect = this.getBoundingClientRect();
+    const horizontalCenterOffset = (targetRect.width - thisRect.width) / 2;
+    const verticalCenterOffset = (targetRect.height - thisRect.height) / 2;
+    const targetLeft = targetRect.left - parentRect.left;
+    const targetTop = targetRect.top - parentRect.top;
+    let tooltipLeft, tooltipTop;
+
+    switch(this.position) {
+      case 'top':
+        tooltipLeft = targetLeft + horizontalCenterOffset;
+        tooltipTop = targetTop - thisRect.height - offset;
+        break;
+      case 'bottom':
+        tooltipLeft = targetLeft + horizontalCenterOffset;
+        tooltipTop = targetTop + targetRect.height + offset;
+        break;
+      case 'left':
+        tooltipLeft = targetLeft - thisRect.width - offset;
+        tooltipTop = targetTop + verticalCenterOffset;
+        break;
+      case 'right':
+        tooltipLeft = targetLeft + targetRect.width + offset;
+        tooltipTop = targetTop + verticalCenterOffset;
+        break;
+    }
+    if (this.fitToVisibleBounds) {
+      // Clip the left/right side
+      if (parentRect.left + tooltipLeft + thisRect.width > window.innerWidth) {
+        this.style.right = '0px';
+        this.style.left = 'auto';
+      } else {
+        this.style.left = Math.max(0, tooltipLeft) + 'px';
+        this.style.right = 'auto';
+      }
+      // Clip the top/bottom side.
+      if (parentRect.top + tooltipTop + thisRect.height > window.innerHeight) {
+        this.style.bottom = parentRect.height + 'px';
+        this.style.top = 'auto';
+      } else {
+        this.style.top = Math.max(-parentRect.top, tooltipTop) + 'px';
+        this.style.bottom = 'auto';
+      }
+    } else {
+      this.style.left = tooltipLeft + 'px';
+      this.style.top = tooltipTop + 'px';
+    }
+  }
+
+  function listeners() {
+    if (this._target) {
+        this.listen(this._target, 'mouseenter', 'show');
+        this.listen(this._target, 'focus', 'show');
+        this.listen(this._target, 'mouseleave', 'hide');
+        this.listen(this._target, 'blur', 'hide');
+        this.listen(this._target, 'tap', 'hide');
+      }
+      this.listen(this, 'mouseenter', 'hide');
+    }
+
+</script>
+
+</body>
+</html>

@@ -3,8 +3,10 @@
   box-sizing: border-box;
   display: inline-block;
   width: 20em;
-  font-size: 12px;
+  font-size: 14px;
   font-family: Arial, sans-serif;
+  font-weight: 200;
+  color: #444444;
 }
 
 .tag-container {
@@ -22,7 +24,6 @@
   margin-bottom: .2em;
   color: #888888;
   line-height: 1;
-
 }
 
 .tag {
@@ -108,3 +109,7 @@
   outline: dotted 1px #333333;
   background: #E9E9E9;
 }
+
+/*::content li:hover {*/
+  /*background: #E9E9E9;*/
+/*}*/

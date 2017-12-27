@@ -1,16 +1,25 @@
-<template id="template">
+<template id="dropdownTemplate">
   <link rel="stylesheet" href="./DropDown.css">
 
-  <div class="input-bar">
-    <span class="label">LABEL</span>
-    <svg width="10" height="6" viewBox="0 0 10 6">
-      <path class="arrow" d="M5 6 L 0 0 H 10 Z"/>
-    </svg>
-  </div>
 
-    <ul class="dropdown" style="display: none;">
-      <content select="li"></content>
-    </ul>
+  <div class="dropdown">
+
+    <div class="selected-bar">
+      <div>
+        <span class="label">LABEL</span>
+        <svg width="10" height="6" viewBox="0 0 10 6">
+          <path class="arrow" d="M5 6 L 0 0 H 10 Z"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="ul-container" style="display: none;">
+      <ul>
+        <content select="li"/>
+      </ul>
+    </div>
+
+  </div>
 
 </template>
 

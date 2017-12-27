@@ -1,19 +1,23 @@
 <html>
-<body>
 
+<body>
   <x-drop-down>
     <li>Setup</li>
     <li><a href="#">Editors</a></li>
     <li><a href="#">Caveats</a></li>
     <li>Packages</li>
-    <li><a>babel-core</a></li>
-    <li><a>babel-polyfill</a></li>
-    <li><a>Plugins</a></li>
+    <li>babel-core</li>
+    <li>babel-polyfill</li>
+    <li>Plugins</li>
   </x-drop-down>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
   <link rel="import" href="./DropDown.html">
 
+  <script>
+    const dropdown = document.querySelector('x-drop-down')
+    dropdown.addEventListener('change', e => console.log(dropdown.getSelected()))
+  </script>
 </body>
 </html>
 

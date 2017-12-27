@@ -88,17 +88,20 @@ class DropDown extends HTMLElement {
         return this.highlightItem(this.i)
       default:
         if (e.which > 47 && e.which < 91)
-          return this.filterOptions(e.key)
+          if (!this.filterMethod(e.key, 'startsWith'))
+            this.filterMethod(e.key, 'includes')
     }
   }
 
-  filterOptions(char) {
+  filterMethod(char, method) {
     for (let i = 0; i < this.li.length; i++) {
-      if (this.li[i].textContent.toLowerCase().startsWith(char)) {
+      if (this.li[i].textContent.toLowerCase()[method](char)) {
         this.highlightItem(this.i, '')
-        return this.highlightItem(this.i = i)
+        this.highlightItem(this.i = i)
+        return true
       }
     }
+    return false
   }
 
   highlightItem(i, style = this.hoverCss) {

@@ -30,7 +30,7 @@ class MultiSelect extends HTMLElement {
   }
 
   attachEventHandlers() {
-    this.parentComponent.addEventListener('keydown', this.keyDownHandler.bind(this))
+    this.parentComponent. addEventListener('keydown', this.keyDownHandler.bind(this))
     this.selectOptions.addEventListener('click', e => this.selectOptionElement(e.target))
     this.tagContainer.addEventListener('click', e => this.isOpen ? this.close() : this.open())
     this.li.forEach(val => val.addEventListener('mouseenter', this.hoverHandler.bind(this)))

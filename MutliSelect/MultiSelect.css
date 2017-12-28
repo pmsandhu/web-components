@@ -2,10 +2,10 @@
   position: relative;
   box-sizing: border-box;
   display: inline-block;
-  width: 20em;
   font-size: 14px;
   font-family: Arial, sans-serif;
   font-weight: 200;
+  width: 20em;
   color: #444444;
 }
 
@@ -20,20 +20,20 @@
 }
 
 .tag-container-placeholder {
-  padding: .25em .5em;
-  margin-bottom: .2em;
-  color: #888888;
   line-height: 1;
+  margin-bottom: .2em;
+  padding: .25em .5em;
+  color: #888888;
 }
 
 .tag {
   position: relative;
   display: inline-block;
+  line-height: 1;
+  margin: 0 .2em .2em 0;
   padding: .25em 1.5em .25em .5em;
   border: 1px solid #BDBDBD;
   border-radius: .2em;
-  margin: 0 .2em .2em 0;
-  line-height: 1;
   vertical-align: middle;
 }
 
@@ -51,10 +51,10 @@
 
 .tag-remove-button {
   position: absolute;
-  top: .25em;
-  right: .25em;
   width: 1em;
   height: 1em;
+  top: .25em;
+  right: .25em;
   opacity: 0.3;
 }
 
@@ -64,11 +64,11 @@
 
 .tag-remove-button:before,
 .tag-remove-button:after {
-  content: ' ';
   position: absolute;
-  left: .5em;
+  content: ' ';
   width: 2px;
   height: 1em;
+  left: .5em;
   background-color: #333333;
 }
 
@@ -81,16 +81,16 @@
 }
 
 .select-dropdown {
+  box-sizing: border-box;
   position: absolute;
-  z-index: 1000;
   display: none;
-  overflow-y: auto;
   width: 100%;
   max-height: 300px;
-  box-sizing: border-box;
+  overflow-y: auto;
+  background: white;
   border: 1px solid #BDBDBD;
   border-radius: .2em;
-  background: white;
+  z-index: 1000;
 }
 
 .select-options {
@@ -99,17 +99,13 @@
 }
 
 ::content li {
-  padding: .5em 1em;
   min-height: 1em;
+  padding: .5em 1em;
   list-style: none;
   cursor: pointer;
 }
 
 ::content li:focus {
-  outline: dotted 1px #333333;
   background: #E9E9E9;
+  outline: dotted 1px #333333;
 }
-
-/*::content li:hover {*/
-  /*background: #E9E9E9;*/
-/*}*/

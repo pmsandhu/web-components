@@ -1,7 +1,7 @@
 <html>
 <body>
 
-  <x-multiselect placeholder="Select Value">
+  <x-select placeholder="Select Value">
     <li value="1">Item 1</li>
     <li value="2">Item 2</li>
     <li value="3">Item 3</li>
@@ -9,15 +9,15 @@
     <li value="5">Item 5</li>
     <li value="6">Long Item</li>
     <li value="7">Long Long Items jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</li>
-  </x-multiselect>
+    <li value="8">Item 5</li>
+  </x-select>
 
-  <link rel="import" href="./MultiSelect.html">
+  <link rel="import" href="./Select.html">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
 
   <script>
-    const multiselect = document.querySelector('x-multiselect')
-    multiselect.addEventListener('change', e => console.log('detail', e.detail))
+    const select = document.querySelector('x-select')
+    select.addEventListener('change', e => console.log(e.detail))
   </script>
-
 </body>
 </html>

@@ -1,0 +1,78 @@
+.switch {
+  display: block;
+  position: relative;
+  min-height: 16px;
+  line-height: 16px;
+  margin-bottom: 10px;
+  padding-left: 38px;
+  cursor: pointer;
+}
+
+input {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  z-index: -1;
+  overflow: visible;
+}
+
+.circle {
+  position: absolute;
+  width: 28px;
+  height: 16px;
+  line-height: 16px;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background: rgba(167, 182, 194, .5);
+  transition: background .1s cubic-bezier(.4, 1, .75, .9);
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.circle:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  top: 2px;
+  left: 2px;
+  background: #FFFFFF;
+  background-clip: padding-box;
+  transition: left .1s cubic-bezier(.4, 1, .75, .9);
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, .2), 0 1px 1px rgba(16, 22, 26, .2);
+  border-radius: 16px;
+}
+
+input:checked ~ .circle {
+  width: 28px;
+  height: 16px;
+  background-color: #137CBD;
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, 0));
+  color: #FFFFFF;
+}
+
+input:checked ~ .circle:before {
+  left: 14px;
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, .2), 0 1px 1px rgba(16, 22, 26, .2);
+}
+
+input:disabled {
+  color: rgb(84, 84, 84);
+}
+
+input:disabled ~ .circle {
+  background: rgba(206, 217, 224, .5);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+::selection {
+  background: rgba(125, 188, 255, .6);
+}

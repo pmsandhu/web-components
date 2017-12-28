@@ -30,7 +30,7 @@ class MultiSelect extends HTMLElement {
   }
 
   attachEventHandlers() {
-    this.parentComponent. addEventListener('keydown', this.keyDownHandler.bind(this))
+    this.parentComponent.addEventListener('keydown', this.keyDownHandler.bind(this))
     this.selectOptions.addEventListener('click', e => this.selectOptionElement(e.target))
     this.tagContainer.addEventListener('click', e => this.isOpen ? this.close() : this.open())
     this.li.forEach(val => val.addEventListener('mouseenter', this.hoverHandler.bind(this)))
@@ -116,8 +116,30 @@ class MultiSelect extends HTMLElement {
       case 13:
         if (this.isOpen) return this.selectOptionElement(this.getVisibleOptions()[this.focusedIdx])
       default:
-        return e.preventDefault()
+        if (e.which > 47 && e.which < 91)
+          if (!this.filterMethod(e.key, 'startsWith'))
+            this.filterMethod(e.key, 'includes')
     }
+  }
+
+  filterMethod(char, method) {
+    const visibleOptions = this.getVisibleOptions()
+
+    for (let i = this.focusedIdx + 1; i < visibleOptions.length; ++i)
+      if (visibleOptions[i].textContent.toLowerCase()[method](char)) {
+        this.focusedIdx = i
+        visibleOptions[this.focusedIdx].focus()
+        return true
+      }
+
+    for (let i = 0; i < this.focusedIdx; i++)
+      if (visibleOptions[i].textContent.toLowerCase()[method](char)) {
+        this.focusedIdx = i
+        visibleOptions[this.focusedIdx].focus()
+        return true
+      }
+
+    return false
   }
 
   hoverHandler(e) {
@@ -143,7 +165,7 @@ class MultiSelect extends HTMLElement {
   }
 
   fireChangeEvent() {
-    this.dispatchEvent(new CustomEvent('change'))
+    this.dispatchEvent(new CustomEvent('change', { detail: this.getSelectedOptions() }))
   }
 
   getSelectedOptions() {

@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<x-switch
+  label="switch"
+  checked="true"
+  value="switch">
+</x-switch>
+
+<link rel="import" href="./Switch.html">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
+
+<script>
+  const x_switch = document.querySelector('x-switch')
+  x_switch.addEventListener('change', e => console.log(e.detail))
+</script>
+
+</body>
+</html>

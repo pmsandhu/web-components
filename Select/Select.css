@@ -1,0 +1,71 @@
+.select {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  width: 20em;
+}
+
+.bar {
+  padding: .2em .2em 0 .2em;
+  overflow: hidden;
+  border: 1px solid #ADADAD;
+  border-radius: .2em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.select:focus {
+  outline: thin solid green;
+}
+.bar div {
+  display: flex;
+  align-items: center;
+  margin: .25rem .5rem;
+}
+
+svg {
+  margin-left: auto;
+}
+
+.placeholder {
+
+  color: #888888;
+}
+
+.selected {
+  color: #444444;
+}
+
+.dropdown {
+  box-sizing: border-box;
+  position: absolute;
+  display: none;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #BDBDBD;
+  border-radius: .2em;
+  z-index: 1000;
+}
+
+.options {
+  padding: 0;
+  margin: 0;
+}
+
+::content li {
+  padding: .5em 1em;
+  min-height: 1em;
+  list-style: none;
+  cursor: pointer;
+}
+
+::content li:focus {
+  outline: dotted 1px #333333;
+  background: #E9E9E9;
+}
+

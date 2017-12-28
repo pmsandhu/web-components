@@ -1,0 +1,24 @@
+<template id="selectTemplate">
+<link rel="stylesheet" href="./Select.css">
+
+<div class="select">
+
+  <div class="bar">
+    <div>
+      <span id="value" class="placeholder"></span>
+      <svg width="10" height="6" viewBox="0 0 10 6">
+        <path class="arrow" d="M5 6 L 0 0 H 10 Z"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <ul class="options">
+      <content select="li"/>
+    </ul>
+  </div>
+
+</div>
+
+</template>
+<script src="./Select.js"></script>

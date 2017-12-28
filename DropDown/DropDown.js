@@ -68,7 +68,6 @@ class DropDown extends HTMLElement {
 
   handleKeyPress(e) {
     if (this.ulContainer.style.display == 'none') return
-
     switch(e.which) {
       case 13:
         this.toggleDropDown()
@@ -106,6 +105,7 @@ class DropDown extends HTMLElement {
 
   highlightItem(i, style = this.hoverCss) {
     this.li[i].style.cssText = style
+    this.li[i].scrollIntoViewIfNeeded()
   }
 
   fireChangeEvent() {

@@ -36,7 +36,7 @@ class Select extends HTMLElement {
     this.options.addEventListener('click', e => (this.selectValue(e.target), e.stopPropagation()))
     this.bar.addEventListener('click', e => (this.isOpen ? this.close() : this.open(), e.stopPropagation()))
     this.li.forEach((val, i) => val.addEventListener('mouseenter', e => (e.target.focus(), this.focusIndex = i)))
-    document.addEventListener('click', e => this.isOpen ? this.close(): void(0))
+    document.addEventListener('click', e => this.isOpen ? this.close() : void(0))
   }
 
   updateValue(value = this.defaultValue) {
@@ -81,7 +81,7 @@ class Select extends HTMLElement {
     switch(e.which) {
       // BACKSPACE
       case 8:
-        this.li.forEach(val=> val.removeAttribute('selected'))
+        this.li.forEach(val => val.removeAttribute('selected'))
         this.updateValue()
         this.focusIndex = 0
         this.setFocus()
@@ -91,11 +91,11 @@ class Select extends HTMLElement {
         return this.close()
       // DOWN_ARROW
       case 38:
-        this.focusIndex = this.focusIndex == 0 ? this.optionCount: --this.focusIndex
+        this.focusIndex = this.focusIndex == 0 ? this.optionCount : --this.focusIndex
         return this.setFocus()
       // UP_ARROW
       case 40:
-        this.focusIndex = this.focusIndex == this.optionCount? 0 : ++this.focusIndex
+        this.focusIndex = this.focusIndex == this.optionCount ? 0 : ++this.focusIndex
         return this.setFocus()
       // ENTER
       case 13:

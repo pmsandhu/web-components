@@ -1,42 +1,42 @@
 <html>
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
 
-.one, .two {
-  margin-left: 2.5em;
-  margin-bottom: 1em;
-  color: #0275D8;
-}
+  .one, .two {
+    margin-left: 2.5em;
+    margin-bottom: 1em;
+    color: #0275D8;
+  }
 </style>
 
 <body>
 
-<x-switch value="1" label="One" checked="true"></x-switch>
-<div class="one"> -- On -- </div>
+  <x-switch value="1" label="One" checked="true"></x-switch>
+  <div class="one"> -- On -- </div>
 
-<x-switch value="2" label="Two"></x-switch>
-<div class="two"> -- Off -- </div>
+  <x-switch value="2" label="Two"></x-switch>
+  <div class="two"> -- Off -- </div>
 
-<link rel="import" href="./Switch.html">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
+  <link rel="import" href="./Switch.html">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
 
-<script>
+  <script>
 
-const x_switch = document.querySelectorAll('x-switch')
+  const x_switch = document.querySelectorAll('x-switch')
 
-const one = x_switch[0].nextElementSibling
-const two = x_switch[1].nextElementSibling
+  const one = x_switch[0].nextElementSibling
+  const two = x_switch[1].nextElementSibling
 
-x_switch.forEach(val => val.addEventListener('change', e => {
-  const changed = e.detail.value == '1' ? one : two
-  changed.textContent = e.detail.checked ? ' -- On -- ' : ' -- Off -- '
-}))
+  x_switch.forEach(val => val.addEventListener('change', e => {
+    const changed = e.detail.value == '1' ? one : two
+    changed.textContent = e.detail.checked ? ' -- On -- ' : ' -- Off -- '
+  }))
 
-</script>
+  </script>
 
 </body>
 </html>

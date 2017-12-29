@@ -1,5 +1,4 @@
 <html>
-
 <style>
   x-switch {
     --background: red;
@@ -15,21 +14,20 @@
     font-size: 12px;
   }
 
-
 </style>
 
 <body>
 
-  <x-switch value="1" label="One" checked="true"></x-switch>
-  <div class="one"> -- On -- </div>
+<x-switch value="1" label="One" checked="true"></x-switch>
+<div class="one"> -- On --</div>
 
-  <x-switch value="2" label="Two"></x-switch>
-  <div class="two"> -- Off -- </div>
+<x-switch value="2" label="Two"></x-switch>
+<div class="two"> -- Off --</div>
 
-  <link rel="import" href="./Switch.html">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
+<link rel="import" href="./Switch.html">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
 
-  <script>
+<script>
 
   const x_switch = document.querySelectorAll('x-switch')
 
@@ -41,7 +39,7 @@
     changed.textContent = e.detail.checked ? ' -- On -- ' : ' -- Off -- '
   }))
 
-  </script>
+</script>
 
 </body>
 </html>

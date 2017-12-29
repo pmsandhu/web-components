@@ -21,7 +21,7 @@
 }
 
 input {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   box-sizing: border-box;
   position: absolute;
   top: 0;
@@ -81,7 +81,6 @@ input:disabled ~ .label {
 }
 
 input:disabled ~ .circle {
-  /*background: rgba(206, 217, 224, .5);*/
   background-color: var(--disabled-background);
   box-shadow: none;
   cursor: not-allowed;

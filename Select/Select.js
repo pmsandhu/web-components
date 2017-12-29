@@ -153,7 +153,6 @@ class Select extends HTMLElement {
     li.value = val.value
     li.textContent = val.textContent
     li.setAttribute('tabindex', ++this.optionCount)
-    console.log(li)
     this.appendChild(li)
     li.addEventListener('mouseenter', e => (e.target.focus(), this.focusIndex = this.optionCount))
   }

@@ -6,15 +6,15 @@ class MultiSelect extends HTMLElement {
     this.root = this.createShadowRoot()
     this.root.appendChild(template.content.cloneNode(true))
 
-    this.focusedIdx = 0
+    this.focusIndex = 0
     this.isOpen = false
-
-    this.parentComponent = this.root.querySelector('.multiselect')
+    this.multiSelect = this.root.querySelector('.multiselect')
     this.tagContainer = this.root.querySelector('.tag-container')
     this.tagContainerPlaceholder = this.root.querySelector('.tag-container-placeholder')
     this.selectDropdown = this.root.querySelector('.select-dropdown')
     this.selectOptions = this.root.querySelector('.select-options')
     this.li = this.querySelectorAll('li')
+    this.optionCount = this.li.length - 1
   }
 
   connectedCallback() {
@@ -30,7 +30,7 @@ class MultiSelect extends HTMLElement {
   }
 
   attachEventHandlers() {
-    this.parentComponent.addEventListener('keydown', this.keyDownHandler.bind(this))
+    this.multiSelect.addEventListener('keydown', this.keyDownHandler.bind(this))
     this.selectOptions.addEventListener('click', e => this.selectOptionElement(e.target))
     this.tagContainer.addEventListener('click', e => this.isOpen ? this.close() : this.open())
     this.li.forEach(val => val.addEventListener('mouseenter', this.hoverHandler.bind(this)))
@@ -42,7 +42,7 @@ class MultiSelect extends HTMLElement {
 
   updateVisibleOptions() {
     this.li.forEach(val => val.style.display = val.hasAttribute('selected') ? 'none' : 'block')
-    this.focusedIdx = 0
+    this.focusIndex = 0
     this.setFocusedOptionElement()
     this.toggleTagContainerPlaceholder()
     this.fireChangeEvent()
@@ -106,15 +106,15 @@ class MultiSelect extends HTMLElement {
         return this.close()
       // DOWN_ARROW
       case 38:
-        this.focusedIdx = this.focusedIdx == 0 ? this.getVisibleOptions().length - 1 : --this.focusedIdx
+        this.focusIndex = this.focusIndex == 0 ? this.getVisibleOptions().length - 1 : --this.focusIndex
         return this.setFocusedOptionElement()
       // UP_ARROW
       case 40:
-        this.focusedIdx = this.focusedIdx == this.getVisibleOptions().length - 1 ? 0 : ++this.focusedIdx
+        this.focusIndex = this.focusIndex == this.getVisibleOptions().length - 1 ? 0 : ++this.focusIndex
         return this.setFocusedOptionElement()
       // ENTER
       case 13:
-        if (this.isOpen) return this.selectOptionElement(this.getVisibleOptions()[this.focusedIdx])
+        if (this.isOpen) return this.selectOptionElement(this.getVisibleOptions()[this.focusIndex])
       default:
         if (e.which > 47 && e.which < 91)
           if (!this.filterMethod(e.key, 'startsWith'))
@@ -125,17 +125,17 @@ class MultiSelect extends HTMLElement {
   filterMethod(char, method) {
     const visibleOptions = this.getVisibleOptions()
 
-    for (let i = this.focusedIdx + 1; i < visibleOptions.length; ++i)
+    for (let i = this.focusIndex + 1; i < visibleOptions.length; ++i)
       if (visibleOptions[i].textContent.toLowerCase()[method](char)) {
-        this.focusedIdx = i
-        visibleOptions[this.focusedIdx].focus()
+        this.focusIndex = i
+        visibleOptions[this.focusIndex].focus()
         return true
       }
 
-    for (let i = 0; i < this.focusedIdx; i++)
+    for (let i = 0; i < this.focusIndex; i++)
       if (visibleOptions[i].textContent.toLowerCase()[method](char)) {
-        this.focusedIdx = i
-        visibleOptions[this.focusedIdx].focus()
+        this.focusIndex = i
+        visibleOptions[this.focusIndex].focus()
         return true
       }
 
@@ -147,7 +147,7 @@ class MultiSelect extends HTMLElement {
     let i = 0
     const visibleOptions = this.getVisibleOptions()
     while (visibleOptions[i] != e.target) ++i
-    this.focusedIdx = i
+    this.focusIndex = i
   }
 
   findElement(tagName, attribute, match) {
@@ -161,7 +161,7 @@ class MultiSelect extends HTMLElement {
 
   setFocusedOptionElement() {
     const visibleOptions = this.getVisibleOptions()
-    if (visibleOptions.length) visibleOptions[this.focusedIdx].focus()
+    if (visibleOptions.length) visibleOptions[this.focusIndex].focus()
   }
 
   fireChangeEvent() {
@@ -174,6 +174,26 @@ class MultiSelect extends HTMLElement {
       selected.push({ value: val.value, text: val.textContent })
     })
     return selected
+  }
+
+  addOneLi(val) {
+    this.createLiElement(val)
+    this.li = this.querySelectorAll('li')
+  }
+
+  addManyLi(array) {
+    array.forEach(val => this.createLiElement(val))
+    this.li = this.querySelectorAll('li')
+  }
+
+  createLiElement(val) {
+    const li = document.createElement('li')
+    li.value = val.value
+    li.textContent = val.textContent
+    li.style.display = 'block'
+    li.setAttribute('tabindex', ++this.optionCount)
+    this.appendChild(li)
+    li.addEventListener('mouseenter', e => (e.target.focus(), this.focusIndex = this.optionCount))
   }
 }
 

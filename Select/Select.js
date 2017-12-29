@@ -49,7 +49,6 @@ class Select extends HTMLElement {
   }
 
   selectValue(option) {
-
     this.li.forEach((val, i) => {
       if (val.hasAttribute('selected') && val != option)
         val.removeAttribute('selected')
@@ -136,6 +135,27 @@ class Select extends HTMLElement {
     return selected
       ? { value: selected.value, textContent: selected.textContent }
       : { value: '', textContent: '' }
+  }
+
+  addOneLi(val) {
+    this.createLiElement(val)
+    this.li = this.querySelectorAll('li')
+  }
+
+  addManyLi(array) {
+    array.forEach(val => this.createLiElement(val))
+    this.li = this.querySelectorAll('li')
+  }
+
+  createLiElement(val) {
+    const li = document.createElement('li')
+    if (val.hasOwnProperty('className')) li.className = val.className
+    li.value = val.value
+    li.textContent = val.textContent
+    li.setAttribute('tabindex', ++this.optionCount)
+    console.log(li)
+    this.appendChild(li)
+    li.addEventListener('mouseenter', e => (e.target.focus(), this.focusIndex = this.optionCount))
   }
 }
 

@@ -1,0 +1,27 @@
+<html>
+<body>
+
+<x-checkbox
+  stacked="true"
+  checked="true"
+  value="1"
+  label="One">
+</x-checkbox>
+
+<x-checkbox
+  stacked="true"
+  disabled="true"
+  value="2"
+  label="Two">
+</x-checkbox>
+
+<link rel="import" href="./Checkbox.html">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
+
+<script>
+  const checkbox = document.querySelectorAll('x-checkbox')
+  checkbox.forEach(val => val.addEventListener('change', e => console.log(e.detail)))
+</script>
+
+</body>
+</html>

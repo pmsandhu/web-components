@@ -8,7 +8,7 @@
     <li value="4">Item 4</li>
     <li value="5">Item 5</li>
     <li value="6">Long Item</li>
-    <li value="7">Long Long Items jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</li>
+    <li value="7">Long Long Items jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</li>
   </x-multiselect>
 
   <link rel="import" href="./MultiSelect.html">
@@ -16,6 +16,11 @@
 
   <script>
     const multiselect = document.querySelector('x-multiselect')
+    multiselect.addManyLi([
+      { value: '19', textContent: 'meow' },
+      { value: '20', textContent: 'orange' }
+    ])
+
     multiselect.addEventListener('change', e => console.log('detail', e.detail))
   </script>
 

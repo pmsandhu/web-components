@@ -1,6 +1,10 @@
 <html>
 <body>
-
+<style>
+  x-select .special {
+    color: red;
+  }
+</style>
   <x-select placeholder="Select Value">
     <li value="1">Item 1</li>
     <li value="2">Item 2</li>
@@ -9,7 +13,6 @@
     <li value="5">Item 5</li>
     <li value="6">Long Item</li>
     <li value="7">Long Long Items jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</li>
-    <li value="8">Item 5</li>
   </x-select>
 
   <link rel="import" href="./Select.html">
@@ -17,6 +20,11 @@
 
   <script>
     const select = document.querySelector('x-select')
+    select.addOneLi({ value: '9', textContent: 'Hi', className: 'special' })
+    select.addManyLi([
+      { value: '19', textContent: 'meow' },
+      { value: '20', textContent: 'orange' }
+    ])
     select.addEventListener('change', e => console.log(e.detail))
   </script>
 </body>

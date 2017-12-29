@@ -1,4 +1,6 @@
 .switch {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
   display: block;
   position: relative;
   min-height: 16px;
@@ -53,7 +55,7 @@ input {
 input:checked ~ .circle {
   width: 28px;
   height: 16px;
-  background-color: #137CBD;
+  background-color: #888888;
   background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, 0));
   color: #FFFFFF;
 }
@@ -63,12 +65,13 @@ input:checked ~ .circle:before {
   box-shadow: 0 0 0 1px rgba(16, 22, 26, .2), 0 1px 1px rgba(16, 22, 26, .2);
 }
 
-input:disabled {
-  color: rgb(84, 84, 84);
+input:disabled ~ .label {
+  color: #9CA3A9;
 }
 
 input:disabled ~ .circle {
-  background: rgba(206, 217, 224, .5);
+  /*background: rgba(206, 217, 224, .5);*/
+  background-color: #ECEEEF;
   box-shadow: none;
   cursor: not-allowed;
 }

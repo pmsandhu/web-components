@@ -17,9 +17,6 @@
   user-select: none;
 }
 
-.select:focus {
-  outline: thin solid green;
-}
 .bar div {
   display: flex;
   align-items: center;
@@ -31,7 +28,6 @@ svg {
 }
 
 .placeholder {
-
   color: #888888;
 }
 

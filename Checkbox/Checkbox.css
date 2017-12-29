@@ -45,9 +45,6 @@
 
 .control-input:checked ~ .control-indicator {
   color: #FFFFFF;
-  /*background-color: #0275D8;*/
-  /*background-color: #959595;*/
-  /*background-color: #BDBDBD;*/
   background-color: #888888;
 }
 

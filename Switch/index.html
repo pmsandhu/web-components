@@ -1,34 +1,33 @@
 <html>
-<style>
-  x-switch {
-    --background: red;
-    --font-family: "Helvetica Neue";
-    --font-size: 12px;
-  }
-
-  .one, .two {
-    margin-left: 2.5em;
-    margin-bottom: 1em;
-    color: #0275D8;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-  }
-
-</style>
+<head>
+  <link rel="import" href="./Switch.html">
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>-->
+  <style>
+    x-switch {
+      --background: red;
+      --font-family: "Helvetica Neue";
+      --font-size: 12px;
+    }
+    .one, .two {
+      margin-left: 2.5em;
+      margin-bottom: 1em;
+      color: #0275D8;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+    }
+  </style>
+</head>
 
 <body>
 
-<x-switch value="1" label="One" checked="true"></x-switch>
+<x-switch value="1" label="One" checked></x-switch>
 <div class="one"> -- On --</div>
 
-<x-switch value="2" label="Two"></x-switch>
+<x-switch value="2" label="Two" disabled></x-switch>
 <div class="two"> -- Off --</div>
 
-<link rel="import" href="./Switch.html">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
 
 <script>
-
   const x_switch = document.querySelectorAll('x-switch')
 
   const one = x_switch[0].nextElementSibling

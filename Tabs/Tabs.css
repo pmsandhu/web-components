@@ -1,0 +1,32 @@
+:host {
+  max-width: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
+  border: thin solid gainsboro;
+}
+
+::slotted(x-tab) {
+  border: .5px solid #fff;
+  background: #EFEFEF;
+  padding: 10px 20px;
+}
+
+::slotted(x-tab:focus),
+::slotted(x-tab:hover) {
+  cursor: pointer;
+  background: #E3E3E3;
+}
+
+::slotted([aria-selected="true"]) {
+  color: white;
+  box-shadow: none;
+  background-color: #0275D8;
+}
+
+::slotted(x-panel) {
+  flex-basis: 100%;
+  padding: 30px;
+}

@@ -1,0 +1,19 @@
+<html>
+
+<body style="height: 90vh; width: 90vw;">
+<button>Hi</button>
+<!--<x-toast position="bottom-center" message="Hello World"></x-toast>-->
+
+<script>
+  document.querySelector('button').addEventListener('click', e => {
+    const toast = new Toast()
+    toast.position = 'top-center'
+    toast.message = 'Hello world !'
+    document.body.appendChild(toast)
+  })
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
+<link rel="import" href="./Toast.html">
+</body>
+</html>
+

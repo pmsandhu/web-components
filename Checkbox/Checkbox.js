@@ -1,10 +1,10 @@
-const template = document.currentScript.ownerDocument.querySelector('#checkboxTemplate')
+const checkboxTemplate = document.currentScript.ownerDocument.querySelector('#checkboxTemplate')
 
 class Checkbox extends HTMLElement {
   constructor() {
     super()
     this.root = this.createShadowRoot()
-    this.root.appendChild(template.content.cloneNode(true))
+    this.root.appendChild(checkboxTemplate.content.cloneNode(true))
     this.checkbox = this.root.querySelector('.checkbox')
     this.label = this.root.querySelector('.label')
     this.input = this.root.querySelector('input')

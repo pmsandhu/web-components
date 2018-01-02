@@ -1,31 +1,41 @@
 <html>
 <head>
+
 <style>
-  x-tabs:not(:defined), x-tab:not(:defined), x-panel:not(:defined) {
+  x-tabs:not(:defined),
+  x-tab:not(:defined),
+  x-panel:not(:defined) {
     display: block;
   }
 </style>
-</head>
-<body>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
-<link rel="import" href="./Tabs.html">
+<link rel="import" href="Tabs.html">
 
+</head>
+
+<body>
 <x-tabs>
-  <x-tab role="heading" slot="tab">Tab 1</x-tab>
-  <x-panel role="region" slot="panel">Content 1</x-panel>
-  <x-tab role="heading" slot="tab">Tab 2</x-tab>
-  <x-panel role="region" slot="panel">Content 2</x-panel>
-  <x-tab role="heading" slot="tab">Tab 3</x-tab>
-  <x-panel role="region" slot="panel">Content 3</x-panel>
 
-  <x-tab role="heading" slot="tab">Tab 4</x-tab>
-  <x-panel role="region" slot="panel">
-    <div>Content 4</div>
-  </x-panel>
+  <x-tab slot="tab">Tab 1</x-tab>
+  <x-panel slot="panel">Content 1</x-panel>
+
+  <x-tab slot="tab">Tab 2</x-tab>
+  <x-panel slot="panel">Content 2</x-panel>
+
+  <x-tab slot="tab">Tab 3</x-tab>
+  <x-panel slot="panel">Content 3</x-panel>
+
+  <x-tab slot="tab">Tab 4</x-tab>
+  <x-panel slot="panel"><div>Content 4</div></x-panel>
 
 </x-tabs>
 
+<script>
+  document
+    .querySelector('x-tab')
+    .addEventListener('tabSelection', e => console.log(e.detail))
+</script>
+
 </body>
-
-
 </html>

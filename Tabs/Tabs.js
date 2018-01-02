@@ -6,32 +6,35 @@ const KEYCODE = {
   UP: 38,
   HOME: 36,
   END: 35,
+  TAB: 9
+}
+function findElement(collection, attribute='selected') {
+  for (const i of collection)
+    if (i.hasAttribute(attribute)) return i
+  return null
+}
+
+function findIndex(collection, attribute='selected') {
+  for (let i = 0; i < collection.length; i++)
+    if (collection[i].hasAttribute(attribute)) return i
+  return null
 }
 
 class Tabs extends HTMLElement {
   constructor() {
     super()
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
-
-
-    this.onSlotChange = this.onSlotChange.bind(this)
-    this.tabSlot = this.shadowRoot.querySelector('slot[name=tab]')
-    this.panelSlot = this.shadowRoot.querySelector('slot[name=panel]')
-    this.tabSlot.addEventListener('slotchange', this.onSlotChange)
-    this.panelSlot.addEventListener('slotchange', this.onSlotChange)
-
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.appendChild(template.content.cloneNode(true))
   }
 
   connectedCallback() {
-    this.addEventListener('keydown', this.onKeyDown)
     this.addEventListener('click', this.onClick)
-    if (!this.hasAttribute('role')) this.setAttribute('role', 'tablist')
+    this.addEventListener('keydown', this.onKeyDown)
 
     Promise.all([
       customElements.whenDefined('x-tab'),
       customElements.whenDefined('x-panel'),
-    ]).then(_=> this.linkPanels())
+    ]).then(_ => this.linkPanels())
   }
 
   disconnectedCallback() {
@@ -39,83 +42,34 @@ class Tabs extends HTMLElement {
     this.removeEventListener('click', this.onClick)
   }
 
-  onSlotChange() {
-    this.linkPanels()
-  }
-
   linkPanels() {
-    const tabs = this.allTabs()
-    tabs.forEach(tab => {
-      const panel = tab.nextElementSibling
-      if (panel.tagName.toLowerCase() !== 'x-panel')
-        return console.error(`Tab #${tab.id} is not a sibling of a <x-panel>`)
-      tab.setAttribute('aria-controls', panel.id)
-      panel.setAttribute('aria-labelledby', tab.id)
-    })
-    const selectedTab = tabs.find(tab => tab.selected) || tabs[0]
-    this.selectTab(selectedTab)
+    this.panels = this.querySelectorAll('x-panel')
+    this.tabs = this.querySelectorAll('x-tab')
+    this.selectTab(findElement(this.tabs) || this.tabs[0])
   }
 
-  allPanels() {
-    return Array.from(this.querySelectorAll('x-panel'))
-  }
-
-  allTabs() {
-    return Array.from(this.querySelectorAll('x-tab'))
-  }
-
-  panelForTab(tab) {
-    const panelId = tab.getAttribute('aria-controls')
-    return this.querySelector(`#${panelId}`)
-  }
-
-  prevTab() {
-    const tabs = this.allTabs()
-    let newIdx = tabs.findIndex(tab => tab.selected) - 1
-    return tabs[(newIdx + tabs.length) % tabs.length]
-  }
-
-  firstTab() {
-    const tabs = this.allTabs()
-    return tabs[0]
-  }
-
-  lastTab() {
-    const tabs = this.allTabs()
-    return tabs[tabs.length - 1]
-  }
-
-  nextTab() {
-    const tabs = this.allTabs()
-    let newIdx = tabs.findIndex(tab => tab.selected) + 1
-    return tabs[newIdx % tabs.length]
+  selectTab(tab) {
+    this.reset()
+    tab.selected = true
+    tab.nextElementSibling.hidden = false
+    tab.focus()
   }
 
   reset() {
-    const tabs = this.allTabs()
-    const panels = this.allPanels()
-
-    tabs.forEach(tab => tab.selected = false)
-    panels.forEach(panel => panel.hidden = true)
+    this.tabs.forEach(val => val.selected = false)
+    this.panels.forEach(val => val.hidden = true)
   }
 
-  selectTab(newTab) {
-    this.reset()
-    const newPanel = this.panelForTab(newTab)
-    if (!newPanel)
-      throw new Error(`No panel with id ${newPanelId}`)
-    newTab.selected = true
-    newPanel.hidden = false
-    newTab.focus()
+  onClick(e) {
+    if (e.target.localName != 'x-tab') return
+    this.selectTab(e.target)
   }
 
-  onKeyDown(event) {
-    if (event.target.getAttribute('role') !== 'tab')
-      return
-    if (event.altKey)
-      return
+  onKeyDown(e) {
+    if (e.target.localName != 'x-tab' || e.altKey) return
     let newTab
-    switch(event.keyCode) {
+
+    switch(e.keyCode) {
       case KEYCODE.LEFT:
       case KEYCODE.UP:
         newTab = this.prevTab()
@@ -123,93 +77,70 @@ class Tabs extends HTMLElement {
 
       case KEYCODE.RIGHT:
       case KEYCODE.DOWN:
+      case KEYCODE.TAB:
         newTab = this.nextTab()
         break
 
       case KEYCODE.HOME:
-        newTab = this.firstTab()
+        newTab = this.tabs[0]
         break
 
       case KEYCODE.END:
-        newTab = this.lastTab()
+        newTab = this.tabs[this.tabs.length -1]
         break
 
       default:
         return
     }
-    event.preventDefault()
-    this.selectTab(newTab)
 
+    e.preventDefault()
+    this.selectTab(newTab)
   }
 
-  onClick(event) {
-    if (event.target.getAttribute('role') !== 'tab') return
-    this.selectTab(event.target)
+  prevTab() {
+    let idx = findIndex(this.tabs) - 1 + this.tabs.length
+    return this.tabs[idx % this.tabs.length]
+  }
+
+  nextTab() {
+    let idx = findIndex(this.tabs) + 1
+    return this.tabs[idx % this.tabs.length]
   }
 }
 
-customElements.define('x-tabs', Tabs)
 
-let tabCounter = 0;
+let tabIndex = 0
 class Tab extends HTMLElement {
+  constructor() { super() }
 
   static get observedAttributes() {
     return ['selected']
   }
 
-  constructor() {
-    super()
-  }
-
-  connectedCallback() {
-    this.setAttribute('role', 'tab')
-    if (!this.id)
-      this.id = `x-tab-generated-${tabCounter++}`
-    this.setAttribute('aria-selected', 'false')
-    this.setAttribute('tabindex', -1)
-    this.upgradeProperty('selected')
-  }
-
-  upgradeProperty(prop) {
-    if (this.hasOwnProperty(prop)) {
-      let value = this[prop]
-      delete this[prop]
-      this[prop] = value
-    }
-  }
-
-  attributeChangedCallback() {
-    const value = this.hasAttribute('selected')
-    this.setAttribute('aria-selected', value)
-    this.setAttribute('tabindex', value ? 0 : -1)
-  }
-
   set selected(value) {
-    value = Boolean(value)
-    if (value) this.setAttribute('selected', '')
-    else this.removeAttribute('selected')
+    value ? this.setAttribute('selected', '') : this.removeAttribute('selected')
   }
 
   get selected() {
     return this.hasAttribute('selected')
   }
-}
-
-customElements.define('x-tab', Tab)
-
-let panelCounter = 0
-class Panel extends HTMLElement {
-  constructor() {
-    super()
-  }
 
   connectedCallback() {
-    this.setAttribute('role', 'tabpanel')
-    if (!this.id)
-      this.id = `x-panel-generated-${panelCounter++}`
+    this.setAttribute('tabindex', ++tabIndex)
+  }
+
+  attributeChangedCallback() {
+    const detail = { selected: this.selected, panel: this.nextElementSibling }
+    this.dispatchEvent(new CustomEvent('tabSelection', { detail }))
   }
 }
 
+class Panel extends HTMLElement {
+  constructor() { super() }
+}
+
+customElements.define('x-tabs', Tabs)
+customElements.define('x-tab', Tab)
 customElements.define('x-panel', Panel)
 
 

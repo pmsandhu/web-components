@@ -20,7 +20,7 @@
   background: #E3E3E3;
 }
 
-::slotted([aria-selected="true"]) {
+::slotted([selected]) {
   color: white;
   box-shadow: none;
   background-color: #0275D8;

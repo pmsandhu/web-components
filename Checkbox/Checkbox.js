@@ -12,11 +12,11 @@ class Checkbox extends HTMLElement {
 
   connectedCallback() {
     this.attachListeners()
-    this.label.textContent = this.getAttribute('label')
-    if (this.getAttribute('disabled')) this.input.disabled = true
-    if (this.getAttribute('checked')) this.input.checked = true
-    if (this.getAttribute('value')) this.input.value = this.getAttribute('value')
-    if (this.getAttribute('stacked')) this.checkbox.classList.add('stacked')
+    this.label.textContent = this.textContent
+    if (this.hasAttribute('disabled')) this.input.disabled = true
+    if (this.hasAttribute('checked')) this.input.checked = true
+    if (this.hasAttribute('value')) this.input.value = this.getAttribute('value')
+    if (this.hasAttribute('stacked')) this.checkbox.classList.add('stacked')
   }
 
   attachListeners() {

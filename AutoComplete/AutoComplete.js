@@ -1,31 +1,31 @@
-const template = document.currentScript.ownerDocument.querySelector('#selectTemplate')
+const autoCompleteTemplate = document.currentScript.ownerDocument.querySelector('#autoCompleteTemplate')
 
-class Select extends HTMLElement {
+class AutoComplete extends HTMLElement {
   constructor() {
     super()
-    this.root = this.createShadowRoot()
-    this.root.appendChild(template.content.cloneNode(true))
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.appendChild(autoCompleteTemplate.content.cloneNode(true))
 
     this.focusIndex = 0
     this.isOpen = false
 
-    this.select = this.root.querySelector('.select')
-    this.bar = this.root.querySelector('.bar')
-    this.value = this.root.querySelector('#value')
-    this.deselectEl =this.root.querySelector('.deselect')
-    this.dropdown = this.root.querySelector('.dropdown')
-    this.options = this.root.querySelector('.options')
-    this.arrow = this.root.querySelector('.arrow  > path')
+    this.autoComplete = this.shadowRoot.querySelector('.auto-complete')
+    this.bar = this.shadowRoot.querySelector('.bar')
+    this.input = this.shadowRoot.querySelector('input')
+    this.dropdown = this.shadowRoot.querySelector('.dropdown')
+    this.options = this.shadowRoot.querySelector('.options')
+    this.arrow = this.shadowRoot.querySelector('.arrow')
 
     this.li = this.querySelectorAll('li')
     this.optionCount = this.li.length - 1
-    this.defaultValue = { textContent: this.getAttribute('placeholder'), className: 'placeholder' }
+    // this.defaultValue = { textContent: this.getAttribute('placeholder'), className: 'placeholder' }
+    // this.defaultValue = this.input.placeholder
   }
 
   connectedCallback() {
     this.attachAttributes()
     this.attachEventHandlers()
-    this.updateValue()
+    // this.updateValue()
   }
 
   attachAttributes() {
@@ -33,29 +33,26 @@ class Select extends HTMLElement {
   }
 
   attachEventHandlers() {
-    this.select.addEventListener('keydown', this.keyDownHandler.bind(this))
+    // this.input.addEventListener('focus', e => (e.target.focus(), e.target.select()))
+    // this.input.addEventListener('click', e => e.target.select())
+    this.autoComplete.addEventListener('keydown', this.keyDownHandler.bind(this))
     this.options.addEventListener('click', e => (this.selectValue(e.target), e.stopPropagation()))
-    this.deselectEl.addEventListener('click', e => (this.deselect(), e.stopPropagation()))
-    this.bar.addEventListener('click', e => (this.isOpen ? this.close() : this.open(), e.stopPropagation()))
+    this.bar.addEventListener('click', e => {
+      if (this.isOpen)  this.close()
+      else {
+        this.open()
+        this.input.focus()
+        this.input.select()
+        e.stopPropagation()
+      }
+    })
     this.li.forEach((val, i) => val.addEventListener('mouseenter', e => (e.target.focus(), this.focusIndex = i)))
-    document.addEventListener('click', e => this.isOpen ? this.close() : void(0))
+    // document.addEventListener('click', e => this.isOpen ? this.close() : void(0))
   }
 
-  deselect() {
-    this.li.forEach(val => val.removeAttribute('selected'))
-    this.updateValue()
-    this.focusIndex = 0
-    this.setFocus()
-    this.fireChangeEvent()
-    this.open()
-  }
-
-  updateValue(value = this.defaultValue) {
-    console.log(this.deselect)
-    this.deselectEl.style.display = value.className == 'placeholder' ? 'none' : 'block'
-    this.value.textContent = value.textContent
-    this.value.className = value.className
+  updateValue(value) {
     console.log(value)
+    this.input.value = value
   }
 
   setFocus() {
@@ -64,14 +61,13 @@ class Select extends HTMLElement {
 
   selectValue(option) {
     this.li.forEach((val, i) => {
-      if (val.hasAttribute('selected') && val != option)
-        val.removeAttribute('selected')
+      if (val.hasAttribute('selected') && val != option) val.removeAttribute('selected')
       else if (val == option) {
         val.setAttribute('selected', 'selected')
         this.focusIndex = i
       }
     })
-    this.updateValue({ textContent: option.textContent, className: 'selected' })
+    this.updateValue(option.textContent)
     this.setFocus()
     this.fireChangeEvent()
     this.close()
@@ -93,14 +89,6 @@ class Select extends HTMLElement {
 
   keyDownHandler(e) {
     switch(e.which) {
-      // BACKSPACE
-      case 8:
-        this.li.forEach(val => val.removeAttribute('selected'))
-        this.updateValue()
-        this.focusIndex = 0
-        this.setFocus()
-        return this.fireChangeEvent()
-      // ESCAPE
       case 27:
         return this.close()
       // DOWN_ARROW
@@ -125,14 +113,14 @@ class Select extends HTMLElement {
     for (let i = this.focusIndex + 1; i < this.li.length; ++i) {
       if (this.li[i].textContent.toLowerCase()[method](char)) {
         this.focusIndex = i
-        this.setFocus()
+        // this.setFocus()
         return true
       }
     }
     for (let i = 0; i < this.focusIndex; i++) {
       if (this.li[i].textContent.toLowerCase()[method](char)) {
         this.focusIndex = i
-        this.setFocus()
+        // this.setFocus()
         return true
       }
     }
@@ -172,4 +160,4 @@ class Select extends HTMLElement {
   }
 }
 
-customElements.define('x-select', Select)
+customElements.define('x-auto-complete', AutoComplete)

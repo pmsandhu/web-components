@@ -1,0 +1,18 @@
+::slotted {
+  --checked-color:#888888;
+}
+
+.stacked {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.stacked .control {
+  margin-bottom: 0.25rem;
+}
+
+.stacked .control + .control {
+  margin-left: 0;
+}

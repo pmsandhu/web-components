@@ -1,0 +1,24 @@
+<template id="autoCompleteTemplate">
+  <link rel="stylesheet" href="./AutoComplete.css">
+
+  <div class="auto-complete">
+
+    <div class="bar">
+      <div>
+        <input class="placeholder" type="text" placeholder="Select"/>
+        <svg width="10" height="6" viewBox="0 0 10 6">
+          <path class="arrow" d="M5 6 L 0 0 H 10 Z"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <ul class="options">
+       <slot></slot>
+      </ul>
+    </div>
+
+  </div>
+
+</template>
+<script src="./AutoComplete.js"></script>

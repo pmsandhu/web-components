@@ -11,6 +11,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
 <link rel="import" href="Tabs.html">
+<link rel="import" href="../Checkbox/Checkbox.html">
 
 </head>
 
@@ -27,7 +28,10 @@
   <x-panel slot="panel">Content 3</x-panel>
 
   <x-tab slot="tab">Tab 4</x-tab>
-  <x-panel slot="panel"><div>Content 4</div></x-panel>
+  <x-panel slot="panel">
+    <x-checkbox value="1" stacked checked>One</x-checkbox>
+    <x-checkbox value="2" stacked>Two</x-checkbox>
+  </x-panel>
 
 </x-tabs>
 

@@ -1,8 +1,13 @@
 :host {
-  --checked-color:#888888;
+  --checked-color: #888888;
+  outline: none;
 }
 
-::content .control {
+:host(:focus) {
+  outline: none;
+}
+
+.control {
   font-family: Arial, sans-serif;
   font-size: 14px;
   position: relative;
@@ -11,24 +16,10 @@
   min-height: 1.5rem;
   padding-left: 1.5rem;
   margin-right: 1rem;
+  outline: none;
 }
 
-::content .stacked {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-::content .stacked .control {
-  margin-bottom: 0.25rem;
-}
-
-::content .stacked .control + .control {
-  margin-left: 0;
-}
-
-::content .control-indicator {
+.control-indicator {
   position: absolute;
   left: 0;
   display: block;
@@ -38,46 +29,39 @@
   background-size: 50% 50%;
 }
 
-::content .control-input {
+.control-input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-::content .control-input:checked ~ .control-indicator {
+.control-input:checked ~ .control-indicator {
   color: #FFFFFF;
   background-color: var(--checked-color);
 }
 
-::content .control-input:focus ~ .control-indicator {
+.control-input:focus ~ .control-indicator {
   box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-::content .control-input:active ~ .control-indicator {
+.control-input:active ~ .control-indicator {
   color: #FFFFFF;
   background-color: #B3D7FF;
 }
 
-::content .control-input:disabled ~ .control-indicator {
+.control-input:disabled ~ .control-indicator {
   cursor: not-allowed;
   background-color: #ECEEEF;
 }
 
-::content .control-input:disabled ~ .label {
+.control-input:disabled ~ .label {
   color: #9CA3A9;
 }
 
-::content .radio .control-indicator {
+.radio .control-indicator {
   border-radius: 50%;
 }
 
-::content .radio .control-input:checked ~ .control-indicator {
+.radio .control-input:checked ~ .control-indicator {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
 }
-
-/*background: #dee2e6 center center no-repeat;*/
-/*background: #E9E9E9 center center no-repeat;*/
-/*background: #EFEFEF center center no-repeat;*/
-/*background-color: #0275D8;*/
-/*background-color: #959595;*/
-/*background-color: #BDBDBD;*/

@@ -1,30 +1,10 @@
-const template = document.currentScript.ownerDocument.querySelector('#tabsTemplate')
-const KEYCODE = {
-  DOWN: 40,
-  LEFT: 37,
-  RIGHT: 39,
-  UP: 38,
-  HOME: 36,
-  END: 35,
-  TAB: 9
-}
-function findElement(collection, attribute='selected') {
-  for (const i of collection)
-    if (i.hasAttribute(attribute)) return i
-  return null
-}
-
-function findIndex(collection, attribute='selected') {
-  for (let i = 0; i < collection.length; i++)
-    if (collection[i].hasAttribute(attribute)) return i
-  return null
-}
+const tabsTemplate = document.currentScript.ownerDocument.querySelector('#tabsTemplate')
 
 class Tabs extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(template.content.cloneNode(true))
+    this.shadowRoot.appendChild(tabsTemplate.content.cloneNode(true))
   }
 
   connectedCallback() {

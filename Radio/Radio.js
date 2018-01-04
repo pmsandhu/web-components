@@ -1,60 +1,49 @@
-const template = document.currentScript.ownerDocument.querySelector('#radioTemplate')
+const radioTemplate = document.currentScript.ownerDocument.querySelector('#radioTemplate')
 
 class Radio extends HTMLElement {
+  static get observedAttributes() {
+    return ['value', 'disabled', 'checked', 'tabindex']
+  }
+
+  get value()    { return this.getAttribute('value') }
+  get checked()  { return this.hasAttribute('checked') }
+  get tabindex() { return this.getAttribute('tabindex') }
+  get disabled() { return this.hasAttribute('disabled') }
+
+  set tabindex(val) { this.setAttribute('tabindex', val) }
+  set value(val)    { this.setAttribute('value', val) }
+  set disabled(val) { val ? this.setAttribute('disabled', '') : this.removeAttribute('disabled') }
+  set checked(val)  { val ? this.setAttribute('checked', '')  : this.removeAttribute('checked') }
+
   constructor() {
     super()
-    this.root = this.createShadowRoot()
-    this.root.appendChild(template.content.cloneNode(true))
-    this.form = this.root.querySelector('form')
-    this.name = this.hasAttribute('name') ? this.getAttribute('name') : 'radio'
-    this.stacked =  this.hasAttribute('stacked') ? 'stacked' : ''
-    this.label = this.querySelectorAll('label')
+    this.attachShadow({ mode: 'open', delegatesFocus: true })
+    this.shadowRoot.appendChild(radioTemplate.content.cloneNode(true))
+    this.radio = this.shadowRoot.querySelector('.radio')
+    this.label = this.shadowRoot.querySelector('.label')
+    this.input = this.shadowRoot.querySelector('input')
   }
 
   connectedCallback() {
-    this.label.forEach(val => {
-      this.addRadioClasses(val)
-      this.createRadioButton(val)
-      this.attachListeners(val.querySelector('input'))
-    })
+    this.attachListeners()
+    this.label.textContent = this.textContent
   }
 
-  createRadioButton(label) {
-    label.innerHTML = `<input 
-      type="radio" 
-      class="control-input" 
-      name="${this.name}" 
-      value="${label.getAttribute('value')}" 
-      ${this.getDefaults(label)}
-    >
-      <span class="control-indicator"></span>
-      <span class="label">${label.textContent}</span>`
+  attributeChangedCallback(attribute) {
+    if (attribute == 'tabindex') return
+    this.input[attribute] = this[attribute]
   }
 
-  addRadioClasses(label) {
-    label.classList.add('control')
-    label.classList.add('radio')
-    label.classList.add(this.stacked)
-  }
-
-  getDefaults(label) {
-    let input = ''
-    if (label.hasAttribute('disabled')) input += 'disabled'
-    if (label.hasAttribute('checked')) input += ' checked'
-    return input
-  }
-
-  attachListeners(input) {
-    input.onchange = e => this.fireChangeEvent({
+  attachListeners() {
+    this.input.onchange = e => this.fireChangeEvent({
       checked: e.target.checked,
       disabled: e.target.disabled,
-      value: e.target.value,
-      label: e.target.nextElementSibling.nextElementSibling.textContent
+      value: e.target.value
     })
   }
 
   fireChangeEvent(detail) {
-    this.dispatchEvent(new CustomEvent(`${this.name}-changed`, { detail }))
+    this.dispatchEvent(new CustomEvent('radio-changed', { detail }))
   }
 
 }

@@ -1,123 +1,116 @@
-const template = document.currentScript.ownerDocument.querySelector('#selectTemplate')
-
 class Select extends HTMLElement {
   constructor() {
     super()
-    this.root = this.createShadowRoot()
-    this.root.appendChild(template.content.cloneNode(true))
+    this.attachShadow({ mode: 'open' })
+    const selectTemplate = document.currentScript.ownerDocument.querySelector('#selectTemplate')
+    this.shadowRoot.appendChild(selectTemplate.content.cloneNode(true))
 
     this.focusIndex = 0
     this.isOpen = false
 
-    this.select = this.root.querySelector('.select')
-    this.bar = this.root.querySelector('.bar')
-    this.value = this.root.querySelector('#value')
-    this.deselectEl =this.root.querySelector('.deselect')
-    this.dropdown = this.root.querySelector('.dropdown')
-    this.options = this.root.querySelector('.options')
-    this.arrow = this.root.querySelector('.arrow  > path')
+    this.selectBox = this.shadowRoot.querySelector('.box')
+    this.value = this.shadowRoot.querySelector('.placeholder')
+    this.dropdown = this.shadowRoot.querySelector('.dropdown')
+
+    this.x_icon = this.shadowRoot.querySelector('.x_icon')
+    this.arrow_icon = this.shadowRoot.querySelector('.arrow_icon  > path')
 
     this.li = this.querySelectorAll('li')
-    this.optionCount = this.li.length - 1
-    this.defaultValue = { textContent: this.getAttribute('placeholder'), className: 'placeholder' }
+    this.defaultValue = {
+      textContent: this.getAttribute('placeholder') || 'Select ...',
+      className: 'placeholder'
+    }
   }
 
   connectedCallback() {
-    this.attachAttributes()
-    this.attachEventHandlers()
-    this.updateValue()
+    this.setupAttributesAndEventHandlers()
+    this.setUpSlotDefinedDefaults()
   }
 
-  attachAttributes() {
-    this.li.forEach((val, i) => val.setAttribute('tabindex', i))
-  }
+  setupAttributesAndEventHandlers() {
+    this.selectBox.setAttribute('tabindex', -1)
 
-  attachEventHandlers() {
-    this.select.addEventListener('keydown', this.keyDownHandler.bind(this))
-    this.options.addEventListener('click', e => (this.selectValue(e.target), e.stopPropagation()))
-    this.deselectEl.addEventListener('click', e => (this.deselect(), e.stopPropagation()))
-    this.bar.addEventListener('click', e => (this.isOpen ? this.close() : this.open(), e.stopPropagation()))
-    this.li.forEach((val, i) => val.addEventListener('mouseenter', e => (e.target.focus(), this.focusIndex = i)))
+    this.li.forEach((val, i) => {
+      val.setAttribute('tabindex', i)
+      val.addEventListener('mouseenter', this.handleMouseEnter.bind(this, i))
+    })
+
+    this.addEventListener('click', this.toggle)
+    this.addEventListener('keydown', this.handleKeyPress)
+    this.dropdown.addEventListener('click', this.selectValue.bind(this))
+    this.x_icon.addEventListener('click', this.deselectValue.bind(this))
     document.addEventListener('click', e => this.isOpen ? this.close() : void(0))
+
   }
 
-  deselect() {
-    this.li.forEach(val => val.removeAttribute('selected'))
-    this.updateValue()
-    this.focusIndex = 0
-    this.setFocus()
-    this.fireChangeEvent()
-    this.open()
+  setUpSlotDefinedDefaults(){
+    const hasDefaultSelection = this.querySelector('li[selected]')
+    if (!hasDefaultSelection) return this.updateValue(this.defaultValue)
+    this.focusIndex = hasDefaultSelection.tabIndex
+    this.selectValue()
   }
 
-  updateValue(value = this.defaultValue) {
-    console.log(this.deselect)
-    this.deselectEl.style.display = value.className == 'placeholder' ? 'none' : 'block'
-    this.value.textContent = value.textContent
-    this.value.className = value.className
-    console.log(value)
+  updateValue({ textContent, className }) {
+    this.x_icon.style.display = className == 'placeholder' ? 'none' : 'block'
+    this.value.textContent = textContent
+    this.value.className = className
   }
 
   setFocus() {
     this.li[this.focusIndex].focus()
   }
 
-  selectValue(option) {
-    this.li.forEach((val, i) => {
-      if (val.hasAttribute('selected') && val != option)
-        val.removeAttribute('selected')
-      else if (val == option) {
-        val.setAttribute('selected', 'selected')
-        this.focusIndex = i
-      }
-    })
-    this.updateValue({ textContent: option.textContent, className: 'selected' })
-    this.setFocus()
-    this.fireChangeEvent()
-    this.close()
-  }
-
   open() {
     this.isOpen = true
-    this.arrow.setAttribute('transform', 'rotate(180, 5, 3)')
+    this.arrow_icon.setAttribute('transform', 'rotate(180, 5, 3)')
     this.dropdown.style.display = 'block'
     this.setFocus()
   }
 
   close() {
     this.isOpen = false
-    this.arrow.removeAttribute('transform')
+    this.arrow_icon.removeAttribute('transform')
     this.dropdown.style.display = 'none'
-    this.bar.focus()
+    this.selectBox.focus()
   }
 
-  keyDownHandler(e) {
+  toggle(e) {
+    this.isOpen ? this.close() : this.open()
+    e.stopPropagation()
+  }
+
+  handleKeyPress(e) {
     switch(e.which) {
-      // BACKSPACE
-      case 8:
-        this.li.forEach(val => val.removeAttribute('selected'))
-        this.updateValue()
-        this.focusIndex = 0
+
+      case KEYCODE.BACKSPACE:
+        this.deselectValue(e)
+        break
+
+      case KEYCODE.ESCAPE:
+        this.close()
+        break
+
+      case KEYCODE.UP:
+        this.focusIndex = (this.focusIndex - 1 + this.li.length) % this.li.length
         this.setFocus()
-        return this.fireChangeEvent()
-      // ESCAPE
-      case 27:
-        return this.close()
-      // DOWN_ARROW
-      case 38:
-        this.focusIndex = this.focusIndex == 0 ? this.optionCount : --this.focusIndex
-        return this.setFocus()
-      // UP_ARROW
-      case 40:
-        this.focusIndex = this.focusIndex == this.optionCount ? 0 : ++this.focusIndex
-        return this.setFocus()
-      // ENTER
-      case 13:
-        if (this.isOpen) return this.selectValue(this.li[this.focusIndex])
+        break
+
+      case KEYCODE.DOWN:
+        if (!this.isOpen) return this.open()
+        this.focusIndex = (this.focusIndex + 1) % this.li.length
+        this.setFocus()
+        break
+
+      case KEYCODE.ENTER:
+        if (this.isOpen) this.selectValue(e)
+        else this.open()
+        break
+
       default:
         if (e.which > 47 && e.which < 91)
           if (!this.filterMethod(e.key, 'startsWith'))
             this.filterMethod(e.key, 'includes')
+        break
     }
   }
 
@@ -139,36 +132,65 @@ class Select extends HTMLElement {
     return false
   }
 
-  fireChangeEvent() {
-    const detail = this.getValue()
-    this.dispatchEvent(new CustomEvent('change', { detail }))
+  selectValue(e) {
+    const currentSelected = this.querySelector('li[selected]')
+    if (currentSelected) currentSelected.removeAttribute('selected')
+    this.li[this.focusIndex].setAttribute('selected', '')
+    this.updateValue({ textContent: this.li[this.focusIndex].textContent, className: 'selected' })
+    this.setFocus()
+    this.fireChangeEvent()
+    this.close()
+    if (e) e.stopPropagation()
   }
 
-  getValue() {
+  deselectValue(e) {
     const selected = this.querySelector('li[selected]')
-    return selected
+    if (!selected) return e.stopPropagation()
+    selected.removeAttribute('selected')
+    this.updateValue(this.defaultValue)
+    this.focusIndex = 0
+    this.setFocus()
+    this.open()
+    this.fireChangeEvent()
+    e.stopPropagation()
+  }
+
+  handleMouseEnter(i, e) {
+    e.target.focus()
+    this.focusIndex = i
+  }
+
+  fireChangeEvent() {
+    const selected = this.querySelector('li[selected]')
+    const detail = selected
       ? { value: selected.value, textContent: selected.textContent }
       : { value: '', textContent: '' }
+    this.dispatchEvent(new CustomEvent('change', { detail }))
   }
 
   addOneLi(val) {
     this.createLiElement(val)
     this.li = this.querySelectorAll('li')
   }
-
   addManyLi(array) {
-    array.forEach(val => this.createLiElement(val))
+    array.forEach((val, i) => this.createLiElement(val, this.li.length + i))
     this.li = this.querySelectorAll('li')
   }
 
-  createLiElement(val) {
+  createLiElement(val, i = 0) {
     const li = document.createElement('li')
-    if (val.hasOwnProperty('className')) li.className = val.className
-    li.value = val.value
-    li.textContent = val.textContent
-    li.setAttribute('tabindex', ++this.optionCount)
+    for (let prop in val) li[prop] = val[prop]
+    li.setAttribute('tabindex', i)
+    li.addEventListener('mouseenter', this.handleMouseEnter.bind(this, i))
     this.appendChild(li)
-    li.addEventListener('mouseenter', e => (e.target.focus(), this.focusIndex = this.optionCount))
+  }
+
+  disconnectedCallback() {
+    this.removeEventListener('keydown', this.handleKeyPress)
+    this.removeEventListener('click', this.toggle)
+    this.x_icon.removeEventListener('click', this.deselectValue)
+    this.dropdown.removeEventListener('click', this.selectValue)
+    this.li.forEach(val => (val.remove(), val = null))
   }
 }
 

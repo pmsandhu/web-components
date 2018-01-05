@@ -16,7 +16,7 @@
   width: 20em;
 }
 
-.bar {
+.box {
   padding: .2em .2em 0 .2em;
   overflow: hidden;
   border: 1px solid #ADADAD;
@@ -26,14 +26,14 @@
   user-select: none;
 }
 
-.bar > div {
+.box > div {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin: .25rem .5rem;
 }
 
-.deselect {
+.x_icon {
   margin-right: 6px;
   opacity: .8;
   display: none;
@@ -41,16 +41,16 @@
   stroke-width: 2px;
 }
 
-.deselect:hover {
+.x_icon:hover {
   opacity: .7;
   stroke: #C41A16;
 }
 
-.arrow {
+.arrow_icon {
   fill: #444444;
 }
 
-.arrow:hover {
+.arrow_icon:hover {
   fill: #D2D2D2;
 }
 
@@ -81,15 +81,18 @@
 
 .options { padding: 0; margin: 0; }
 
-::content li {
+::slotted(li) {
   padding: .5em 1em;
   min-height: 1em;
   list-style: none;
   cursor: pointer;
 }
 
-::content li:focus {
+::slotted(li:focus) {
   outline: dotted 1px #333333;
   background: #E9E9E9;
 }
 
+::slotted(li[disabled]) {
+  pointer-events: none;
+}

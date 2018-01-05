@@ -1,15 +1,15 @@
 <template id="selectTemplate">
-<link rel="stylesheet" href="./Select.css">
+<link rel="stylesheet" href="../Select/Select.css">
 
 <div class="select">
 
-  <div class="bar">
+  <div class="box">
     <div>
       <span id="value" class="placeholder"></span>
-      <svg class="deselect" width="9" height="9" viewBox="-1 -1 11 11">
+      <svg class="x_icon" width="9" height="9" viewBox="-1 -1 11 11">
         <path d="M9 0 L 0 9 M9 9 L 0 0"/>
       </svg>
-      <svg class="arrow" width="10" height="6" viewBox="0 0 10 6">
+      <svg class="arrow_icon" width="10" height="6" viewBox="0 0 10 6">
         <path d="M5 6 L 0 0 H 10 Z"/>
       </svg>
     </div>
@@ -17,11 +17,12 @@
 
   <div class="dropdown">
     <ul class="options">
-      <content select="li"/>
+      <slot></slot>
     </ul>
   </div>
 
 </div>
 
 </template>
+<script src="../utils.js"></script>
 <script src="./Select.js"></script>

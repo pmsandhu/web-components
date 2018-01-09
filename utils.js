@@ -22,3 +22,10 @@ function findIndex(collection, attribute = 'selected') {
     if (collection[i].hasAttribute(attribute)) return i
   return null
 }
+
+function findElementByContent(collection, attribute, match) {
+  for (const i of collection)
+    if (i[attribute] == match) return i
+}
+
+const getTemplate = qs => document.currentScript.ownerDocument.querySelector(qs)

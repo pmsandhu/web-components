@@ -2,9 +2,7 @@ class Select extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: 'open' })
-    const selectTemplate = document.currentScript.ownerDocument.querySelector('#selectTemplate')
-    this.shadowRoot.appendChild(selectTemplate.content.cloneNode(true))
-
+    this.shadowRoot.appendChild(getTemplate('#selectTemplate').content.cloneNode(true))
     this.focusIndex = 0
     this.isOpen = false
 

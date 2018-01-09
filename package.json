@@ -1,0 +1,22 @@
+{
+  "name": "web-components",
+  "version": "1.0.0",
+  "description": "web-component library",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m SimpleHTTPServer 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmsandhu/web-components.git"
+  },
+  "keywords": [
+    "web-components"
+  ],
+  "author": "patrice sandhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pmsandhu/web-components/issues"
+  },
+  "homepage": "https://github.com/pmsandhu/web-components#readme"
+}

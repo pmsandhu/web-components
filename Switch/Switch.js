@@ -1,6 +1,6 @@
-const template = document.currentScript.ownerDocument.querySelector('#switchTemplate')
-
+const switchTemplate = document.currentScript.ownerDocument.querySelector('#switchTemplate')
 class Switch extends HTMLElement {
+
   static get observedAttributes() {
     return ['disabled', 'checked', 'value']
   }
@@ -16,11 +16,11 @@ class Switch extends HTMLElement {
 
   constructor() {
     super()
-    this.root = this.createShadowRoot()
-    this.root.appendChild(template.content.cloneNode(true))
-    this.switch = this.root.querySelector('.switch')
-    this.label = this.root.querySelector('.label')
-    this.input = this.root.querySelector('input')
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.appendChild(switchTemplate.content.cloneNode(true))
+    this.switch = this.shadowRoot.querySelector('.switch')
+    this.label = this.shadowRoot.querySelector('.label')
+    this.input = this.shadowRoot.querySelector('input')
   }
 
   connectedCallback() {

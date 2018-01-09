@@ -80,7 +80,7 @@
   transform: rotate(-45deg);
 }
 
-.select-dropdown {
+.dropdown {
   box-sizing: border-box;
   position: absolute;
   display: none;
@@ -98,14 +98,14 @@
   margin: 0;
 }
 
-::content li {
+::slotted(li) {
   min-height: 1em;
   padding: .5em 1em;
   list-style: none;
   cursor: pointer;
 }
 
-::content li:focus {
+::slotted(li:focus) {
   background: #E9E9E9;
   outline: dotted 1px #333333;
 }

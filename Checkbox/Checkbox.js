@@ -17,6 +17,7 @@ class Checkbox extends HTMLElement {
     if (this.hasAttribute('checked')) this.input.checked = true
     if (this.hasAttribute('value')) this.input.value = this.getAttribute('value')
     if (this.hasAttribute('stacked')) this.checkbox.classList.add('stacked')
+    this.setAttribute('tabindex', -1)
   }
 
   attachListeners() {

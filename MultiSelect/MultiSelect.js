@@ -104,13 +104,14 @@ class MultiSelect extends HTMLElement {
         break
 
       case KEYCODE.UP:
-        this.focusIndex = this.focusIndex == 0 ? this.getVisibleOptions().length - 1 : --this.focusIndex
+        const length = this.getVisibleOptions().length
+        this.focusIndex = (this.focusIndex - 1 + length) % length
         this.setFocus()
         break
 
       case KEYCODE.DOWN:
         if (!this.isOpen) return this.open()
-        this.focusIndex = this.focusIndex == this.getVisibleOptions().length - 1 ? 0 : ++this.focusIndex
+        this.focusIndex = (this.focusIndex + 1) % this.getVisibleOptions().length
         this.setFocus()
         break
 
@@ -130,20 +131,20 @@ class MultiSelect extends HTMLElement {
 
   filterMethod(char, method) {
     const visibleOptions = this.getVisibleOptions()
-    for (let i = this.focusIndex + 1; i < visibleOptions.length; ++i) {
+    for (let i = this.focusIndex + 1; i < visibleOptions.length; ++i)
       if (visibleOptions[i].textContent.toLowerCase()[method](char)) {
         this.focusIndex = i
         visibleOptions[this.focusIndex].focus()
         return true
       }
-    }
-    for (let i = 0; i < this.focusIndex; i++) {
+
+    for (let i = 0; i < this.focusIndex; i++)
       if (visibleOptions[i].textContent.toLowerCase()[method](char)) {
         this.focusIndex = i
         visibleOptions[this.focusIndex].focus()
         return true
       }
-    }
+
     return false
   }
 

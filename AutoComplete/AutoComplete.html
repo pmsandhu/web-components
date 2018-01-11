@@ -1,13 +1,16 @@
 <template id="autoCompleteTemplate">
   <link rel="stylesheet" href="./AutoComplete.css">
 
-  <div class="auto-complete">
+  <div class="autocomplete">
 
-    <div class="bar">
+    <div class="box">
       <div>
         <input class="placeholder" type="text" placeholder="Select"/>
-        <svg width="10" height="6" viewBox="0 0 10 6">
-          <path class="arrow" d="M5 6 L 0 0 H 10 Z"/>
+        <svg class="x_icon" width="9" height="9" viewBox="-1 -1 11 11">
+          <path d="M9 0 L 0 9 M9 9 L 0 0"/>
+        </svg>
+        <svg class="arrow_icon" width="10" height="6" viewBox="0 0 10 6">
+          <path d="M5 6 L 0 0 H 10 Z"/>
         </svg>
       </div>
     </div>
@@ -21,4 +24,5 @@
   </div>
 
 </template>
+<script src="../utils.js"></script>
 <script src="./AutoComplete.js"></script>

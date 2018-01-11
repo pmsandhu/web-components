@@ -27,7 +27,7 @@ class Select extends HTMLElement {
 
   setupAttributesAndEventHandlers() {
     this.selectBox.setAttribute('tabindex', -1)
-
+    this.dropdown.hidden = true
     this.li.forEach((val, i) => {
       val.setAttribute('tabindex', i)
       val.addEventListener('mouseenter', this.handleMouseEnter.bind(this, i))
@@ -61,14 +61,15 @@ class Select extends HTMLElement {
   open() {
     this.isOpen = true
     this.arrow_icon.setAttribute('transform', 'rotate(180, 5, 3)')
-    this.dropdown.style.display = 'block'
+    this.dropdown.hidden = false
     this.setFocus()
   }
 
   close() {
     this.isOpen = false
     this.arrow_icon.removeAttribute('transform')
-    this.dropdown.style.display = 'none'
+    // this.dropdown.style.display = 'none'
+    this.dropdown.hidden = true
     this.selectBox.focus()
   }
 

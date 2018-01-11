@@ -1,4 +1,13 @@
-.auto-complete {
+*::-webkit-scrollbar { width: 6px; }
+
+*::-webkit-scrollbar-track { background-color: #ADADAD; }
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(180, 180, 180, 0.3);
+  width: 6px;
+}
+
+.autocomplete {
   position: relative;
   box-sizing: border-box;
   display: inline-block;
@@ -7,7 +16,7 @@
   width: 20em;
 }
 
-.bar {
+.box {
   padding: .2em .2em 0 .2em;
   overflow: hidden;
   border: 1px solid #ADADAD;
@@ -17,32 +26,50 @@
   user-select: none;
 }
 
-.bar div {
+.box > div {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   margin: .25rem .5rem;
 }
 
-svg {
-  margin-left: auto;
+.x_icon {
+  display: none;
+  stroke: #606060;
+  margin-right: 6px;
+  opacity: .8;
+  stroke-width: 2px;
+}
+
+.x_icon:hover {
+  opacity: .7;
+  stroke: #C41A16;
+}
+
+.arrow_icon {
+  fill: #444444;
+}
+
+.arrow_icon:hover {
+  fill: #D2D2D2;
 }
 
 .placeholder {
-  font-size: 12px;
-  font-family: Arial, sans-serif;
-  color: #444444;
-  outline: none;
-  border: thin solid red;
-  width: 100%;
+  color: #888888;
 }
 
+.selected {
+  color: #444444;
+}
+
+.placeholder, .selected {
+  margin-right: auto;
+}
 
 .dropdown {
   box-sizing: border-box;
   position: absolute;
-  display: none;
-  width: 100%;
-  max-height: 300px;
+  max-height: 310px;
   overflow-y: auto;
   background: white;
   border: 1px solid #BDBDBD;
@@ -62,8 +89,11 @@ svg {
   cursor: pointer;
 }
 
-::slotted(li:focus){
+::slotted(li:focus) {
   outline: dotted 1px #333333;
   background: #E9E9E9;
 }
 
+::slotted(li[disabled]) {
+  pointer-events: none;
+}

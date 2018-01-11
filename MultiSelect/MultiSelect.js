@@ -24,6 +24,7 @@ class MultiSelect extends HTMLElement {
     this.tagContainer.setAttribute('tabindex', -1)
     this.placeholder.innerText = this.getAttribute('placeholder') || 'Select'
     this.li.forEach((val, i) => val.setAttribute('tabindex', i))
+    this.dropdown.hidden = true
   }
 
   attachEventHandlers() {
@@ -35,7 +36,7 @@ class MultiSelect extends HTMLElement {
   }
 
   updateVisibleOptions() {
-    this.li.forEach(val => val.style.display = val.hasAttribute('selected') ? 'none' : 'block')
+    this.li.forEach(val => val.hidden = val.hasAttribute('selected'))
     this.focusIndex = 0
     this.setFocus()
     this.togglePlaceholder()
@@ -43,7 +44,7 @@ class MultiSelect extends HTMLElement {
   }
 
   togglePlaceholder() {
-    this.placeholder.style.display = this.querySelectorAll('li[selected]').length ? 'none' : 'block'
+    this.placeholder.hidden = this.querySelectorAll('li[selected]').length
   }
 
   toggle(e) {
@@ -53,28 +54,25 @@ class MultiSelect extends HTMLElement {
 
   open() {
     this.isOpen = true
-    this.dropdown.style.display = 'block'
+    this.dropdown.hidden = false
     this.setFocus()
   }
 
   close() {
     this.isOpen = false
-    this.dropdown.style.display = 'none'
+    this.dropdown.hidden = true
     this.tagContainer.focus()
   }
 
   selectOption(e) {
     if (!e.target.hasAttribute('selected')) {
-      e.target.setAttribute('selected', 'selected')
+      e.target.setAttribute('selected', '')
       this.tagContainer.appendChild(this.createTag(e.target))
     }
     this.updateVisibleOptions()
     e.stopPropagation()
   }
 
-  getVisibleOptions() {
-    return this.querySelectorAll('li[style="display: block;"]')
-  }
 
   setFocus() {
     const visibleOptions = this.getVisibleOptions()
@@ -84,7 +82,7 @@ class MultiSelect extends HTMLElement {
   handleMouseEnter(e) {
     e.target.focus()
     let i = 0
-    const visibleOptions = this.getVisibleOptions()
+    const visibleOptions = this.getVisibleOptions() /*?*/
     while (visibleOptions[i] != e.target) ++i
     this.focusIndex = i
   }

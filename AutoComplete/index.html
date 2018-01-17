@@ -1,21 +1,25 @@
 <html>
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
-  <link rel="import" href="./AutoComplete.html">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.14/webcomponents-hi.js"></script>
+<link rel="import" href="./AutoComplete.html">
 </head>
 
 <body>
-<x-auto-complete placeholder="Select Value">
-  <li value="1">Item 1</li>
-  <li value="2">Item 2</li>
-  <li value="3">Item 3</li>
-  <li value="4">Item 4</li>
-  <li value="5">Item 5</li>
-  <li value="6">Long Item</li>
-  <li value="7">Long Long Items jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</li>
+<x-auto-complete
+  name="programming-languages"
+  placeholder="Programming languages ...">
 </x-auto-complete>
 
 <script>
+  const data =[
+    'ActionScript', 'AppleScript', 'Asp', 'Assembly',
+    'BASIC', 'Batch', 'C', 'C++', 'CSS', 'Clojure', 'COBOL',
+    'ColdFusion', 'Erlang', 'Fortran', 'Groovy', 'Haskell', 'HTML',
+    'Java', 'JavaScript', 'Lisp', 'Perl', 'PHP', 'PowerShell',
+    'Python', 'Ruby', 'Scala', 'Scheme', 'SQL', 'TeX', 'XML'
+  ]
+  document.querySelector('x-auto-complete').init(data)
+
 </script>
 </body>
 </html>

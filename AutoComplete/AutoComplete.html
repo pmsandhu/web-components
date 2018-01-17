@@ -3,23 +3,14 @@
 
   <div class="autocomplete">
 
-    <div class="box">
-      <div>
-        <input class="placeholder" type="text" placeholder="Select"/>
-        <svg class="x_icon" width="9" height="9" viewBox="-1 -1 11 11">
-          <path d="M9 0 L 0 9 M9 9 L 0 0"/>
-        </svg>
-        <svg class="arrow_icon" width="10" height="6" viewBox="0 0 10 6">
-          <path d="M5 6 L 0 0 H 10 Z"/>
-        </svg>
-      </div>
-    </div>
+    <form onsubmit="return false;">
+      <input autofocus
+             type="text"
+             name="autocomplete"
+             placeholder="Select a Value ...">
+    </form>
 
-    <div class="dropdown">
-      <ul class="options">
-       <slot></slot>
-      </ul>
-    </div>
+    <div class="dropdown"></div>
 
   </div>
 

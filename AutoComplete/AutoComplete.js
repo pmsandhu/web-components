@@ -84,6 +84,11 @@ class AutoComplete extends HTMLElement {
     }
   }
 
+  focus(e) {
+    this.input.last_val = '\n'
+    this.keyUp(e)
+  }
+
   keyUp(e) {
     let key = e.which
     if (!((key < KEYCODE.END || key > KEYCODE.DOWN)
@@ -162,11 +167,6 @@ class AutoComplete extends HTMLElement {
       default:
         break
     }
-  }
-
-  focus(e) {
-    this.input.last_val = '\n'
-    this.keyUp(e)
   }
 
   source(term, suggest) {

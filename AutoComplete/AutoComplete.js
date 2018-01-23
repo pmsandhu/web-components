@@ -52,6 +52,7 @@ class AutoComplete extends HTMLElement {
   isDropdownHidden() {
     return this.dropdown.style.display == 'none'
   }
+
   mouseLeave(e) {
     if (!e.target.classList.contains('option')) return
     const s = this.dropdown.querySelector('.option.selected')

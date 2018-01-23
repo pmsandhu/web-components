@@ -73,6 +73,9 @@ class MultiSelect extends HTMLElement {
     e.stopPropagation()
   }
 
+  getVisibleOptions() {
+    return this.querySelectorAll('li:not([hidden]')
+  }
 
   setFocus() {
     const visibleOptions = this.getVisibleOptions()
@@ -82,7 +85,7 @@ class MultiSelect extends HTMLElement {
   handleMouseEnter(e) {
     e.target.focus()
     let i = 0
-    const visibleOptions = this.getVisibleOptions() /*?*/
+    const visibleOptions = this.getVisibleOptions()
     while (visibleOptions[i] != e.target) ++i
     this.focusIndex = i
   }

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="A.css">
+</head>
+
+<body>
+
+<div class="autocomplete">
+  <form onsubmit="return false;">
+    <input autofocus
+           type="text"
+           name="programming-languages"
+           placeholder="Programming languages ...">
+  </form>
+  <div class="dropdown"></div>
+</div>
+
+<script src="../utils.js"></script>
+<script src="A.js"></script>
+
+<script>
+
+const autoComplete = new A({
+  selector: 'input',
+  minChars: 1,
+})
+
+autoComplete.init([
+  'ActionScript', 'AppleScript', 'Asp', 'Assembly',
+  'BASIC', 'Batch', 'C', 'C++', 'CSS', 'Clojure', 'COBOL',
+  'ColdFusion', 'Erlang', 'Fortran', 'Groovy', 'Haskell', 'HTML',
+  'Java', 'JavaScript', 'Lisp', 'Perl', 'PHP', 'PowerShell',
+  'Python', 'Ruby', 'Scala', 'Scheme', 'SQL', 'TeX', 'XML'
+])
+
+</script>
+
+</body>
+
+</html>

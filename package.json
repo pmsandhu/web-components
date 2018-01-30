@@ -4,7 +4,7 @@
   "description": "web-component library",
   "main": "index.html",
   "scripts": {
-    "start": "python -m SimpleHTTPServer 8000"
+      "start": "python -m SimpleHTTPServer 8000"
   },
   "repository": {
     "type": "git",

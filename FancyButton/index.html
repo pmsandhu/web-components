@@ -1,0 +1,76 @@
+<html>
+<head>
+  <style>
+    .bg--blue {
+      background-color: #2196F3;
+      color: #fff;
+    }
+    button {
+      font-size: 12px;
+      font-family: Roboto, sans-serif;
+      border: none;
+      padding: 10px;
+      margin: 10px;
+      outline: 0;
+      box-shadow: 0 2px 4px 0 #000;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    button:active {
+      box-shadow: 0 2px 6px 0 #000;
+    }
+
+    .ripple {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .ripple span {
+      transform: scale(0);
+      border-radius: 100%;
+      position: absolute;
+      opacity: 0.75;
+      background-color: #FFF;
+      animation: ripple-effect 1000ms;
+    }
+
+    @-moz-keyframes ripple-effect {
+      to {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+
+    @-webkit-keyframes ripple-effect {
+      to {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+
+    @-o-keyframes ripple-effect {
+      to {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+
+    @keyframes ripple-effect {
+      to {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+  </style>
+</head>
+<body>
+<button is="fancy-button" class="bg--blue">CLICK ME</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.4.1/document-register-element.js"></script>
+<script src="FancyButton.js"></script>
+</body>
+</html>

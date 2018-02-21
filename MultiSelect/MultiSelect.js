@@ -16,8 +16,8 @@ class MultiSelect extends HTMLElement {
   connectedCallback() {
     this.attachAttributes()
     this.attachEventHandlers()
-    this.togglePlaceholder()
     this.updateVisibleOptions()
+    this.togglePlaceholder()
   }
 
   attachAttributes() {
@@ -29,9 +29,9 @@ class MultiSelect extends HTMLElement {
 
   attachEventHandlers() {
     this.addEventListener('click', this.toggle)
-    this.addEventListener('keydown', this.keyDownHandler)
-    this.dropdown.addEventListener('click', this.selectOption.bind(this))
+    this.addEventListener('keydown', this.handleKeyDown)
     this.li.forEach(val => val.addEventListener('mouseenter', this.handleMouseEnter.bind(this)))
+    this.dropdown.addEventListener('click', this.selectOption.bind(this))
     document.addEventListener('click', e => this.isOpen ? this.close() : void(0))
   }
 
@@ -90,7 +90,7 @@ class MultiSelect extends HTMLElement {
     this.focusIndex = i
   }
 
-  keyDownHandler(e) {
+  handleKeyDown(e) {
     switch(e.which) {
 
       case KEYCODE.BACKSPACE:

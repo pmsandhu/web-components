@@ -68,7 +68,6 @@ class Select extends HTMLElement {
   close() {
     this.isOpen = false
     this.arrow_icon.removeAttribute('transform')
-    // this.dropdown.style.display = 'none'
     this.dropdown.hidden = true
     this.selectBox.focus()
   }

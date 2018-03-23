@@ -31,7 +31,6 @@ class Checkbox extends HTMLElement {
   fireChangeEvent(detail) {
     this.dispatchEvent(new CustomEvent('change', { detail }))
   }
-
 }
 
 customElements.define('x-checkbox', Checkbox)

@@ -16,7 +16,7 @@
   padding: 0;
   border: 0;
   min-width: 320px;
-  color: #777;
+  color: #777777;
 }
 
 .autocomplete, input {
@@ -25,8 +25,8 @@
 }
 
 form {
-  border-top: 1px solid #EEE;
-  border-bottom: 1px solid #EEE;
+  border-top: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
   background: #FAFAFA;
   margin: 30px 0;
   padding: 20px 10px;
@@ -38,16 +38,16 @@ input {
   max-width: 600px;
   outline: 0;
   border-radius: 0 !important;
-  border: 1px solid #CCC;
+  border: 1px solid #CCCCCC;
   padding: 5px;
 }
 
 .dropdown {
   text-align: left;
   cursor: default;
-  border: 1px solid #CCC;
+  border: 1px solid #CCCCCC;
   border-top: 0;
-  background: #FFF;
+  background: #FFFFFF;
   box-shadow: -1px 1px 3px rgba(0, 0, 0, .1);
   position: absolute;
   display: none;
@@ -65,7 +65,7 @@ input {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 1.02em;
-  color: #333;
+  color: #333333;
 }
 
 .option b {

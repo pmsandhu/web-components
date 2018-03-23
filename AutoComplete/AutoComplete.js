@@ -15,10 +15,10 @@ class AutoComplete extends HTMLElement {
 
   connectedCallback() {
     if (this.hasAttribute('placeholder')) this.input.placeholder = this.getAttribute('placeholder')
-    if (this.hasAttribute('name'))        this.input.name = this.getAttribute('name')
-    if (this.hasAttribute('min-chars'))   this.minChars = this.getAttribute('min-chars')
-    if (this.hasAttribute('offsetleft'))  this.offsetleft = this.getAttribute('offsetleft')
-    if (this.hasAttribute('offsettop'))   this.offsettop = this.getAttribute('offsettop')
+    if (this.hasAttribute('name')) this.input.name = this.getAttribute('name')
+    if (this.hasAttribute('min-chars')) this.minChars = this.getAttribute('min-chars')
+    if (this.hasAttribute('offsetleft')) this.offsetleft = this.getAttribute('offsetleft')
+    if (this.hasAttribute('offsettop')) this.offsettop = this.getAttribute('offsettop')
   }
 
   init(data) {
@@ -37,11 +37,11 @@ class AutoComplete extends HTMLElement {
     window.addEventListener('resize', this.updateSize.bind(this))
 
     this.dropdown.addEventListener('mouseleave', this.mouseLeave.bind(this))
-    this.dropdown.addEventListener('mouseover',  this.mouseOver.bind(this))
-    this.dropdown.addEventListener('mousedown',  this.mouseDown.bind(this))
+    this.dropdown.addEventListener('mouseover', this.mouseOver.bind(this))
+    this.dropdown.addEventListener('mousedown', this.mouseDown.bind(this))
 
-    this.input.addEventListener('blur',    this.blur.bind(this))
-    this.input.addEventListener('keyup',   this.keyUp.bind(this))
+    this.input.addEventListener('blur', this.blur.bind(this))
+    this.input.addEventListener('keyup', this.keyUp.bind(this))
     this.input.addEventListener('keydown', this.keyDown.bind(this))
   }
 
@@ -226,13 +226,13 @@ class AutoComplete extends HTMLElement {
 
   disconnectedCallback() {
     this.dropdown.removeEventListener('mouseleave', this.mouseLeave)
-    this.dropdown.removeEventListener('mouseover',  this.mouseOver)
-    this.dropdown.removeEventListener('mousedown',  this.mouseDown)
-    this.input.removeEventListener('resize',  this.updateSize)
+    this.dropdown.removeEventListener('mouseover', this.mouseOver)
+    this.dropdown.removeEventListener('mousedown', this.mouseDown)
+    this.input.removeEventListener('resize', this.updateSize)
     this.input.removeEventListener('keydown', this.keyDown)
-    this.input.removeEventListener('keyup',   this.keyUp)
-    this.input.removeEventListener('blur',    blur)
-    this.input.removeEventListener('focus',   focus)
+    this.input.removeEventListener('keyup', this.keyUp)
+    this.input.removeEventListener('blur', blur)
+    this.input.removeEventListener('focus', focus)
     let autocomplete = getTemplate('#autoCompleteTemplate')
     autocomplete = null
   }

@@ -1,19 +1,21 @@
 <template id="multiselectTemplate">
-<link rel="stylesheet" href="./MultiSelect.css">
+  <link rel="stylesheet" href="./MultiSelect.css">
 
-<div class="multiselect">
-  <div class="tag-container">
-    <div class="tag-container-placeholder"></div>
+  <div class="multiselect">
+
+    <div class="tag-container">
+      <div class="tag-container-placeholder"></div>
+    </div>
+
+    <div class="dropdown">
+      <ul class="select-options">
+        <slot></slot>
+      </ul>
+    </div>
+
   </div>
-
-  <div class="dropdown">
-    <ul class="select-options">
-      <slot></slot>
-    </ul>
-  </div>
-
-</div>
 
 </template>
+
 <script src="../utils.js"></script>
 <script src="./MultiSelect.js"></script>

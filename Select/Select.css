@@ -1,32 +1,24 @@
-*::-webkit-scrollbar { width: 6px; }
+@import url(../common.css);
 
-*::-webkit-scrollbar-track { background-color: #ADADAD; }
-
-*::-webkit-scrollbar-thumb {
-  background-color: rgba(180, 180, 180, 0.3);
-  width: 6px;
-}
-
-.select {
+:host {
   position: relative;
-  box-sizing: border-box;
   display: inline-block;
-  font-size: 12px;
-  font-family: Arial, sans-serif;
   width: 20em;
+  color: var(--black);
+  background-color: var(--white);
+  cursor: pointer;
 }
 
-.box {
+.container {
   padding: .2em .2em 0 .2em;
   overflow: hidden;
-  border: 1px solid #ADADAD;
-  border-radius: .2em;
-  cursor: pointer;
-  -webkit-user-select: none;
+  border: 1px solid var(--neutralSecondary);
+  border-radius: var(--border-radius);
+  outline: none;
   user-select: none;
 }
 
-.box > div {
+.container > div {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -36,8 +28,7 @@
 .x_icon {
   margin-right: 6px;
   opacity: .8;
-  //display: none;
-  stroke: #888888;
+  stroke: var(--neutralTertiary);
   stroke-width: 2px;
 }
 
@@ -47,55 +38,58 @@
 }
 
 .arrow_icon {
-  fill: #444444;
+  fill: var(--black);
 }
 
 .arrow_icon:hover {
-  fill: #D2D2D2;
+  fill: var(--neutralSecondary);
 }
 
 .placeholder {
-  color: #888888;
+  color: var(--neutralTertiary);
 }
 
 .selected {
-  color: #444444;
+  color: var(--black);
 }
 
-.placeholder, .selected {
+.placeholder,
+.selected {
   margin-right: auto;
 }
 
 .dropdown {
   box-sizing: border-box;
   position: absolute;
-  //display: none;
-  width: 100%;
-  max-height: 310px;
+  width: 99%;
+  max-height: 300px;
+  margin-top: 1px;
   overflow-y: auto;
-  background: white;
-  border: 1px solid #BDBDBD;
-  border-radius: .2em;
-  z-index: 1000;
+  background-color: var(--white);
+  border: 1px solid var(--neutralLight);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 .options {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 ::slotted(li) {
+  min-height: .75em;
   padding: .5em 1em;
-  min-height: 1em;
-  list-style: none;
   cursor: pointer;
+  list-style: none;
+}
+
+::slotted(li:hover) {
+  background-color: var(--neutralLighter);
 }
 
 ::slotted(li:focus) {
-  outline: dotted 1px #333333;
-  background: #E9E9E9;
+  background-color: var(--neutralLight);
+  outline: none;
+  /*outline-offset: -1px;*/
 }
 
-::slotted(li[disabled]) {
-  pointer-events: none;
-}

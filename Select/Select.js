@@ -6,7 +6,7 @@ class Select extends HTMLElement {
     this.focusIndex = 0
     this.isOpen = false
 
-    this.selectBox = this.shadowRoot.querySelector('.box')
+    this.container = this.shadowRoot.querySelector('.container')
     this.value = this.shadowRoot.querySelector('.placeholder')
     this.dropdown = this.shadowRoot.querySelector('.dropdown')
 
@@ -26,7 +26,7 @@ class Select extends HTMLElement {
   }
 
   setupAttributesAndEventHandlers() {
-    this.selectBox.setAttribute('tabindex', -1)
+    this.container.setAttribute('tabindex', -1)
     this.dropdown.hidden = true
     this.li.forEach((val, i) => {
       val.setAttribute('tabindex', i)
@@ -58,6 +58,10 @@ class Select extends HTMLElement {
     this.li[this.focusIndex].focus()
   }
 
+  unsetFocus() {
+    this.li[this.focusIndex].blur()
+  }
+
   open() {
     this.isOpen = true
     this.arrow_icon.setAttribute('transform', 'rotate(180, 5, 3)')
@@ -69,7 +73,7 @@ class Select extends HTMLElement {
     this.isOpen = false
     this.arrow_icon.removeAttribute('transform')
     this.dropdown.hidden = true
-    this.selectBox.focus()
+    this.container.focus()
   }
 
   toggle(e) {
@@ -154,6 +158,7 @@ class Select extends HTMLElement {
   }
 
   handleMouseEnter(i, e) {
+    // this.unsetFocus()
     e.target.focus()
     this.focusIndex = i
   }

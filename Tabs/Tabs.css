@@ -1,29 +1,36 @@
+@import url(../common.css);
+
+::slotted {
+  --selected-background-color: #0275D8;
+}
+
 :host {
-  max-width: 650px;
   display: flex;
   flex-wrap: wrap;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  color: #333333;
+  max-width: 650px;
+  color: var(--black);
   border: thin solid gainsboro;
 }
 
 ::slotted(x-tab) {
-  border: .5px solid #fff;
-  background: #EFEFEF;
+  margin: 0 .09em;
   padding: 10px 20px;
+  background-color: #EFEFEF;
+  cursor: pointer;
 }
 
-::slotted(x-tab:focus),
+::slotted(x-tab:focus) {
+  outline: 1px solid #5F8BF8;
+}
+
 ::slotted(x-tab:hover) {
-  cursor: pointer;
-  background: #E3E3E3;
+  opacity: .9;
 }
 
 ::slotted([selected]) {
   color: white;
+  background-color: var(--selected-background-color);
   box-shadow: none;
-  background-color: #0275D8;
 }
 
 ::slotted(x-panel) {

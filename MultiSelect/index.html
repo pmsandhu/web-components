@@ -1,4 +1,26 @@
-<html>
+<html lang="en">
+<head>
+  <title>Multi Select</title>
+
+  <style>
+    x-multiselect {
+      /*--white: #333333;*/
+      /*--black: #ffffff;*/
+      /*--neutralLight: #757575;*/
+      /*--neutralLighter: #616161;*/
+      /*--neutralDark: #fafafa;*/
+      /*--neutralDarker: #E6E6E6;*/
+      /*--border-radius: .2em;*/
+      /*--neutralSecondary: #757575;*/
+      /*--neutralSecondaryAlt: #616161;*/
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.8/custom-elements.min.js"></script>
+  <link rel="import" href="./MultiSelect.html">
+
+</head>
+
 <body>
 
 <x-multiselect placeholder="Select Value">
@@ -11,18 +33,13 @@
   <li value="7">Long Long Items jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</li>
 </x-multiselect>
 
-<link rel="import" href="./MultiSelect.html">
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.8/custom-elements.min.js"></script>-->
 
 <script>
   const multiselect = document.querySelector('x-multiselect')
-
-  /* dynamically add list items to multiselect */
   multiselect.addManyLi([
     { value: '19', textContent: 'meow' },
     { value: '20', textContent: 'orange' }
   ])
-
   multiselect.addEventListener('change', e => console.log('detail', e.detail))
 </script>
 

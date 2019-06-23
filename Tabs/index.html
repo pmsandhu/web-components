@@ -1,18 +1,21 @@
-<html>
+<html lang="en">
 <head>
+  <title>Tabs</title>
 
-<style>
-  x-tabs:not(:defined),
-  x-tab:not(:defined),
-  x-panel:not(:defined) {
-    display: block;
-  }
-</style>
+  <style>
+    x-tabs {
+      --selected-background-color: red;
+    }
+    x-tabs:not(:defined),
+    x-tab:not(:defined),
+    x-panel:not(:defined) {
+      display: block;
+    }
+  </style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.8/custom-elements.min.js"></script>
-<link rel="import" href="Tabs.html">
-<link rel="import" href="../Checkbox/Checkbox.html">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.8/custom-elements.min.js"></script>
+  <link rel="import" href="Tabs.html">
+  <link rel="import" href="../Checkbox/Checkbox.html">
 </head>
 
 <body>
@@ -36,9 +39,7 @@
 </x-tabs>
 
 <script>
-  document
-    .querySelector('x-tab')
-    .addEventListener('tabSelection', e => console.log(e.detail))
+  document.querySelector('x-tab').addEventListener('tabSelection', e => console.log(e.detail))
 </script>
 
 </body>

@@ -1,14 +1,13 @@
-<html>
+<html lang="en">
 <head>
+  <title>Radio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.8/custom-elements.min.js"></script>
+  <link rel="import" href="./RadioGroup.html">
+  <link rel="import" href="../Radio/Radio.html">
 
-<style>
-  x-radio { --checked-color: #0275D8; }
-</style>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.8/custom-elements.min.js"></script>
-
-<link rel="import" href="./RadioGroup.html">
-<link rel="import" href="../Radio/Radio.html">
+  <style>
+    x-radio { --checked-color: #0275D8; }
+  </style>
 
 </head>
 
@@ -23,8 +22,8 @@
 </x-radio-group>
 
 <script>
-  const r = document.querySelector('x-radio')
-  r.addEventListener('radio-changed', e => console.log(e.detail))
+  const radio = document.querySelector('x-radio')
+  radio.addEventListener('radio-changed', e => console.log(e.detail))
 </script>
 
 </body>

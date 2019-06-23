@@ -7,8 +7,8 @@ class MultiSelect extends HTMLElement {
     this.focusIndex = 0
     this.isOpen = false
 
-    this.tagContainer = this.shadowRoot.querySelector('.tag-container')
-    this.placeholder = this.shadowRoot.querySelector('.tag-container-placeholder')
+    this.container = this.shadowRoot.querySelector('.container')
+    this.placeholder = this.shadowRoot.querySelector('.placeholder')
     this.dropdown = this.shadowRoot.querySelector('.dropdown')
     this.li = this.querySelectorAll('li')
   }
@@ -21,7 +21,7 @@ class MultiSelect extends HTMLElement {
   }
 
   attachAttributes() {
-    this.tagContainer.setAttribute('tabindex', -1)
+    this.container.setAttribute('tabindex', -1)
     this.placeholder.innerText = this.getAttribute('placeholder') || 'Select'
     this.li.forEach((val, i) => val.setAttribute('tabindex', i))
     this.dropdown.hidden = true
@@ -61,13 +61,13 @@ class MultiSelect extends HTMLElement {
   close() {
     this.isOpen = false
     this.dropdown.hidden = true
-    this.tagContainer.focus()
+    this.container.focus()
   }
 
   selectOption(e) {
     if (!e.target.hasAttribute('selected')) {
       e.target.setAttribute('selected', '')
-      this.tagContainer.appendChild(this.createTag(e.target))
+      this.container.appendChild(this.createTag(e.target))
     }
     this.updateVisibleOptions()
     e.stopPropagation()

@@ -10,7 +10,7 @@ class Select extends HTMLElement {
     this.value = this.shadowRoot.querySelector('.placeholder')
     this.dropdown = this.shadowRoot.querySelector('.dropdown')
 
-    this.x_icon = this.shadowRoot.querySelector('.x_icon')
+    this.close_icon = this.shadowRoot.querySelector('.close_icon')
     this.arrow_icon = this.shadowRoot.querySelector('.arrow_icon  > path')
 
     this.li = this.querySelectorAll('li')
@@ -36,7 +36,7 @@ class Select extends HTMLElement {
     this.addEventListener('click', this.toggle)
     this.addEventListener('keydown', this.handleKeyPress)
     this.dropdown.addEventListener('click', this.selectValue.bind(this))
-    this.x_icon.addEventListener('click', this.deselectValue.bind(this))
+    this.close_icon.addEventListener('click', this.deselectValue.bind(this))
     document.addEventListener('click', e => this.isOpen ? this.close() : void(0))
 
   }
@@ -49,17 +49,13 @@ class Select extends HTMLElement {
   }
 
   updateValue({ textContent, className }) {
-    this.x_icon.style.display = className == 'placeholder' ? 'none' : 'block'
+    this.close_icon.style.display = className == 'placeholder' ? 'none' : 'block'
     this.value.textContent = textContent
     this.value.className = className
   }
 
   setFocus() {
     this.li[this.focusIndex].focus()
-  }
-
-  unsetFocus() {
-    this.li[this.focusIndex].blur()
   }
 
   open() {
@@ -158,7 +154,6 @@ class Select extends HTMLElement {
   }
 
   handleMouseEnter(i, e) {
-    // this.unsetFocus()
     e.target.focus()
     this.focusIndex = i
   }
@@ -191,7 +186,7 @@ class Select extends HTMLElement {
   disconnectedCallback() {
     this.removeEventListener('keydown', this.handleKeyPress)
     this.removeEventListener('click', this.toggle)
-    this.x_icon.removeEventListener('click', this.deselectValue)
+    this.close_icon.removeEventListener('click', this.deselectValue)
     this.dropdown.removeEventListener('click', this.selectValue)
     this.li.forEach(val => (val.remove(), val = null))
   }

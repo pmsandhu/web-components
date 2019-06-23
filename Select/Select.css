@@ -25,14 +25,14 @@
   margin: .25rem .5rem;
 }
 
-.x_icon {
+.close_icon {
   margin-right: 6px;
   opacity: .8;
   stroke: var(--neutralTertiary);
   stroke-width: 2px;
 }
 
-.x_icon:hover {
+.close_icon:hover {
   opacity: .7;
   stroke: #C41A16;
 }

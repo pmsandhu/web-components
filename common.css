@@ -2,6 +2,7 @@
   font-size: 12px;
   font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
   box-sizing: border-box;
+
   --white: #FFFFFF;
   --black: #444444;
   --neutralDark: #7A7A7A;
@@ -10,9 +11,10 @@
   --neutralLight: #E6E6E6;
   --neutralLighter: #F4F4F4;
   --neutralLighterAlt: #F3F2F1;
-  --neutralSecondary: #d3d3d3;
+  --neutralSecondary: #D3D3D3;
   --neutralSecondaryAlt: #BDBDBD;
   --neutralTertiary: #979797;
+
   --border-radius: 0;
   --box-shadow: rgba(0, 0, 0, .4) 0 0 3px 0;
 }

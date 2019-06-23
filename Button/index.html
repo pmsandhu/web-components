@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Button</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.8/custom-elements.min.js"></script>
+  <link rel="import" href="./Button.html">
+</head>
+
+<body>
+
+<my-button label="Click Me"></my-button>
+
+<script>
+  const button = document.querySelector('my-button')
+    .addEventListener('onClick', value => console.log(value))
+</script>
+</body>
+</html>

@@ -3,16 +3,16 @@
   <title>Multi Select</title>
 
   <style>
-    x-multiselect {
-      /*--white: #333333;*/
-      /*--black: #ffffff;*/
-      /*--neutralLight: #757575;*/
-      /*--neutralLighter: #616161;*/
-      /*--neutralDark: #fafafa;*/
-      /*--neutralDarker: #E6E6E6;*/
-      /*--border-radius: .2em;*/
-      /*--neutralSecondary: #757575;*/
-      /*--neutralSecondaryAlt: #616161;*/
+    x-multiselect#dark-theme {
+      --white: #333333;
+      --black: #ffffff;
+      --neutralLight: #757575;
+      --neutralLighter: #616161;
+      --neutralDark: #fafafa;
+      --neutralDarker: #E6E6E6;
+      --border-radius: .2em;
+      --neutralSecondary: #757575;
+      --neutralSecondaryAlt: #616161;
     }
   </style>
 
@@ -33,13 +33,23 @@
   <li value="7">Long Long Items jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</li>
 </x-multiselect>
 
+<x-multiselect id="dark-theme" placeholder="Select Value">
+  <li value="1">Dark Item 1</li>
+  <li value="2">Dark Item 2</li>
+  <li value="3">Dark Item 3</li>
+  <li value="4">Dark Item 4</li>
+  <li value="5">Dark Item 5</li>
+</x-multiselect>
+
+
 
 <script>
-  const multiselect = document.querySelector('x-multiselect')
+  const multiselect = document.querySelector('x-multiselect#light-theme')
   multiselect.addManyLi([
     { value: '19', textContent: 'meow' },
     { value: '20', textContent: 'orange' }
   ])
+
   multiselect.addEventListener('change', e => console.log('detail', e.detail))
 </script>
 

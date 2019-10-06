@@ -9,6 +9,7 @@ const KEYCODE = {
   DOWN: 40,
   LEFT: 37,
   RIGHT: 39,
+  IS_CHAR: e => (e.which > 47 && e.which < 91) || e.which == 32
 }
 
 function findElement(collection, attribute = 'selected') {
@@ -29,3 +30,16 @@ function findElementByContent(collection, attribute, match) {
 }
 
 const getTemplate = qs => document.currentScript.ownerDocument.querySelector(qs)
+
+const throttle = fn => {
+  let scheduled = false
+  return args => {
+    if (!scheduled) {
+      scheduled = true
+      requestAnimationFrame(() => {
+        scheduled = false
+        fn(args)
+      })
+    }
+  }
+}

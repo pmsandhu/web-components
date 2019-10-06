@@ -10,7 +10,7 @@ class Tabs extends HTMLElement {
   connectedCallback() {
     this.addEventListener('click', this.onClick)
     this.addEventListener('keydown', this.onKeyDown)
-
+    this.linkPanels()
     Promise.all([
       customElements.whenDefined('x-tab'),
       customElements.whenDefined('x-panel'),

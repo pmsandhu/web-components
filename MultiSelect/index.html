@@ -3,6 +3,10 @@
   <title>Multi Select</title>
 
   <style>
+    x-multiselect {
+      --border-radius: 2px;
+    }
+
     x-multiselect#dark-theme {
       --white: #333333;
       --black: #ffffff;
@@ -15,42 +19,41 @@
       --neutralSecondaryAlt: #616161;
     }
   </style>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.8/custom-elements.min.js"></script>
+  <link rel="stylesheet" href="../scss/fabric-icons.css">
   <link rel="import" href="./MultiSelect.html">
-
 </head>
 
 <body>
 
 <x-multiselect placeholder="Select Value">
   <li value="1">Item 1</li>
-  <li value="2">Item 2</li>
+  <li value="2">Apple</li>
   <li value="3">Item 3</li>
-  <li value="4">Item 4</li>
-  <li value="5">Item 5</li>
-  <li value="6">Long Item</li>
-  <li value="7">Long Long Items jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</li>
+  <li value="4">Ball</li>
+  <li value="5">Banana</li>
+  <li value="6">Apart</li>
+  <li value="7">Item 7</li>
+  <li value="8">Long Item</li>
+  <li value="9">Long Long Items jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</li>
 </x-multiselect>
 
-<x-multiselect id="dark-theme" placeholder="Select Value">
-  <li value="1">Dark Item 1</li>
-  <li value="2">Dark Item 2</li>
-  <li value="3">Dark Item 3</li>
-  <li value="4">Dark Item 4</li>
-  <li value="5">Dark Item 5</li>
-</x-multiselect>
-
-
+<!--<x-multiselect id="dark-theme" placeholder="Select Value">-->
+<!--  <li value="1">Dark Item 1</li>-->
+<!--  <li value="2">Dark Item 2</li>-->
+<!--  <li value="3">Dark Item 3</li>-->
+<!--  <li value="4">Dark Item 4</li>-->
+<!--  <li value="5">Dark Item 5</li>-->
+<!--</x-multiselect>-->
 
 <script>
   const multiselect = document.querySelector('x-multiselect')
-  multiselect.addManyLi([
+  multiselect.addElements([
     { value: '19', textContent: 'meow' },
-    { value: '20', textContent: 'orange' }
+    { value: '20', textContent: 'orange' },
+    { value: '20', textContent: 'mmm', selected: false },
   ])
 
-  multiselect.addEventListener('change', e => console.log('detail', e.detail))
+  // multiselect.addEventListener('change', e => console.log('detail', e.detail))
 </script>
 
 </body>

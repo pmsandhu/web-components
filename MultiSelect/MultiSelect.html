@@ -1,21 +1,32 @@
+<script src="../utils.js"></script>
+
+<template id="autofillTemplate">
+  <link rel="stylesheet" href="../Autofill/Autofill.css">
+  <input class="input" type="text" spellcheck="false" autocomplete="off">
+</template>
+<script src="../Autofill/Autofill.js"></script>
+
+
 <template id="multiselectTemplate">
   <link rel="stylesheet" href="./MultiSelect.css">
 
   <div class="multiselect">
 
     <div class="container">
-      <div class="placeholder"></div>
+      <x-autofill></x-autofill>
     </div>
 
     <div class="dropdown">
       <ul class="options">
         <slot></slot>
       </ul>
+      <span class="no-results" style="display: none;">No results found.</span>
     </div>
 
   </div>
 
 </template>
 
-<script src="../utils.js"></script>
+
+
 <script src="./MultiSelect.js"></script>

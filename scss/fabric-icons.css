@@ -1,0 +1,7247 @@
+@charset "UTF-8";
+/*
+  Your use of the content in the files referenced here is subject to the terms of the license at https://aka.ms/fabric-assets-license
+*/
+@font-face {
+  font-family: "FabricMDL2Icons";
+  src: url("./fabric-icons.woff") format("woff");
+}
+i {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: "FabricMDL2Icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+}
+
+[name=PageLink]:before {
+  content: "";
+}
+
+[name=CommentSolid]:before {
+  content: "";
+}
+
+[name=ChangeEntitlements]:before {
+  content: "";
+}
+
+[name=Installation]:before {
+  content: "";
+}
+
+[name=WebAppBuilderModule]:before {
+  content: "";
+}
+
+[name=WebAppBuilderFragment]:before {
+  content: "";
+}
+
+[name=WebAppBuilderSlot]:before {
+  content: "";
+}
+
+[name=BullseyeTargetEdit]:before {
+  content: "";
+}
+
+[name=WebAppBuilderFragmentCreate]:before {
+  content: "";
+}
+
+[name=PageData]:before {
+  content: "";
+}
+
+[name=PageHeaderEdit]:before {
+  content: "";
+}
+
+[name=ProductList]:before {
+  content: "";
+}
+
+[name=UnpublishContent]:before {
+  content: "";
+}
+
+[name=DependencyAdd]:before {
+  content: "";
+}
+
+[name=DependencyRemove]:before {
+  content: "";
+}
+
+[name=EntitlementPolicy]:before {
+  content: "";
+}
+
+[name=EntitlementRedemption]:before {
+  content: "";
+}
+
+[name=SchoolDataSyncLogo]:before {
+  content: "";
+}
+
+[name=PinSolid12]:before {
+  content: "";
+}
+
+[name=PinSolidOff12]:before {
+  content: "";
+}
+
+[name=AddLink]:before {
+  content: "";
+}
+
+[name=SharepointAppIcon16]:before {
+  content: "";
+}
+
+[name=DataflowsLink]:before {
+  content: "";
+}
+
+[name=TimePicker]:before {
+  content: "";
+}
+
+[name=UserWarning]:before {
+  content: "";
+}
+
+[name=ComplianceAudit]:before {
+  content: "";
+}
+
+[name=StickyNotesOutlineAppIcon]:before {
+  content: "";
+}
+
+[name=StickyNotesSolidAppIcon]:before {
+  content: "";
+}
+
+[name=Webcam2Off]:before {
+  content: "";
+}
+
+[name=eDiscovery]:before {
+  content: "";
+}
+
+[name=CalendarYear]:before {
+  content: "";
+}
+
+[name=IgnoreConversation]:before {
+  content: "";
+}
+
+[name=GlobalNavButton]:before {
+  content: "";
+}
+
+[name=InternetSharing]:before {
+  content: "";
+}
+
+[name=Brightness]:before {
+  content: "";
+}
+
+[name=MapPin]:before {
+  content: "";
+}
+
+[name=Airplane]:before {
+  content: "";
+}
+
+[name=Tablet]:before {
+  content: "";
+}
+
+[name=QuickNote]:before {
+  content: "";
+}
+
+[name=ChevronDown]:before {
+  content: "";
+}
+
+[name=ChevronUp]:before {
+  content: "";
+}
+
+[name=Edit]:before {
+  content: "";
+}
+
+[name=Add]:before {
+  content: "";
+}
+
+[name=Cancel]:before {
+  content: "";
+}
+
+[name=More]:before {
+  content: "";
+}
+
+[name=Settings]:before {
+  content: "";
+}
+
+[name=Video]:before {
+  content: "";
+}
+
+[name=Mail]:before {
+  content: "";
+}
+
+[name=People]:before {
+  content: "";
+}
+
+[name=Phone]:before {
+  content: "";
+}
+
+[name=Pin]:before {
+  content: "";
+}
+
+[name=Shop]:before {
+  content: "";
+}
+
+[name=Stop]:before {
+  content: "";
+}
+
+[name=Link]:before {
+  content: "";
+}
+
+[name=Filter]:before {
+  content: "";
+}
+
+[name=AllApps]:before {
+  content: "";
+}
+
+[name=Zoom]:before {
+  content: "";
+}
+
+[name=ZoomOut]:before {
+  content: "";
+}
+
+[name=Microphone]:before {
+  content: "";
+}
+
+[name=Search]:before {
+  content: "";
+}
+
+[name=Camera]:before {
+  content: "";
+}
+
+[name=Attach]:before {
+  content: "";
+}
+
+[name=Send]:before {
+  content: "";
+}
+
+[name=FavoriteList]:before {
+  content: "";
+}
+
+[name=PageSolid]:before {
+  content: "";
+}
+
+[name=Forward]:before {
+  content: "";
+}
+
+[name=Back]:before {
+  content: "";
+}
+
+[name=Refresh]:before {
+  content: "";
+}
+
+[name=Share]:before {
+  content: "";
+}
+
+[name=Lock]:before {
+  content: "";
+}
+
+[name=BlockedSite]:before {
+  content: "";
+}
+
+[name=ReportHacked]:before {
+  content: "";
+}
+
+[name=EMI]:before {
+  content: "";
+}
+
+[name=MiniLink]:before {
+  content: "";
+}
+
+[name=Blocked]:before {
+  content: "";
+}
+
+[name=FavoriteStar]:before {
+  content: "";
+}
+
+[name=FavoriteStarFill]:before {
+  content: "";
+}
+
+[name=ReadingMode]:before {
+  content: "";
+}
+
+[name=Favicon]:before {
+  content: "";
+}
+
+[name=Remove]:before {
+  content: "";
+}
+
+[name=Checkbox]:before {
+  content: "";
+}
+
+[name=CheckboxComposite]:before {
+  content: "";
+}
+
+[name=CheckboxFill]:before {
+  content: "";
+}
+
+[name=CheckboxIndeterminate]:before {
+  content: "";
+}
+
+[name=CheckboxCompositeReversed]:before {
+  content: "";
+}
+
+[name=CheckMark]:before {
+  content: "";
+}
+
+[name=BackToWindow]:before {
+  content: "";
+}
+
+[name=FullScreen]:before {
+  content: "";
+}
+
+[name=Print]:before {
+  content: "";
+}
+
+[name=Up]:before {
+  content: "";
+}
+
+[name=Down]:before {
+  content: "";
+}
+
+[name=OEM]:before {
+  content: "";
+}
+
+[name=Delete]:before {
+  content: "";
+}
+
+[name=Save]:before {
+  content: "";
+}
+
+[name=ReturnKey]:before {
+  content: "";
+}
+
+[name=Cloud]:before {
+  content: "";
+}
+
+[name=Flashlight]:before {
+  content: "";
+}
+
+[name=CommandPrompt]:before {
+  content: "";
+}
+
+[name=Sad]:before {
+  content: "";
+}
+
+[name=RealEstate]:before {
+  content: "";
+}
+
+[name=SIPMove]:before {
+  content: "";
+}
+
+[name=EraseTool]:before {
+  content: "";
+}
+
+[name=GripperTool]:before {
+  content: "";
+}
+
+[name=Dialpad]:before {
+  content: "";
+}
+
+[name=PageLeft]:before {
+  content: "";
+}
+
+[name=PageRight]:before {
+  content: "";
+}
+
+[name=MultiSelect]:before {
+  content: "";
+}
+
+[name=KeyboardClassic]:before {
+  content: "";
+}
+
+[name=Play]:before {
+  content: "";
+}
+
+[name=Pause]:before {
+  content: "";
+}
+
+[name=ChevronLeft]:before {
+  content: "";
+}
+
+[name=ChevronRight]:before {
+  content: "";
+}
+
+[name=InkingTool]:before {
+  content: "";
+}
+
+[name=Emoji2]:before {
+  content: "";
+}
+
+[name=GripperBarHorizontal]:before {
+  content: "";
+}
+
+[name=System]:before {
+  content: "";
+}
+
+[name=Personalize]:before {
+  content: "";
+}
+
+[name=SearchAndApps]:before {
+  content: "";
+}
+
+[name=Globe]:before {
+  content: "";
+}
+
+[name=EaseOfAccess]:before {
+  content: "";
+}
+
+[name=ContactInfo]:before {
+  content: "";
+}
+
+[name=Unpin]:before {
+  content: "";
+}
+
+[name=Contact]:before {
+  content: "";
+}
+
+[name=Memo]:before {
+  content: "";
+}
+
+[name=IncomingCall]:before {
+  content: "";
+}
+
+[name=Paste]:before {
+  content: "";
+}
+
+[name=WindowsLogo]:before {
+  content: "";
+}
+
+[name=Error]:before {
+  content: "";
+}
+
+[name=GripperBarVertical]:before {
+  content: "";
+}
+
+[name=Unlock]:before {
+  content: "";
+}
+
+[name=Slideshow]:before {
+  content: "";
+}
+
+[name=Calendar]:before {
+  content: "";
+}
+
+[name=Megaphone]:before {
+  content: "";
+}
+
+[name=Trim]:before {
+  content: "";
+}
+
+[name=AutoEnhanceOn]:before {
+  content: "";
+}
+
+[name=AutoEnhanceOff]:before {
+  content: "";
+}
+
+[name=Color]:before {
+  content: "";
+}
+
+[name=SaveAs]:before {
+  content: "";
+}
+
+[name=Light]:before {
+  content: "";
+}
+
+[name=Filters]:before {
+  content: "";
+}
+
+[name=AspectRatio]:before {
+  content: "";
+}
+
+[name=Contrast]:before {
+  content: "";
+}
+
+[name=Redo]:before {
+  content: "";
+}
+
+[name=Undo]:before {
+  content: "";
+}
+
+[name=Crop]:before {
+  content: "";
+}
+
+[name=PhotoCollection]:before {
+  content: "";
+}
+
+[name=Album]:before {
+  content: "";
+}
+
+[name=Rotate]:before {
+  content: "";
+}
+
+[name=PanoIndicator]:before {
+  content: "";
+}
+
+[name=Translate]:before {
+  content: "";
+}
+
+[name=RedEye]:before {
+  content: "";
+}
+
+[name=ViewOriginal]:before {
+  content: "";
+}
+
+[name=ThumbnailView]:before {
+  content: "";
+}
+
+[name=Package]:before {
+  content: "";
+}
+
+[name=Telemarketer]:before {
+  content: "";
+}
+
+[name=Warning]:before {
+  content: "";
+}
+
+[name=Financial]:before {
+  content: "";
+}
+
+[name=Education]:before {
+  content: "";
+}
+
+[name=ShoppingCart]:before {
+  content: "";
+}
+
+[name=Train]:before {
+  content: "";
+}
+
+[name=Flag]:before {
+  content: "";
+}
+
+[name=Move]:before {
+  content: "";
+}
+
+[name=Page]:before {
+  content: "";
+}
+
+[name=TouchPointer]:before {
+  content: "";
+}
+
+[name=Merge]:before {
+  content: "";
+}
+
+[name=TurnRight]:before {
+  content: "";
+}
+
+[name=Ferry]:before {
+  content: "";
+}
+
+[name=Highlight]:before {
+  content: "";
+}
+
+[name=PowerButton]:before {
+  content: "";
+}
+
+[name=Tab]:before {
+  content: "";
+}
+
+[name=Admin]:before {
+  content: "";
+}
+
+[name=TVMonitor]:before {
+  content: "";
+}
+
+[name=Speakers]:before {
+  content: "";
+}
+
+[name=Game]:before {
+  content: "";
+}
+
+[name=HorizontalTabKey]:before {
+  content: "";
+}
+
+[name=UnstackSelected]:before {
+  content: "";
+}
+
+[name=StackIndicator]:before {
+  content: "";
+}
+
+[name=Nav2DMapView]:before {
+  content: "";
+}
+
+[name=StreetsideSplitMinimize]:before {
+  content: "";
+}
+
+[name=Car]:before {
+  content: "";
+}
+
+[name=Bus]:before {
+  content: "";
+}
+
+[name=EatDrink]:before {
+  content: "";
+}
+
+[name=SeeDo]:before {
+  content: "";
+}
+
+[name=LocationCircle]:before {
+  content: "";
+}
+
+[name=Home]:before {
+  content: "";
+}
+
+[name=SwitcherStartEnd]:before {
+  content: "";
+}
+
+[name=ParkingLocation]:before {
+  content: "";
+}
+
+[name=IncidentTriangle]:before {
+  content: "";
+}
+
+[name=Touch]:before {
+  content: "";
+}
+
+[name=MapDirections]:before {
+  content: "";
+}
+
+[name=CaretHollow]:before {
+  content: "";
+}
+
+[name=CaretSolid]:before {
+  content: "";
+}
+
+[name=History]:before {
+  content: "";
+}
+
+[name=Location]:before {
+  content: "";
+}
+
+[name=MapLayers]:before {
+  content: "";
+}
+
+[name=SearchNearby]:before {
+  content: "";
+}
+
+[name=Work]:before {
+  content: "";
+}
+
+[name=Recent]:before {
+  content: "";
+}
+
+[name=Hotel]:before {
+  content: "";
+}
+
+[name=Bank]:before {
+  content: "";
+}
+
+[name=LocationDot]:before {
+  content: "";
+}
+
+[name=Dictionary]:before {
+  content: "";
+}
+
+[name=ChromeBack]:before {
+  content: "";
+}
+
+[name=FolderOpen]:before {
+  content: "";
+}
+
+[name=Pinned]:before {
+  content: "";
+}
+
+[name=PinnedFill]:before {
+  content: "";
+}
+
+[name=RevToggleKey]:before {
+  content: "";
+}
+
+[name=USB]:before {
+  content: "";
+}
+
+[name=View]:before {
+  content: "";
+}
+
+[name=Previous]:before {
+  content: "";
+}
+
+[name=Next]:before {
+  content: "";
+}
+
+[name=Clear]:before {
+  content: "";
+}
+
+[name=Sync]:before {
+  content: "";
+}
+
+[name=Download]:before {
+  content: "";
+}
+
+[name=Help]:before {
+  content: "";
+}
+
+[name=Upload]:before {
+  content: "";
+}
+
+[name=Emoji]:before {
+  content: "";
+}
+
+[name=MailForward]:before {
+  content: "";
+}
+
+[name=ClosePane]:before {
+  content: "";
+}
+
+[name=OpenPane]:before {
+  content: "";
+}
+
+[name=PreviewLink]:before {
+  content: "";
+}
+
+[name=ZoomIn]:before {
+  content: "";
+}
+
+[name=Bookmarks]:before {
+  content: "";
+}
+
+[name=Document]:before {
+  content: "";
+}
+
+[name=ProtectedDocument]:before {
+  content: "";
+}
+
+[name=OpenInNewWindow]:before {
+  content: "";
+}
+
+[name=MailFill]:before {
+  content: "";
+}
+
+[name=ViewAll]:before {
+  content: "";
+}
+
+[name=Switch]:before {
+  content: "";
+}
+
+[name=Rename]:before {
+  content: "";
+}
+
+[name=Go]:before {
+  content: "";
+}
+
+[name=Remote]:before {
+  content: "";
+}
+
+[name=SelectAll]:before {
+  content: "";
+}
+
+[name=Orientation]:before {
+  content: "";
+}
+
+[name=Import]:before {
+  content: "";
+}
+
+[name=Folder]:before {
+  content: "";
+}
+
+[name=Picture]:before {
+  content: "";
+}
+
+[name=ChromeClose]:before {
+  content: "";
+}
+
+[name=ShowResults]:before {
+  content: "";
+}
+
+[name=Message]:before {
+  content: "";
+}
+
+[name=CalendarDay]:before {
+  content: "";
+}
+
+[name=CalendarWeek]:before {
+  content: "";
+}
+
+[name=MailReplyAll]:before {
+  content: "";
+}
+
+[name=Read]:before {
+  content: "";
+}
+
+[name=Cut]:before {
+  content: "";
+}
+
+[name=PaymentCard]:before {
+  content: "";
+}
+
+[name=Copy]:before {
+  content: "";
+}
+
+[name=Important]:before {
+  content: "";
+}
+
+[name=MailReply]:before {
+  content: "";
+}
+
+[name=Sort]:before {
+  content: "";
+}
+
+[name=GotoToday]:before {
+  content: "";
+}
+
+[name=Font]:before {
+  content: "";
+}
+
+[name=FontColor]:before {
+  content: "";
+}
+
+[name=FolderFill]:before {
+  content: "";
+}
+
+[name=Permissions]:before {
+  content: "";
+}
+
+[name=DisableUpdates]:before {
+  content: "";
+}
+
+[name=Unfavorite]:before {
+  content: "";
+}
+
+[name=Italic]:before {
+  content: "";
+}
+
+[name=Underline]:before {
+  content: "";
+}
+
+[name=Bold]:before {
+  content: "";
+}
+
+[name=MoveToFolder]:before {
+  content: "";
+}
+
+[name=Dislike]:before {
+  content: "";
+}
+
+[name=Like]:before {
+  content: "";
+}
+
+[name=AlignRight]:before {
+  content: "";
+}
+
+[name=AlignCenter]:before {
+  content: "";
+}
+
+[name=AlignLeft]:before {
+  content: "";
+}
+
+[name=OpenFile]:before {
+  content: "";
+}
+
+[name=ClearSelection]:before {
+  content: "";
+}
+
+[name=FontDecrease]:before {
+  content: "";
+}
+
+[name=FontIncrease]:before {
+  content: "";
+}
+
+[name=FontSize]:before {
+  content: "";
+}
+
+[name=CellPhone]:before {
+  content: "";
+}
+
+[name=Tag]:before {
+  content: "";
+}
+
+[name=RepeatOne]:before {
+  content: "";
+}
+
+[name=RepeatAll]:before {
+  content: "";
+}
+
+[name=Calculator]:before {
+  content: "";
+}
+
+[name=Library]:before {
+  content: "";
+}
+
+[name=PostUpdate]:before {
+  content: "";
+}
+
+[name=NewFolder]:before {
+  content: "";
+}
+
+[name=CalendarReply]:before {
+  content: "";
+}
+
+[name=UnsyncFolder]:before {
+  content: "";
+}
+
+[name=SyncFolder]:before {
+  content: "";
+}
+
+[name=BlockContact]:before {
+  content: "";
+}
+
+[name=AddFriend]:before {
+  content: "";
+}
+
+[name=Accept]:before {
+  content: "";
+}
+
+[name=BulletedList]:before {
+  content: "";
+}
+
+[name=Preview]:before {
+  content: "";
+}
+
+[name=News]:before {
+  content: "";
+}
+
+[name=Chat]:before {
+  content: "";
+}
+
+[name=Group]:before {
+  content: "";
+}
+
+[name=World]:before {
+  content: "";
+}
+
+[name=Comment]:before {
+  content: "";
+}
+
+[name=DockLeft]:before {
+  content: "";
+}
+
+[name=DockRight]:before {
+  content: "";
+}
+
+[name=Repair]:before {
+  content: "";
+}
+
+[name=Accounts]:before {
+  content: "";
+}
+
+[name=Street]:before {
+  content: "";
+}
+
+[name=RadioBullet]:before {
+  content: "";
+}
+
+[name=Stopwatch]:before {
+  content: "";
+}
+
+[name=Clock]:before {
+  content: "";
+}
+
+[name=WorldClock]:before {
+  content: "";
+}
+
+[name=AlarmClock]:before {
+  content: "";
+}
+
+[name=Photo]:before {
+  content: "";
+}
+
+[name=ActionCenter]:before {
+  content: "";
+}
+
+[name=Hospital]:before {
+  content: "";
+}
+
+[name=Timer]:before {
+  content: "";
+}
+
+[name=FullCircleMask]:before {
+  content: "";
+}
+
+[name=LocationFill]:before {
+  content: "";
+}
+
+[name=ChromeMinimize]:before {
+  content: "";
+}
+
+[name=ChromeRestore]:before {
+  content: "";
+}
+
+[name=Annotation]:before {
+  content: "";
+}
+
+[name=Fingerprint]:before {
+  content: "";
+}
+
+[name=Handwriting]:before {
+  content: "";
+}
+
+[name=ChromeFullScreen]:before {
+  content: "";
+}
+
+[name=Completed]:before {
+  content: "";
+}
+
+[name=Label]:before {
+  content: "";
+}
+
+[name=FlickDown]:before {
+  content: "";
+}
+
+[name=FlickUp]:before {
+  content: "";
+}
+
+[name=FlickLeft]:before {
+  content: "";
+}
+
+[name=FlickRight]:before {
+  content: "";
+}
+
+[name=MiniExpand]:before {
+  content: "";
+}
+
+[name=MiniContract]:before {
+  content: "";
+}
+
+[name=Streaming]:before {
+  content: "";
+}
+
+[name=MusicInCollection]:before {
+  content: "";
+}
+
+[name=OneDriveLogo]:before {
+  content: "";
+}
+
+[name=CompassNW]:before {
+  content: "";
+}
+
+[name=Code]:before {
+  content: "";
+}
+
+[name=LightningBolt]:before {
+  content: "";
+}
+
+[name=Info]:before {
+  content: "";
+}
+
+[name=CalculatorMultiply]:before {
+  content: "";
+}
+
+[name=CalculatorAddition]:before {
+  content: "";
+}
+
+[name=CalculatorSubtract]:before {
+  content: "";
+}
+
+[name=CalculatorPercentage]:before {
+  content: "";
+}
+
+[name=CalculatorEqualTo]:before {
+  content: "";
+}
+
+[name=PrintfaxPrinterFile]:before {
+  content: "";
+}
+
+[name=StorageOptical]:before {
+  content: "";
+}
+
+[name=Communications]:before {
+  content: "";
+}
+
+[name=Headset]:before {
+  content: "";
+}
+
+[name=Health]:before {
+  content: "";
+}
+
+[name=Webcam2]:before {
+  content: "";
+}
+
+[name=FrontCamera]:before {
+  content: "";
+}
+
+[name=ChevronUpSmall]:before {
+  content: "";
+}
+
+[name=ChevronDownSmall]:before {
+  content: "";
+}
+
+[name=ChevronLeftSmall]:before {
+  content: "";
+}
+
+[name=ChevronRightSmall]:before {
+  content: "";
+}
+
+[name=ChevronUpMed]:before {
+  content: "";
+}
+
+[name=ChevronDownMed]:before {
+  content: "";
+}
+
+[name=ChevronLeftMed]:before {
+  content: "";
+}
+
+[name=ChevronRightMed]:before {
+  content: "";
+}
+
+[name=Devices2]:before {
+  content: "";
+}
+
+[name=PC1]:before {
+  content: "";
+}
+
+[name=PresenceChickletVideo]:before {
+  content: "";
+}
+
+[name=Reply]:before {
+  content: "";
+}
+
+[name=HalfAlpha]:before {
+  content: "";
+}
+
+[name=ConstructionCone]:before {
+  content: "";
+}
+
+[name=DoubleChevronLeftMed]:before {
+  content: "";
+}
+
+[name=Volume0]:before {
+  content: "";
+}
+
+[name=Volume1]:before {
+  content: "";
+}
+
+[name=Volume2]:before {
+  content: "";
+}
+
+[name=Volume3]:before {
+  content: "";
+}
+
+[name=Chart]:before {
+  content: "";
+}
+
+[name=Robot]:before {
+  content: "";
+}
+
+[name=Manufacturing]:before {
+  content: "";
+}
+
+[name=LockSolid]:before {
+  content: "";
+}
+
+[name=FitPage]:before {
+  content: "";
+}
+
+[name=FitWidth]:before {
+  content: "";
+}
+
+[name=BidiLtr]:before {
+  content: "";
+}
+
+[name=BidiRtl]:before {
+  content: "";
+}
+
+[name=RightDoubleQuote]:before {
+  content: "";
+}
+
+[name=Sunny]:before {
+  content: "";
+}
+
+[name=CloudWeather]:before {
+  content: "";
+}
+
+[name=Cloudy]:before {
+  content: "";
+}
+
+[name=PartlyCloudyDay]:before {
+  content: "";
+}
+
+[name=PartlyCloudyNight]:before {
+  content: "";
+}
+
+[name=ClearNight]:before {
+  content: "";
+}
+
+[name=RainShowersDay]:before {
+  content: "";
+}
+
+[name=Rain]:before {
+  content: "";
+}
+
+[name=Thunderstorms]:before {
+  content: "";
+}
+
+[name=RainSnow]:before {
+  content: "";
+}
+
+[name=Snow]:before {
+  content: "";
+}
+
+[name=BlowingSnow]:before {
+  content: "";
+}
+
+[name=Frigid]:before {
+  content: "";
+}
+
+[name=Fog]:before {
+  content: "";
+}
+
+[name=Squalls]:before {
+  content: "";
+}
+
+[name=Duststorm]:before {
+  content: "";
+}
+
+[name=Unknown]:before {
+  content: "";
+}
+
+[name=Precipitation]:before {
+  content: "";
+}
+
+[name=SortLines]:before {
+  content: "";
+}
+
+[name=Ribbon]:before {
+  content: "";
+}
+
+[name=AreaChart]:before {
+  content: "";
+}
+
+[name=Assign]:before {
+  content: "";
+}
+
+[name=FlowChart]:before {
+  content: "";
+}
+
+[name=CheckList]:before {
+  content: "";
+}
+
+[name=Diagnostic]:before {
+  content: "";
+}
+
+[name=Generate]:before {
+  content: "";
+}
+
+[name=LineChart]:before {
+  content: "";
+}
+
+[name=Equalizer]:before {
+  content: "";
+}
+
+[name=BarChartHorizontal]:before {
+  content: "";
+}
+
+[name=BarChartVertical]:before {
+  content: "";
+}
+
+[name=Freezing]:before {
+  content: "";
+}
+
+[name=FunnelChart]:before {
+  content: "";
+}
+
+[name=Processing]:before {
+  content: "";
+}
+
+[name=Quantity]:before {
+  content: "";
+}
+
+[name=ReportDocument]:before {
+  content: "";
+}
+
+[name=StackColumnChart]:before {
+  content: "";
+}
+
+[name=SnowShowerDay]:before {
+  content: "";
+}
+
+[name=HailDay]:before {
+  content: "";
+}
+
+[name=WorkFlow]:before {
+  content: "";
+}
+
+[name=HourGlass]:before {
+  content: "";
+}
+
+[name=StoreLogoMed20]:before {
+  content: "";
+}
+
+[name=TimeSheet]:before {
+  content: "";
+}
+
+[name=TriangleSolid]:before {
+  content: "";
+}
+
+[name=UpgradeAnalysis]:before {
+  content: "";
+}
+
+[name=VideoSolid]:before {
+  content: "";
+}
+
+[name=RainShowersNight]:before {
+  content: "";
+}
+
+[name=SnowShowerNight]:before {
+  content: "";
+}
+
+[name=Teamwork]:before {
+  content: "";
+}
+
+[name=HailNight]:before {
+  content: "";
+}
+
+[name=PeopleAdd]:before {
+  content: "";
+}
+
+[name=Glasses]:before {
+  content: "";
+}
+
+[name=DateTime2]:before {
+  content: "";
+}
+
+[name=Shield]:before {
+  content: "";
+}
+
+[name=Header1]:before {
+  content: "";
+}
+
+[name=PageAdd]:before {
+  content: "";
+}
+
+[name=NumberedList]:before {
+  content: "";
+}
+
+[name=PowerBILogo]:before {
+  content: "";
+}
+
+[name=Info2]:before {
+  content: "";
+}
+
+[name=MusicInCollectionFill]:before {
+  content: "";
+}
+
+[name=List]:before {
+  content: "";
+}
+
+[name=Asterisk]:before {
+  content: "";
+}
+
+[name=ErrorBadge]:before {
+  content: "";
+}
+
+[name=CircleRing]:before {
+  content: "";
+}
+
+[name=CircleFill]:before {
+  content: "";
+}
+
+[name=Record2]:before {
+  content: "";
+}
+
+[name=AllAppsMirrored]:before {
+  content: "";
+}
+
+[name=BookmarksMirrored]:before {
+  content: "";
+}
+
+[name=BulletedListMirrored]:before {
+  content: "";
+}
+
+[name=CaretHollowMirrored]:before {
+  content: "";
+}
+
+[name=CaretSolidMirrored]:before {
+  content: "";
+}
+
+[name=ChromeBackMirrored]:before {
+  content: "";
+}
+
+[name=ClearSelectionMirrored]:before {
+  content: "";
+}
+
+[name=ClosePaneMirrored]:before {
+  content: "";
+}
+
+[name=DockLeftMirrored]:before {
+  content: "";
+}
+
+[name=DoubleChevronLeftMedMirrored]:before {
+  content: "";
+}
+
+[name=GoMirrored]:before {
+  content: "";
+}
+
+[name=HelpMirrored]:before {
+  content: "";
+}
+
+[name=ImportMirrored]:before {
+  content: "";
+}
+
+[name=ImportAllMirrored]:before {
+  content: "";
+}
+
+[name=ListMirrored]:before {
+  content: "";
+}
+
+[name=MailForwardMirrored]:before {
+  content: "";
+}
+
+[name=MailReplyMirrored]:before {
+  content: "";
+}
+
+[name=MailReplyAllMirrored]:before {
+  content: "";
+}
+
+[name=MiniContractMirrored]:before {
+  content: "";
+}
+
+[name=MiniExpandMirrored]:before {
+  content: "";
+}
+
+[name=OpenPaneMirrored]:before {
+  content: "";
+}
+
+[name=ParkingLocationMirrored]:before {
+  content: "";
+}
+
+[name=SendMirrored]:before {
+  content: "";
+}
+
+[name=ShowResultsMirrored]:before {
+  content: "";
+}
+
+[name=ThumbnailViewMirrored]:before {
+  content: "";
+}
+
+[name=Media]:before {
+  content: "";
+}
+
+[name=Devices3]:before {
+  content: "";
+}
+
+[name=Focus]:before {
+  content: "";
+}
+
+[name=VideoLightOff]:before {
+  content: "";
+}
+
+[name=Lightbulb]:before {
+  content: "";
+}
+
+[name=StatusTriangle]:before {
+  content: "";
+}
+
+[name=VolumeDisabled]:before {
+  content: "";
+}
+
+[name=Puzzle]:before {
+  content: "";
+}
+
+[name=EmojiNeutral]:before {
+  content: "";
+}
+
+[name=EmojiDisappointed]:before {
+  content: "";
+}
+
+[name=HomeSolid]:before {
+  content: "";
+}
+
+[name=Ringer]:before {
+  content: "";
+}
+
+[name=PDF]:before {
+  content: "";
+}
+
+[name=HeartBroken]:before {
+  content: "";
+}
+
+[name=StoreLogo16]:before {
+  content: "";
+}
+
+[name=MultiSelectMirrored]:before {
+  content: "";
+}
+
+[name=Broom]:before {
+  content: "";
+}
+
+[name=AddToShoppingList]:before {
+  content: "";
+}
+
+[name=Cocktails]:before {
+  content: "";
+}
+
+[name=Wines]:before {
+  content: "";
+}
+
+[name=Articles]:before {
+  content: "";
+}
+
+[name=Cycling]:before {
+  content: "";
+}
+
+[name=DietPlanNotebook]:before {
+  content: "";
+}
+
+[name=Pill]:before {
+  content: "";
+}
+
+[name=ExerciseTracker]:before {
+  content: "";
+}
+
+[name=HandsFree]:before {
+  content: "";
+}
+
+[name=Medical]:before {
+  content: "";
+}
+
+[name=Running]:before {
+  content: "";
+}
+
+[name=Weights]:before {
+  content: "";
+}
+
+[name=Trackers]:before {
+  content: "";
+}
+
+[name=AddNotes]:before {
+  content: "";
+}
+
+[name=AllCurrency]:before {
+  content: "";
+}
+
+[name=BarChart4]:before {
+  content: "";
+}
+
+[name=CirclePlus]:before {
+  content: "";
+}
+
+[name=Coffee]:before {
+  content: "";
+}
+
+[name=Cotton]:before {
+  content: "";
+}
+
+[name=Market]:before {
+  content: "";
+}
+
+[name=Money]:before {
+  content: "";
+}
+
+[name=PieDouble]:before {
+  content: "";
+}
+
+[name=PieSingle]:before {
+  content: "";
+}
+
+[name=RemoveFilter]:before {
+  content: "";
+}
+
+[name=Savings]:before {
+  content: "";
+}
+
+[name=Sell]:before {
+  content: "";
+}
+
+[name=StockDown]:before {
+  content: "";
+}
+
+[name=StockUp]:before {
+  content: "";
+}
+
+[name=Lamp]:before {
+  content: "";
+}
+
+[name=Source]:before {
+  content: "";
+}
+
+[name=MSNVideos]:before {
+  content: "";
+}
+
+[name=Cricket]:before {
+  content: "";
+}
+
+[name=Golf]:before {
+  content: "";
+}
+
+[name=Baseball]:before {
+  content: "";
+}
+
+[name=Soccer]:before {
+  content: "";
+}
+
+[name=MoreSports]:before {
+  content: "";
+}
+
+[name=AutoRacing]:before {
+  content: "";
+}
+
+[name=CollegeHoops]:before {
+  content: "";
+}
+
+[name=CollegeFootball]:before {
+  content: "";
+}
+
+[name=ProFootball]:before {
+  content: "";
+}
+
+[name=ProHockey]:before {
+  content: "";
+}
+
+[name=Rugby]:before {
+  content: "";
+}
+
+[name=SubstitutionsIn]:before {
+  content: "";
+}
+
+[name=Tennis]:before {
+  content: "";
+}
+
+[name=Arrivals]:before {
+  content: "";
+}
+
+[name=Design]:before {
+  content: "";
+}
+
+[name=Website]:before {
+  content: "";
+}
+
+[name=Drop]:before {
+  content: "";
+}
+
+[name=HistoricalWeather]:before {
+  content: "";
+}
+
+[name=SkiResorts]:before {
+  content: "";
+}
+
+[name=Snowflake]:before {
+  content: "";
+}
+
+[name=BusSolid]:before {
+  content: "";
+}
+
+[name=FerrySolid]:before {
+  content: "";
+}
+
+[name=AirplaneSolid]:before {
+  content: "";
+}
+
+[name=TrainSolid]:before {
+  content: "";
+}
+
+[name=Heart]:before {
+  content: "";
+}
+
+[name=HeartFill]:before {
+  content: "";
+}
+
+[name=Ticket]:before {
+  content: "";
+}
+
+[name=WifiWarning4]:before {
+  content: "";
+}
+
+[name=Devices4]:before {
+  content: "";
+}
+
+[name=AzureLogo]:before {
+  content: "";
+}
+
+[name=BingLogo]:before {
+  content: "";
+}
+
+[name=MSNLogo]:before {
+  content: "";
+}
+
+[name=OutlookLogoInverse]:before {
+  content: "";
+}
+
+[name=OfficeLogo]:before {
+  content: "";
+}
+
+[name=SkypeLogo]:before {
+  content: "";
+}
+
+[name=Door]:before {
+  content: "";
+}
+
+[name=EditMirrored]:before {
+  content: "";
+}
+
+[name=GiftCard]:before {
+  content: "";
+}
+
+[name=DoubleBookmark]:before {
+  content: "";
+}
+
+[name=StatusErrorFull]:before {
+  content: "";
+}
+
+[name=Certificate]:before {
+  content: "";
+}
+
+[name=FastForward]:before {
+  content: "";
+}
+
+[name=Rewind]:before {
+  content: "";
+}
+
+[name=Photo2]:before {
+  content: "";
+}
+
+[name=OpenSource]:before {
+  content: "";
+}
+
+[name=Movers]:before {
+  content: "";
+}
+
+[name=CloudDownload]:before {
+  content: "";
+}
+
+[name=Family]:before {
+  content: "";
+}
+
+[name=WindDirection]:before {
+  content: "";
+}
+
+[name=Bug]:before {
+  content: "";
+}
+
+[name=SiteScan]:before {
+  content: "";
+}
+
+[name=BrowserScreenShot]:before {
+  content: "";
+}
+
+[name=F12DevTools]:before {
+  content: "";
+}
+
+[name=CSS]:before {
+  content: "";
+}
+
+[name=JS]:before {
+  content: "";
+}
+
+[name=DeliveryTruck]:before {
+  content: "";
+}
+
+[name=ReminderPerson]:before {
+  content: "";
+}
+
+[name=ReminderGroup]:before {
+  content: "";
+}
+
+[name=ReminderTime]:before {
+  content: "";
+}
+
+[name=TabletMode]:before {
+  content: "";
+}
+
+[name=Umbrella]:before {
+  content: "";
+}
+
+[name=NetworkTower]:before {
+  content: "";
+}
+
+[name=CityNext]:before {
+  content: "";
+}
+
+[name=CityNext2]:before {
+  content: "";
+}
+
+[name=Section]:before {
+  content: "";
+}
+
+[name=OneNoteLogoInverse]:before {
+  content: "";
+}
+
+[name=ToggleFilled]:before {
+  content: "";
+}
+
+[name=ToggleBorder]:before {
+  content: "";
+}
+
+[name=SliderThumb]:before {
+  content: "";
+}
+
+[name=ToggleThumb]:before {
+  content: "";
+}
+
+[name=Documentation]:before {
+  content: "";
+}
+
+[name=Badge]:before {
+  content: "";
+}
+
+[name=Giftbox]:before {
+  content: "";
+}
+
+[name=VisualStudioLogo]:before {
+  content: "";
+}
+
+[name=HomeGroup]:before {
+  content: "";
+}
+
+[name=ExcelLogoInverse]:before {
+  content: "";
+}
+
+[name=WordLogoInverse]:before {
+  content: "";
+}
+
+[name=PowerPointLogoInverse]:before {
+  content: "";
+}
+
+[name=Cafe]:before {
+  content: "";
+}
+
+[name=SpeedHigh]:before {
+  content: "";
+}
+
+[name=Commitments]:before {
+  content: "";
+}
+
+[name=ThisPC]:before {
+  content: "";
+}
+
+[name=MusicNote]:before {
+  content: "";
+}
+
+[name=MicOff]:before {
+  content: "";
+}
+
+[name=PlaybackRate1x]:before {
+  content: "";
+}
+
+[name=EdgeLogo]:before {
+  content: "";
+}
+
+[name=CompletedSolid]:before {
+  content: "";
+}
+
+[name=AlbumRemove]:before {
+  content: "";
+}
+
+[name=MessageFill]:before {
+  content: "";
+}
+
+[name=TabletSelected]:before {
+  content: "";
+}
+
+[name=MobileSelected]:before {
+  content: "";
+}
+
+[name=LaptopSelected]:before {
+  content: "";
+}
+
+[name=TVMonitorSelected]:before {
+  content: "";
+}
+
+[name=DeveloperTools]:before {
+  content: "";
+}
+
+[name=Shapes]:before {
+  content: "";
+}
+
+[name=InsertTextBox]:before {
+  content: "";
+}
+
+[name=LowerBrightness]:before {
+  content: "";
+}
+
+[name=WebComponents]:before {
+  content: "";
+}
+
+[name=OfflineStorage]:before {
+  content: "";
+}
+
+[name=DOM]:before {
+  content: "";
+}
+
+[name=CloudUpload]:before {
+  content: "";
+}
+
+[name=ScrollUpDown]:before {
+  content: "";
+}
+
+[name=DateTime]:before {
+  content: "";
+}
+
+[name=Event]:before {
+  content: "";
+}
+
+[name=Cake]:before {
+  content: "";
+}
+
+[name=Tiles]:before {
+  content: "";
+}
+
+[name=Org]:before {
+  content: "";
+}
+
+[name=PartyLeader]:before {
+  content: "";
+}
+
+[name=DRM]:before {
+  content: "";
+}
+
+[name=CloudAdd]:before {
+  content: "";
+}
+
+[name=AppIconDefault]:before {
+  content: "";
+}
+
+[name=Photo2Add]:before {
+  content: "";
+}
+
+[name=Photo2Remove]:before {
+  content: "";
+}
+
+[name=Calories]:before {
+  content: "";
+}
+
+[name=POI]:before {
+  content: "";
+}
+
+[name=AddTo]:before {
+  content: "";
+}
+
+[name=RadioBtnOff]:before {
+  content: "";
+}
+
+[name=RadioBtnOn]:before {
+  content: "";
+}
+
+[name=ExploreContent]:before {
+  content: "";
+}
+
+[name=Embed]:before {
+  content: "";
+}
+
+[name=Product]:before {
+  content: "";
+}
+
+[name=ProgressLoopInner]:before {
+  content: "";
+}
+
+[name=ProgressLoopOuter]:before {
+  content: "";
+}
+
+[name=Blocked2]:before {
+  content: "";
+}
+
+[name=FangBody]:before {
+  content: "";
+}
+
+[name=Toolbox]:before {
+  content: "";
+}
+
+[name=PageHeader]:before {
+  content: "";
+}
+
+[name=Glimmer]:before {
+  content: "";
+}
+
+[name=ChatInviteFriend]:before {
+  content: "";
+}
+
+[name=Brush]:before {
+  content: "";
+}
+
+[name=Shirt]:before {
+  content: "";
+}
+
+[name=Crown]:before {
+  content: "";
+}
+
+[name=Diamond]:before {
+  content: "";
+}
+
+[name=ScaleUp]:before {
+  content: "";
+}
+
+[name=QRCode]:before {
+  content: "";
+}
+
+[name=Feedback]:before {
+  content: "";
+}
+
+[name=SharepointLogoInverse]:before {
+  content: "";
+}
+
+[name=YammerLogo]:before {
+  content: "";
+}
+
+[name=Hide]:before {
+  content: "";
+}
+
+[name=Uneditable]:before {
+  content: "";
+}
+
+[name=ReturnToSession]:before {
+  content: "";
+}
+
+[name=OpenFolderHorizontal]:before {
+  content: "";
+}
+
+[name=CalendarMirrored]:before {
+  content: "";
+}
+
+[name=SwayLogoInverse]:before {
+  content: "";
+}
+
+[name=OutOfOffice]:before {
+  content: "";
+}
+
+[name=Trophy]:before {
+  content: "";
+}
+
+[name=ReopenPages]:before {
+  content: "";
+}
+
+[name=EmojiTabSymbols]:before {
+  content: "";
+}
+
+[name=AADLogo]:before {
+  content: "";
+}
+
+[name=AccessLogo]:before {
+  content: "";
+}
+
+[name=AdminALogoInverse32]:before {
+  content: "";
+}
+
+[name=AdminCLogoInverse32]:before {
+  content: "";
+}
+
+[name=AdminDLogoInverse32]:before {
+  content: "";
+}
+
+[name=AdminELogoInverse32]:before {
+  content: "";
+}
+
+[name=AdminLLogoInverse32]:before {
+  content: "";
+}
+
+[name=AdminMLogoInverse32]:before {
+  content: "";
+}
+
+[name=AdminOLogoInverse32]:before {
+  content: "";
+}
+
+[name=AdminPLogoInverse32]:before {
+  content: "";
+}
+
+[name=AdminSLogoInverse32]:before {
+  content: "";
+}
+
+[name=AdminYLogoInverse32]:before {
+  content: "";
+}
+
+[name=DelveLogoInverse]:before {
+  content: "";
+}
+
+[name=ExchangeLogoInverse]:before {
+  content: "";
+}
+
+[name=LyncLogo]:before {
+  content: "";
+}
+
+[name=OfficeVideoLogoInverse]:before {
+  content: "";
+}
+
+[name=SocialListeningLogo]:before {
+  content: "";
+}
+
+[name=VisioLogoInverse]:before {
+  content: "";
+}
+
+[name=Balloons]:before {
+  content: "";
+}
+
+[name=Cat]:before {
+  content: "";
+}
+
+[name=MailAlert]:before {
+  content: "";
+}
+
+[name=MailCheck]:before {
+  content: "";
+}
+
+[name=MailLowImportance]:before {
+  content: "";
+}
+
+[name=MailPause]:before {
+  content: "";
+}
+
+[name=MailRepeat]:before {
+  content: "";
+}
+
+[name=SecurityGroup]:before {
+  content: "";
+}
+
+[name=Table]:before {
+  content: "";
+}
+
+[name=VoicemailForward]:before {
+  content: "";
+}
+
+[name=VoicemailReply]:before {
+  content: "";
+}
+
+[name=Waffle]:before {
+  content: "";
+}
+
+[name=RemoveEvent]:before {
+  content: "";
+}
+
+[name=EventInfo]:before {
+  content: "";
+}
+
+[name=ForwardEvent]:before {
+  content: "";
+}
+
+[name=WipePhone]:before {
+  content: "";
+}
+
+[name=AddOnlineMeeting]:before {
+  content: "";
+}
+
+[name=JoinOnlineMeeting]:before {
+  content: "";
+}
+
+[name=RemoveLink]:before {
+  content: "";
+}
+
+[name=PeopleBlock]:before {
+  content: "";
+}
+
+[name=PeopleRepeat]:before {
+  content: "";
+}
+
+[name=PeopleAlert]:before {
+  content: "";
+}
+
+[name=PeoplePause]:before {
+  content: "";
+}
+
+[name=TransferCall]:before {
+  content: "";
+}
+
+[name=AddPhone]:before {
+  content: "";
+}
+
+[name=UnknownCall]:before {
+  content: "";
+}
+
+[name=NoteReply]:before {
+  content: "";
+}
+
+[name=NoteForward]:before {
+  content: "";
+}
+
+[name=NotePinned]:before {
+  content: "";
+}
+
+[name=RemoveOccurrence]:before {
+  content: "";
+}
+
+[name=Timeline]:before {
+  content: "";
+}
+
+[name=EditNote]:before {
+  content: "";
+}
+
+[name=CircleHalfFull]:before {
+  content: "";
+}
+
+[name=Room]:before {
+  content: "";
+}
+
+[name=Unsubscribe]:before {
+  content: "";
+}
+
+[name=Subscribe]:before {
+  content: "";
+}
+
+[name=HardDrive]:before {
+  content: "";
+}
+
+[name=RecurringTask]:before {
+  content: "";
+}
+
+[name=TaskManager]:before {
+  content: "";
+}
+
+[name=TaskManagerMirrored]:before {
+  content: "";
+}
+
+[name=Combine]:before {
+  content: "";
+}
+
+[name=Split]:before {
+  content: "";
+}
+
+[name=DoubleChevronUp]:before {
+  content: "";
+}
+
+[name=DoubleChevronLeft]:before {
+  content: "";
+}
+
+[name=DoubleChevronRight]:before {
+  content: "";
+}
+
+[name=Ascending]:before {
+  content: "";
+}
+
+[name=Descending]:before {
+  content: "";
+}
+
+[name=TextBox]:before {
+  content: "";
+}
+
+[name=TextField]:before {
+  content: "";
+}
+
+[name=NumberField]:before {
+  content: "";
+}
+
+[name=Dropdown]:before {
+  content: "";
+}
+
+[name=PenWorkspace]:before {
+  content: "";
+}
+
+[name=BookingsLogo]:before {
+  content: "";
+}
+
+[name=ClassNotebookLogoInverse]:before {
+  content: "";
+}
+
+[name=DelveAnalyticsLogo]:before {
+  content: "";
+}
+
+[name=DocsLogoInverse]:before {
+  content: "";
+}
+
+[name=Dynamics365Logo]:before {
+  content: "";
+}
+
+[name=DynamicSMBLogo]:before {
+  content: "";
+}
+
+[name=OfficeAssistantLogo]:before {
+  content: "";
+}
+
+[name=OfficeStoreLogo]:before {
+  content: "";
+}
+
+[name=OneNoteEduLogoInverse]:before {
+  content: "";
+}
+
+[name=PlannerLogo]:before {
+  content: "";
+}
+
+[name=PowerApps]:before {
+  content: "";
+}
+
+[name=Suitcase]:before {
+  content: "";
+}
+
+[name=ProjectLogoInverse]:before {
+  content: "";
+}
+
+[name=CaretLeft8]:before {
+  content: "";
+}
+
+[name=CaretRight8]:before {
+  content: "";
+}
+
+[name=CaretUp8]:before {
+  content: "";
+}
+
+[name=CaretDown8]:before {
+  content: "";
+}
+
+[name=CaretLeftSolid8]:before {
+  content: "";
+}
+
+[name=CaretRightSolid8]:before {
+  content: "";
+}
+
+[name=CaretUpSolid8]:before {
+  content: "";
+}
+
+[name=CaretDownSolid8]:before {
+  content: "";
+}
+
+[name=ClearFormatting]:before {
+  content: "";
+}
+
+[name=Superscript]:before {
+  content: "";
+}
+
+[name=Subscript]:before {
+  content: "";
+}
+
+[name=Strikethrough]:before {
+  content: "";
+}
+
+[name=Export]:before {
+  content: "";
+}
+
+[name=ExportMirrored]:before {
+  content: "";
+}
+
+[name=SingleBookmark]:before {
+  content: "";
+}
+
+[name=SingleBookmarkSolid]:before {
+  content: "";
+}
+
+[name=DoubleChevronDown]:before {
+  content: "";
+}
+
+[name=FollowUser]:before {
+  content: "";
+}
+
+[name=ReplyAll]:before {
+  content: "";
+}
+
+[name=WorkforceManagement]:before {
+  content: "";
+}
+
+[name=RecruitmentManagement]:before {
+  content: "";
+}
+
+[name=Questionnaire]:before {
+  content: "";
+}
+
+[name=ManagerSelfService]:before {
+  content: "";
+}
+
+[name=ProductionFloorManagement]:before {
+  content: "";
+}
+
+[name=ProductRelease]:before {
+  content: "";
+}
+
+[name=ProductVariant]:before {
+  content: "";
+}
+
+[name=ReplyMirrored]:before {
+  content: "";
+}
+
+[name=ReplyAllMirrored]:before {
+  content: "";
+}
+
+[name=Medal]:before {
+  content: "";
+}
+
+[name=AddGroup]:before {
+  content: "";
+}
+
+[name=QuestionnaireMirrored]:before {
+  content: "";
+}
+
+[name=CloudImportExport]:before {
+  content: "";
+}
+
+[name=TemporaryUser]:before {
+  content: "";
+}
+
+[name=CaretSolid16]:before {
+  content: "";
+}
+
+[name=GroupedDescending]:before {
+  content: "";
+}
+
+[name=GroupedAscending]:before {
+  content: "";
+}
+
+[name=SortUp]:before {
+  content: "";
+}
+
+[name=SortDown]:before {
+  content: "";
+}
+
+[name=AwayStatus]:before {
+  content: "";
+}
+
+[name=MyMoviesTV]:before {
+  content: "";
+}
+
+[name=SyncToPC]:before {
+  content: "";
+}
+
+[name=GenericScan]:before {
+  content: "";
+}
+
+[name=AustralianRules]:before {
+  content: "";
+}
+
+[name=WifiEthernet]:before {
+  content: "";
+}
+
+[name=TrackersMirrored]:before {
+  content: "";
+}
+
+[name=DateTimeMirrored]:before {
+  content: "";
+}
+
+[name=StopSolid]:before {
+  content: "";
+}
+
+[name=DoubleChevronUp12]:before {
+  content: "";
+}
+
+[name=DoubleChevronDown12]:before {
+  content: "";
+}
+
+[name=DoubleChevronLeft12]:before {
+  content: "";
+}
+
+[name=DoubleChevronRight12]:before {
+  content: "";
+}
+
+[name=CalendarAgenda]:before {
+  content: "";
+}
+
+[name=ConnectVirtualMachine]:before {
+  content: "";
+}
+
+[name=AddEvent]:before {
+  content: "";
+}
+
+[name=AssetLibrary]:before {
+  content: "";
+}
+
+[name=DataConnectionLibrary]:before {
+  content: "";
+}
+
+[name=DocLibrary]:before {
+  content: "";
+}
+
+[name=FormLibrary]:before {
+  content: "";
+}
+
+[name=FormLibraryMirrored]:before {
+  content: "";
+}
+
+[name=ReportLibrary]:before {
+  content: "";
+}
+
+[name=ReportLibraryMirrored]:before {
+  content: "";
+}
+
+[name=ContactCard]:before {
+  content: "";
+}
+
+[name=CustomList]:before {
+  content: "";
+}
+
+[name=CustomListMirrored]:before {
+  content: "";
+}
+
+[name=IssueTracking]:before {
+  content: "";
+}
+
+[name=IssueTrackingMirrored]:before {
+  content: "";
+}
+
+[name=PictureLibrary]:before {
+  content: "";
+}
+
+[name=OfficeAddinsLogo]:before {
+  content: "";
+}
+
+[name=OfflineOneDriveParachute]:before {
+  content: "";
+}
+
+[name=OfflineOneDriveParachuteDisabled]:before {
+  content: "";
+}
+
+[name=LargeGrid]:before {
+  content: "";
+}
+
+[name=TriangleSolidUp12]:before {
+  content: "";
+}
+
+[name=TriangleSolidDown12]:before {
+  content: "";
+}
+
+[name=TriangleSolidLeft12]:before {
+  content: "";
+}
+
+[name=TriangleSolidRight12]:before {
+  content: "";
+}
+
+[name=TriangleUp12]:before {
+  content: "";
+}
+
+[name=TriangleDown12]:before {
+  content: "";
+}
+
+[name=TriangleLeft12]:before {
+  content: "";
+}
+
+[name=TriangleRight12]:before {
+  content: "";
+}
+
+[name=ArrowUpRight8]:before {
+  content: "";
+}
+
+[name=ArrowDownRight8]:before {
+  content: "";
+}
+
+[name=DocumentSet]:before {
+  content: "";
+}
+
+[name=GoToDashboard]:before {
+  content: "";
+}
+
+[name=DelveAnalytics]:before {
+  content: "";
+}
+
+[name=ArrowUpRightMirrored8]:before {
+  content: "";
+}
+
+[name=ArrowDownRightMirrored8]:before {
+  content: "";
+}
+
+[name=CompanyDirectory]:before {
+  content: "";
+}
+
+[name=OpenEnrollment]:before {
+  content: "";
+}
+
+[name=CompanyDirectoryMirrored]:before {
+  content: "";
+}
+
+[name=OneDriveAdd]:before {
+  content: "";
+}
+
+[name=ProfileSearch]:before {
+  content: "";
+}
+
+[name=Header2]:before {
+  content: "";
+}
+
+[name=Header3]:before {
+  content: "";
+}
+
+[name=Header4]:before {
+  content: "";
+}
+
+[name=RingerSolid]:before {
+  content: "";
+}
+
+[name=Eyedropper]:before {
+  content: "";
+}
+
+[name=MarketDown]:before {
+  content: "";
+}
+
+[name=CalendarWorkWeek]:before {
+  content: "";
+}
+
+[name=SidePanel]:before {
+  content: "";
+}
+
+[name=GlobeFavorite]:before {
+  content: "";
+}
+
+[name=CaretTopLeftSolid8]:before {
+  content: "";
+}
+
+[name=CaretTopRightSolid8]:before {
+  content: "";
+}
+
+[name=ViewAll2]:before {
+  content: "";
+}
+
+[name=DocumentReply]:before {
+  content: "";
+}
+
+[name=PlayerSettings]:before {
+  content: "";
+}
+
+[name=ReceiptForward]:before {
+  content: "";
+}
+
+[name=ReceiptReply]:before {
+  content: "";
+}
+
+[name=ReceiptCheck]:before {
+  content: "";
+}
+
+[name=Fax]:before {
+  content: "";
+}
+
+[name=RecurringEvent]:before {
+  content: "";
+}
+
+[name=ReplyAlt]:before {
+  content: "";
+}
+
+[name=ReplyAllAlt]:before {
+  content: "";
+}
+
+[name=EditStyle]:before {
+  content: "";
+}
+
+[name=EditMail]:before {
+  content: "";
+}
+
+[name=Lifesaver]:before {
+  content: "";
+}
+
+[name=LifesaverLock]:before {
+  content: "";
+}
+
+[name=InboxCheck]:before {
+  content: "";
+}
+
+[name=FolderSearch]:before {
+  content: "";
+}
+
+[name=CollapseMenu]:before {
+  content: "";
+}
+
+[name=ExpandMenu]:before {
+  content: "";
+}
+
+[name=Boards]:before {
+  content: "";
+}
+
+[name=SunAdd]:before {
+  content: "";
+}
+
+[name=SunQuestionMark]:before {
+  content: "";
+}
+
+[name=LandscapeOrientation]:before {
+  content: "";
+}
+
+[name=DocumentSearch]:before {
+  content: "";
+}
+
+[name=PublicCalendar]:before {
+  content: "";
+}
+
+[name=PublicContactCard]:before {
+  content: "";
+}
+
+[name=PublicEmail]:before {
+  content: "";
+}
+
+[name=PublicFolder]:before {
+  content: "";
+}
+
+[name=WordDocument]:before {
+  content: "";
+}
+
+[name=PowerPointDocument]:before {
+  content: "";
+}
+
+[name=ExcelDocument]:before {
+  content: "";
+}
+
+[name=GroupedList]:before {
+  content: "";
+}
+
+[name=ClassroomLogo]:before {
+  content: "";
+}
+
+[name=Sections]:before {
+  content: "";
+}
+
+[name=EditPhoto]:before {
+  content: "";
+}
+
+[name=Starburst]:before {
+  content: "";
+}
+
+[name=ShareiOS]:before {
+  content: "";
+}
+
+[name=AirTickets]:before {
+  content: "";
+}
+
+[name=PencilReply]:before {
+  content: "";
+}
+
+[name=Tiles2]:before {
+  content: "";
+}
+
+[name=SkypeCircleCheck]:before {
+  content: "";
+}
+
+[name=SkypeCircleClock]:before {
+  content: "";
+}
+
+[name=SkypeCircleMinus]:before {
+  content: "";
+}
+
+[name=SkypeCheck]:before {
+  content: "";
+}
+
+[name=SkypeClock]:before {
+  content: "";
+}
+
+[name=SkypeMinus]:before {
+  content: "";
+}
+
+[name=SkypeMessage]:before {
+  content: "";
+}
+
+[name=ClosedCaption]:before {
+  content: "";
+}
+
+[name=ATPLogo]:before {
+  content: "";
+}
+
+[name=OfficeFormsLogoInverse]:before {
+  content: "";
+}
+
+[name=RecycleBin]:before {
+  content: "";
+}
+
+[name=EmptyRecycleBin]:before {
+  content: "";
+}
+
+[name=Hide2]:before {
+  content: "";
+}
+
+[name=Breadcrumb]:before {
+  content: "";
+}
+
+[name=BirthdayCake]:before {
+  content: "";
+}
+
+[name=ClearFilter]:before {
+  content: "";
+}
+
+[name=Flow]:before {
+  content: "";
+}
+
+[name=TimeEntry]:before {
+  content: "";
+}
+
+[name=CRMProcesses]:before {
+  content: "";
+}
+
+[name=PageEdit]:before {
+  content: "";
+}
+
+[name=PageArrowRight]:before {
+  content: "";
+}
+
+[name=PageRemove]:before {
+  content: "";
+}
+
+[name=Database]:before {
+  content: "";
+}
+
+[name=DataManagementSettings]:before {
+  content: "";
+}
+
+[name=CRMServices]:before {
+  content: "";
+}
+
+[name=EditContact]:before {
+  content: "";
+}
+
+[name=ConnectContacts]:before {
+  content: "";
+}
+
+[name=AppIconDefaultAdd]:before {
+  content: "";
+}
+
+[name=AppIconDefaultList]:before {
+  content: "";
+}
+
+[name=ActivateOrders]:before {
+  content: "";
+}
+
+[name=DeactivateOrders]:before {
+  content: "";
+}
+
+[name=ProductCatalog]:before {
+  content: "";
+}
+
+[name=ScatterChart]:before {
+  content: "";
+}
+
+[name=AccountActivity]:before {
+  content: "";
+}
+
+[name=DocumentManagement]:before {
+  content: "";
+}
+
+[name=CRMReport]:before {
+  content: "";
+}
+
+[name=KnowledgeArticle]:before {
+  content: "";
+}
+
+[name=Relationship]:before {
+  content: "";
+}
+
+[name=HomeVerify]:before {
+  content: "";
+}
+
+[name=ZipFolder]:before {
+  content: "";
+}
+
+[name=SurveyQuestions]:before {
+  content: "";
+}
+
+[name=TextDocument]:before {
+  content: "";
+}
+
+[name=TextDocumentShared]:before {
+  content: "";
+}
+
+[name=PageCheckedOut]:before {
+  content: "";
+}
+
+[name=PageShared]:before {
+  content: "";
+}
+
+[name=SaveAndClose]:before {
+  content: "";
+}
+
+[name=Script]:before {
+  content: "";
+}
+
+[name=Archive]:before {
+  content: "";
+}
+
+[name=ActivityFeed]:before {
+  content: "";
+}
+
+[name=Compare]:before {
+  content: "";
+}
+
+[name=EventDate]:before {
+  content: "";
+}
+
+[name=ArrowUpRight]:before {
+  content: "";
+}
+
+[name=CaretRight]:before {
+  content: "";
+}
+
+[name=SetAction]:before {
+  content: "";
+}
+
+[name=ChatBot]:before {
+  content: "";
+}
+
+[name=CaretSolidLeft]:before {
+  content: "";
+}
+
+[name=CaretSolidDown]:before {
+  content: "";
+}
+
+[name=CaretSolidRight]:before {
+  content: "";
+}
+
+[name=CaretSolidUp]:before {
+  content: "";
+}
+
+[name=PowerAppsLogo]:before {
+  content: "";
+}
+
+[name=PowerApps2Logo]:before {
+  content: "";
+}
+
+[name=SearchIssue]:before {
+  content: "";
+}
+
+[name=SearchIssueMirrored]:before {
+  content: "";
+}
+
+[name=FabricAssetLibrary]:before {
+  content: "";
+}
+
+[name=FabricDataConnectionLibrary]:before {
+  content: "";
+}
+
+[name=FabricDocLibrary]:before {
+  content: "";
+}
+
+[name=FabricFormLibrary]:before {
+  content: "";
+}
+
+[name=FabricFormLibraryMirrored]:before {
+  content: "";
+}
+
+[name=FabricReportLibrary]:before {
+  content: "";
+}
+
+[name=FabricReportLibraryMirrored]:before {
+  content: "";
+}
+
+[name=FabricPublicFolder]:before {
+  content: "";
+}
+
+[name=FabricFolderSearch]:before {
+  content: "";
+}
+
+[name=FabricMovetoFolder]:before {
+  content: "";
+}
+
+[name=FabricUnsyncFolder]:before {
+  content: "";
+}
+
+[name=FabricSyncFolder]:before {
+  content: "";
+}
+
+[name=FabricOpenFolderHorizontal]:before {
+  content: "";
+}
+
+[name=FabricFolder]:before {
+  content: "";
+}
+
+[name=FabricFolderFill]:before {
+  content: "";
+}
+
+[name=FabricNewFolder]:before {
+  content: "";
+}
+
+[name=FabricPictureLibrary]:before {
+  content: "";
+}
+
+[name=PhotoVideoMedia]:before {
+  content: "";
+}
+
+[name=AddFavorite]:before {
+  content: "";
+}
+
+[name=AddFavoriteFill]:before {
+  content: "";
+}
+
+[name=BufferTimeBefore]:before {
+  content: "";
+}
+
+[name=BufferTimeAfter]:before {
+  content: "";
+}
+
+[name=BufferTimeBoth]:before {
+  content: "";
+}
+
+[name=PublishContent]:before {
+  content: "";
+}
+
+[name=ClipboardList]:before {
+  content: "";
+}
+
+[name=ClipboardListMirrored]:before {
+  content: "";
+}
+
+[name=CannedChat]:before {
+  content: "";
+}
+
+[name=SkypeForBusinessLogo]:before {
+  content: "";
+}
+
+[name=TabCenter]:before {
+  content: "";
+}
+
+[name=PageCheckedin]:before {
+  content: "";
+}
+
+[name=PageList]:before {
+  content: "";
+}
+
+[name=ReadOutLoud]:before {
+  content: "";
+}
+
+[name=CaretBottomLeftSolid8]:before {
+  content: "";
+}
+
+[name=CaretBottomRightSolid8]:before {
+  content: "";
+}
+
+[name=FolderHorizontal]:before {
+  content: "";
+}
+
+[name=MicrosoftStaffhubLogo]:before {
+  content: "";
+}
+
+[name=GiftboxOpen]:before {
+  content: "";
+}
+
+[name=StatusCircleOuter]:before {
+  content: "";
+}
+
+[name=StatusCircleInner]:before {
+  content: "";
+}
+
+[name=StatusCircleRing]:before {
+  content: "";
+}
+
+[name=StatusTriangleOuter]:before {
+  content: "";
+}
+
+[name=StatusTriangleInner]:before {
+  content: "";
+}
+
+[name=StatusTriangleExclamation]:before {
+  content: "";
+}
+
+[name=StatusCircleExclamation]:before {
+  content: "";
+}
+
+[name=StatusCircleErrorX]:before {
+  content: "";
+}
+
+[name=StatusCircleCheckmark]:before {
+  content: "";
+}
+
+[name=StatusCircleInfo]:before {
+  content: "";
+}
+
+[name=StatusCircleBlock]:before {
+  content: "";
+}
+
+[name=StatusCircleBlock2]:before {
+  content: "";
+}
+
+[name=StatusCircleQuestionMark]:before {
+  content: "";
+}
+
+[name=StatusCircleSync]:before {
+  content: "";
+}
+
+[name=Toll]:before {
+  content: "";
+}
+
+[name=ExploreContentSingle]:before {
+  content: "";
+}
+
+[name=CollapseContent]:before {
+  content: "";
+}
+
+[name=CollapseContentSingle]:before {
+  content: "";
+}
+
+[name=InfoSolid]:before {
+  content: "";
+}
+
+[name=GroupList]:before {
+  content: "";
+}
+
+[name=ProgressRingDots]:before {
+  content: "";
+}
+
+[name=CaloriesAdd]:before {
+  content: "";
+}
+
+[name=BranchFork]:before {
+  content: "";
+}
+
+[name=MuteChat]:before {
+  content: "";
+}
+
+[name=AddHome]:before {
+  content: "";
+}
+
+[name=AddWork]:before {
+  content: "";
+}
+
+[name=MobileReport]:before {
+  content: "";
+}
+
+[name=ScaleVolume]:before {
+  content: "";
+}
+
+[name=HardDriveGroup]:before {
+  content: "";
+}
+
+[name=FastMode]:before {
+  content: "";
+}
+
+[name=ToggleLeft]:before {
+  content: "";
+}
+
+[name=ToggleRight]:before {
+  content: "";
+}
+
+[name=TriangleShape]:before {
+  content: "";
+}
+
+[name=RectangleShape]:before {
+  content: "";
+}
+
+[name=CubeShape]:before {
+  content: "";
+}
+
+[name=Trophy2]:before {
+  content: "";
+}
+
+[name=BucketColor]:before {
+  content: "";
+}
+
+[name=BucketColorFill]:before {
+  content: "";
+}
+
+[name=Taskboard]:before {
+  content: "";
+}
+
+[name=SingleColumn]:before {
+  content: "";
+}
+
+[name=DoubleColumn]:before {
+  content: "";
+}
+
+[name=TripleColumn]:before {
+  content: "";
+}
+
+[name=ColumnLeftTwoThirds]:before {
+  content: "";
+}
+
+[name=ColumnRightTwoThirds]:before {
+  content: "";
+}
+
+[name=AccessLogoFill]:before {
+  content: "";
+}
+
+[name=AnalyticsLogo]:before {
+  content: "";
+}
+
+[name=AnalyticsQuery]:before {
+  content: "";
+}
+
+[name=NewAnalyticsQuery]:before {
+  content: "";
+}
+
+[name=AnalyticsReport]:before {
+  content: "";
+}
+
+[name=WordLogo]:before {
+  content: "";
+}
+
+[name=WordLogoFill]:before {
+  content: "";
+}
+
+[name=ExcelLogo]:before {
+  content: "";
+}
+
+[name=ExcelLogoFill]:before {
+  content: "";
+}
+
+[name=OneNoteLogo]:before {
+  content: "";
+}
+
+[name=OneNoteLogoFill]:before {
+  content: "";
+}
+
+[name=OutlookLogo]:before {
+  content: "";
+}
+
+[name=OutlookLogoFill]:before {
+  content: "";
+}
+
+[name=PowerPointLogo]:before {
+  content: "";
+}
+
+[name=PowerPointLogoFill]:before {
+  content: "";
+}
+
+[name=PublisherLogo]:before {
+  content: "";
+}
+
+[name=PublisherLogoFill]:before {
+  content: "";
+}
+
+[name=ScheduleEventAction]:before {
+  content: "";
+}
+
+[name=FlameSolid]:before {
+  content: "";
+}
+
+[name=ServerProcesses]:before {
+  content: "";
+}
+
+[name=Server]:before {
+  content: "";
+}
+
+[name=SaveAll]:before {
+  content: "";
+}
+
+[name=LinkedInLogo]:before {
+  content: "";
+}
+
+[name=Decimals]:before {
+  content: "";
+}
+
+[name=SidePanelMirrored]:before {
+  content: "";
+}
+
+[name=ProtectRestrict]:before {
+  content: "";
+}
+
+[name=Blog]:before {
+  content: "";
+}
+
+[name=UnknownMirrored]:before {
+  content: "";
+}
+
+[name=PublicContactCardMirrored]:before {
+  content: "";
+}
+
+[name=GridViewSmall]:before {
+  content: "";
+}
+
+[name=GridViewMedium]:before {
+  content: "";
+}
+
+[name=GridViewLarge]:before {
+  content: "";
+}
+
+[name=Step]:before {
+  content: "";
+}
+
+[name=StepInsert]:before {
+  content: "";
+}
+
+[name=StepShared]:before {
+  content: "";
+}
+
+[name=StepSharedAdd]:before {
+  content: "";
+}
+
+[name=StepSharedInsert]:before {
+  content: "";
+}
+
+[name=ViewDashboard]:before {
+  content: "";
+}
+
+[name=ViewList]:before {
+  content: "";
+}
+
+[name=ViewListGroup]:before {
+  content: "";
+}
+
+[name=ViewListTree]:before {
+  content: "";
+}
+
+[name=TriggerAuto]:before {
+  content: "";
+}
+
+[name=TriggerUser]:before {
+  content: "";
+}
+
+[name=PivotChart]:before {
+  content: "";
+}
+
+[name=StackedBarChart]:before {
+  content: "";
+}
+
+[name=StackedLineChart]:before {
+  content: "";
+}
+
+[name=BuildQueue]:before {
+  content: "";
+}
+
+[name=BuildQueueNew]:before {
+  content: "";
+}
+
+[name=UserFollowed]:before {
+  content: "";
+}
+
+[name=ContactLink]:before {
+  content: "";
+}
+
+[name=Stack]:before {
+  content: "";
+}
+
+[name=Bullseye]:before {
+  content: "";
+}
+
+[name=VennDiagram]:before {
+  content: "";
+}
+
+[name=FiveTileGrid]:before {
+  content: "";
+}
+
+[name=FocalPoint]:before {
+  content: "";
+}
+
+[name=Insert]:before {
+  content: "";
+}
+
+[name=RingerRemove]:before {
+  content: "";
+}
+
+[name=TeamsLogoInverse]:before {
+  content: "";
+}
+
+[name=TeamsLogo]:before {
+  content: "";
+}
+
+[name=TeamsLogoFill]:before {
+  content: "";
+}
+
+[name=SkypeForBusinessLogoFill]:before {
+  content: "";
+}
+
+[name=SharepointLogo]:before {
+  content: "";
+}
+
+[name=SharepointLogoFill]:before {
+  content: "";
+}
+
+[name=DelveLogo]:before {
+  content: "";
+}
+
+[name=DelveLogoFill]:before {
+  content: "";
+}
+
+[name=OfficeVideoLogo]:before {
+  content: "";
+}
+
+[name=OfficeVideoLogoFill]:before {
+  content: "";
+}
+
+[name=ExchangeLogo]:before {
+  content: "";
+}
+
+[name=ExchangeLogoFill]:before {
+  content: "";
+}
+
+[name=Signin]:before {
+  content: "";
+}
+
+[name=DocumentApproval]:before {
+  content: "";
+}
+
+[name=CloneToDesktop]:before {
+  content: "";
+}
+
+[name=InstallToDrive]:before {
+  content: "";
+}
+
+[name=Blur]:before {
+  content: "";
+}
+
+[name=Build]:before {
+  content: "";
+}
+
+[name=ProcessMetaTask]:before {
+  content: "";
+}
+
+[name=BranchFork2]:before {
+  content: "";
+}
+
+[name=BranchLocked]:before {
+  content: "";
+}
+
+[name=BranchCommit]:before {
+  content: "";
+}
+
+[name=BranchCompare]:before {
+  content: "";
+}
+
+[name=BranchMerge]:before {
+  content: "";
+}
+
+[name=BranchPullRequest]:before {
+  content: "";
+}
+
+[name=BranchSearch]:before {
+  content: "";
+}
+
+[name=BranchShelveset]:before {
+  content: "";
+}
+
+[name=RawSource]:before {
+  content: "";
+}
+
+[name=MergeDuplicate]:before {
+  content: "";
+}
+
+[name=RowsGroup]:before {
+  content: "";
+}
+
+[name=RowsChild]:before {
+  content: "";
+}
+
+[name=Deploy]:before {
+  content: "";
+}
+
+[name=Redeploy]:before {
+  content: "";
+}
+
+[name=ServerEnviroment]:before {
+  content: "";
+}
+
+[name=VisioDiagram]:before {
+  content: "";
+}
+
+[name=HighlightMappedShapes]:before {
+  content: "";
+}
+
+[name=TextCallout]:before {
+  content: "";
+}
+
+[name=IconSetsFlag]:before {
+  content: "";
+}
+
+[name=VisioLogo]:before {
+  content: "";
+}
+
+[name=VisioLogoFill]:before {
+  content: "";
+}
+
+[name=VisioDocument]:before {
+  content: "";
+}
+
+[name=TimelineProgress]:before {
+  content: "";
+}
+
+[name=TimelineDelivery]:before {
+  content: "";
+}
+
+[name=Backlog]:before {
+  content: "";
+}
+
+[name=TeamFavorite]:before {
+  content: "";
+}
+
+[name=TaskGroup]:before {
+  content: "";
+}
+
+[name=TaskGroupMirrored]:before {
+  content: "";
+}
+
+[name=ScopeTemplate]:before {
+  content: "";
+}
+
+[name=AssessmentGroupTemplate]:before {
+  content: "";
+}
+
+[name=NewTeamProject]:before {
+  content: "";
+}
+
+[name=CommentAdd]:before {
+  content: "";
+}
+
+[name=CommentNext]:before {
+  content: "";
+}
+
+[name=CommentPrevious]:before {
+  content: "";
+}
+
+[name=ShopServer]:before {
+  content: "";
+}
+
+[name=LocaleLanguage]:before {
+  content: "";
+}
+
+[name=QueryList]:before {
+  content: "";
+}
+
+[name=UserSync]:before {
+  content: "";
+}
+
+[name=UserPause]:before {
+  content: "";
+}
+
+[name=StreamingOff]:before {
+  content: "";
+}
+
+[name=MoreVertical]:before {
+  content: "";
+}
+
+[name=ArrowTallUpLeft]:before {
+  content: "";
+}
+
+[name=ArrowTallUpRight]:before {
+  content: "";
+}
+
+[name=ArrowTallDownLeft]:before {
+  content: "";
+}
+
+[name=ArrowTallDownRight]:before {
+  content: "";
+}
+
+[name=FieldEmpty]:before {
+  content: "";
+}
+
+[name=FieldFilled]:before {
+  content: "";
+}
+
+[name=FieldChanged]:before {
+  content: "";
+}
+
+[name=FieldNotChanged]:before {
+  content: "";
+}
+
+[name=RingerOff]:before {
+  content: "";
+}
+
+[name=PlayResume]:before {
+  content: "";
+}
+
+[name=BulletedList2]:before {
+  content: "";
+}
+
+[name=BulletedList2Mirrored]:before {
+  content: "";
+}
+
+[name=ImageCrosshair]:before {
+  content: "";
+}
+
+[name=GitGraph]:before {
+  content: "";
+}
+
+[name=Repo]:before {
+  content: "";
+}
+
+[name=RepoSolid]:before {
+  content: "";
+}
+
+[name=FolderQuery]:before {
+  content: "";
+}
+
+[name=FolderList]:before {
+  content: "";
+}
+
+[name=FolderListMirrored]:before {
+  content: "";
+}
+
+[name=LocationOutline]:before {
+  content: "";
+}
+
+[name=POISolid]:before {
+  content: "";
+}
+
+[name=CalculatorNotEqualTo]:before {
+  content: "";
+}
+
+[name=BoxSubtractSolid]:before {
+  content: "";
+}
+
+[name=BoxAdditionSolid]:before {
+  content: "";
+}
+
+[name=BoxMultiplySolid]:before {
+  content: "";
+}
+
+[name=BoxPlaySolid]:before {
+  content: "";
+}
+
+[name=BoxCheckmarkSolid]:before {
+  content: "";
+}
+
+[name=CirclePauseSolid]:before {
+  content: "";
+}
+
+[name=CirclePause]:before {
+  content: "";
+}
+
+[name=MSNVideosSolid]:before {
+  content: "";
+}
+
+[name=CircleStopSolid]:before {
+  content: "";
+}
+
+[name=CircleStop]:before {
+  content: "";
+}
+
+[name=NavigateBack]:before {
+  content: "";
+}
+
+[name=NavigateBackMirrored]:before {
+  content: "";
+}
+
+[name=NavigateForward]:before {
+  content: "";
+}
+
+[name=NavigateForwardMirrored]:before {
+  content: "";
+}
+
+[name=UnknownSolid]:before {
+  content: "";
+}
+
+[name=UnknownMirroredSolid]:before {
+  content: "";
+}
+
+[name=CircleAddition]:before {
+  content: "";
+}
+
+[name=CircleAdditionSolid]:before {
+  content: "";
+}
+
+[name=FilePDB]:before {
+  content: "";
+}
+
+[name=FileTemplate]:before {
+  content: "";
+}
+
+[name=FileSQL]:before {
+  content: "";
+}
+
+[name=FileJAVA]:before {
+  content: "";
+}
+
+[name=FileASPX]:before {
+  content: "";
+}
+
+[name=FileCSS]:before {
+  content: "";
+}
+
+[name=FileSass]:before {
+  content: "";
+}
+
+[name=FileLess]:before {
+  content: "";
+}
+
+[name=FileHTML]:before {
+  content: "";
+}
+
+[name=JavaScriptLanguage]:before {
+  content: "";
+}
+
+[name=CSharpLanguage]:before {
+  content: "";
+}
+
+[name=CSharp]:before {
+  content: "";
+}
+
+[name=VisualBasicLanguage]:before {
+  content: "";
+}
+
+[name=VB]:before {
+  content: "";
+}
+
+[name=CPlusPlusLanguage]:before {
+  content: "";
+}
+
+[name=CPlusPlus]:before {
+  content: "";
+}
+
+[name=FSharpLanguage]:before {
+  content: "";
+}
+
+[name=FSharp]:before {
+  content: "";
+}
+
+[name=TypeScriptLanguage]:before {
+  content: "";
+}
+
+[name=PythonLanguage]:before {
+  content: "";
+}
+
+[name=PY]:before {
+  content: "";
+}
+
+[name=CoffeeScript]:before {
+  content: "";
+}
+
+[name=MarkDownLanguage]:before {
+  content: "";
+}
+
+[name=FullWidth]:before {
+  content: "";
+}
+
+[name=FullWidthEdit]:before {
+  content: "";
+}
+
+[name=Plug]:before {
+  content: "";
+}
+
+[name=PlugSolid]:before {
+  content: "";
+}
+
+[name=PlugConnected]:before {
+  content: "";
+}
+
+[name=PlugDisconnected]:before {
+  content: "";
+}
+
+[name=UnlockSolid]:before {
+  content: "";
+}
+
+[name=Variable]:before {
+  content: "";
+}
+
+[name=Parameter]:before {
+  content: "";
+}
+
+[name=CommentUrgent]:before {
+  content: "";
+}
+
+[name=Storyboard]:before {
+  content: "";
+}
+
+[name=DiffInline]:before {
+  content: "";
+}
+
+[name=DiffSideBySide]:before {
+  content: "";
+}
+
+[name=ImageDiff]:before {
+  content: "";
+}
+
+[name=ImagePixel]:before {
+  content: "";
+}
+
+[name=FileBug]:before {
+  content: "";
+}
+
+[name=FileCode]:before {
+  content: "";
+}
+
+[name=FileComment]:before {
+  content: "";
+}
+
+[name=BusinessHoursSign]:before {
+  content: "";
+}
+
+[name=FileImage]:before {
+  content: "";
+}
+
+[name=FileSymlink]:before {
+  content: "";
+}
+
+[name=AutoFillTemplate]:before {
+  content: "";
+}
+
+[name=WorkItem]:before {
+  content: "";
+}
+
+[name=WorkItemBug]:before {
+  content: "";
+}
+
+[name=LogRemove]:before {
+  content: "";
+}
+
+[name=ColumnOptions]:before {
+  content: "";
+}
+
+[name=Packages]:before {
+  content: "";
+}
+
+[name=BuildIssue]:before {
+  content: "";
+}
+
+[name=AssessmentGroup]:before {
+  content: "";
+}
+
+[name=VariableGroup]:before {
+  content: "";
+}
+
+[name=FullHistory]:before {
+  content: "";
+}
+
+[name=Wheelchair]:before {
+  content: "";
+}
+
+[name=SingleColumnEdit]:before {
+  content: "";
+}
+
+[name=DoubleColumnEdit]:before {
+  content: "";
+}
+
+[name=TripleColumnEdit]:before {
+  content: "";
+}
+
+[name=ColumnLeftTwoThirdsEdit]:before {
+  content: "";
+}
+
+[name=ColumnRightTwoThirdsEdit]:before {
+  content: "";
+}
+
+[name=StreamLogo]:before {
+  content: "";
+}
+
+[name=PassiveAuthentication]:before {
+  content: "";
+}
+
+[name=AlertSolid]:before {
+  content: "";
+}
+
+[name=MegaphoneSolid]:before {
+  content: "";
+}
+
+[name=TaskSolid]:before {
+  content: "";
+}
+
+[name=ConfigurationSolid]:before {
+  content: "";
+}
+
+[name=BugSolid]:before {
+  content: "";
+}
+
+[name=CrownSolid]:before {
+  content: "";
+}
+
+[name=Trophy2Solid]:before {
+  content: "";
+}
+
+[name=QuickNoteSolid]:before {
+  content: "";
+}
+
+[name=ConstructionConeSolid]:before {
+  content: "";
+}
+
+[name=PageListSolid]:before {
+  content: "";
+}
+
+[name=PageListMirroredSolid]:before {
+  content: "";
+}
+
+[name=StarburstSolid]:before {
+  content: "";
+}
+
+[name=ReadingModeSolid]:before {
+  content: "";
+}
+
+[name=SadSolid]:before {
+  content: "";
+}
+
+[name=HealthSolid]:before {
+  content: "";
+}
+
+[name=ShieldSolid]:before {
+  content: "";
+}
+
+[name=GiftBoxSolid]:before {
+  content: "";
+}
+
+[name=ShoppingCartSolid]:before {
+  content: "";
+}
+
+[name=MailSolid]:before {
+  content: "";
+}
+
+[name=ChatSolid]:before {
+  content: "";
+}
+
+[name=RibbonSolid]:before {
+  content: "";
+}
+
+[name=FinancialSolid]:before {
+  content: "";
+}
+
+[name=FinancialMirroredSolid]:before {
+  content: "";
+}
+
+[name=HeadsetSolid]:before {
+  content: "";
+}
+
+[name=PermissionsSolid]:before {
+  content: "";
+}
+
+[name=ParkingSolid]:before {
+  content: "";
+}
+
+[name=ParkingMirroredSolid]:before {
+  content: "";
+}
+
+[name=DiamondSolid]:before {
+  content: "";
+}
+
+[name=AsteriskSolid]:before {
+  content: "";
+}
+
+[name=OfflineStorageSolid]:before {
+  content: "";
+}
+
+[name=BankSolid]:before {
+  content: "";
+}
+
+[name=DecisionSolid]:before {
+  content: "";
+}
+
+[name=Parachute]:before {
+  content: "";
+}
+
+[name=ParachuteSolid]:before {
+  content: "";
+}
+
+[name=FiltersSolid]:before {
+  content: "";
+}
+
+[name=ColorSolid]:before {
+  content: "";
+}
+
+[name=ReviewSolid]:before {
+  content: "";
+}
+
+[name=ReviewRequestSolid]:before {
+  content: "";
+}
+
+[name=ReviewRequestMirroredSolid]:before {
+  content: "";
+}
+
+[name=ReviewResponseSolid]:before {
+  content: "";
+}
+
+[name=FeedbackRequestSolid]:before {
+  content: "";
+}
+
+[name=FeedbackRequestMirroredSolid]:before {
+  content: "";
+}
+
+[name=FeedbackResponseSolid]:before {
+  content: "";
+}
+
+[name=WorkItemBar]:before {
+  content: "";
+}
+
+[name=WorkItemBarSolid]:before {
+  content: "";
+}
+
+[name=Separator]:before {
+  content: "";
+}
+
+[name=NavigateExternalInline]:before {
+  content: "";
+}
+
+[name=PlanView]:before {
+  content: "";
+}
+
+[name=TimelineMatrixView]:before {
+  content: "";
+}
+
+[name=EngineeringGroup]:before {
+  content: "";
+}
+
+[name=ProjectCollection]:before {
+  content: "";
+}
+
+[name=CaretBottomRightCenter8]:before {
+  content: "";
+}
+
+[name=CaretBottomLeftCenter8]:before {
+  content: "";
+}
+
+[name=CaretTopRightCenter8]:before {
+  content: "";
+}
+
+[name=CaretTopLeftCenter8]:before {
+  content: "";
+}
+
+[name=DonutChart]:before {
+  content: "";
+}
+
+[name=ChevronUnfold10]:before {
+  content: "";
+}
+
+[name=ChevronFold10]:before {
+  content: "";
+}
+
+[name=DoubleChevronDown8]:before {
+  content: "";
+}
+
+[name=DoubleChevronUp8]:before {
+  content: "";
+}
+
+[name=DoubleChevronLeft8]:before {
+  content: "";
+}
+
+[name=DoubleChevronRight8]:before {
+  content: "";
+}
+
+[name=ChevronDownEnd6]:before {
+  content: "";
+}
+
+[name=ChevronUpEnd6]:before {
+  content: "";
+}
+
+[name=ChevronLeftEnd6]:before {
+  content: "";
+}
+
+[name=ChevronRightEnd6]:before {
+  content: "";
+}
+
+[name=ContextMenu]:before {
+  content: "";
+}
+
+[name=AzureAPIManagement]:before {
+  content: "";
+}
+
+[name=AzureServiceEndpoint]:before {
+  content: "";
+}
+
+[name=VSTSLogo]:before {
+  content: "";
+}
+
+[name=VSTSAltLogo1]:before {
+  content: "";
+}
+
+[name=VSTSAltLogo2]:before {
+  content: "";
+}
+
+[name=FileTypeSolution]:before {
+  content: "";
+}
+
+[name=WordLogoInverse16]:before {
+  content: "";
+}
+
+[name=WordLogo16]:before {
+  content: "";
+}
+
+[name=WordLogoFill16]:before {
+  content: "";
+}
+
+[name=PowerPointLogoInverse16]:before {
+  content: "";
+}
+
+[name=PowerPointLogo16]:before {
+  content: "";
+}
+
+[name=PowerPointLogoFill16]:before {
+  content: "";
+}
+
+[name=ExcelLogoInverse16]:before {
+  content: "";
+}
+
+[name=ExcelLogo16]:before {
+  content: "";
+}
+
+[name=ExcelLogoFill16]:before {
+  content: "";
+}
+
+[name=OneNoteLogoInverse16]:before {
+  content: "";
+}
+
+[name=OneNoteLogo16]:before {
+  content: "";
+}
+
+[name=OneNoteLogoFill16]:before {
+  content: "";
+}
+
+[name=OutlookLogoInverse16]:before {
+  content: "";
+}
+
+[name=OutlookLogo16]:before {
+  content: "";
+}
+
+[name=OutlookLogoFill16]:before {
+  content: "";
+}
+
+[name=PublisherLogoInverse16]:before {
+  content: "";
+}
+
+[name=PublisherLogo16]:before {
+  content: "";
+}
+
+[name=PublisherLogoFill16]:before {
+  content: "";
+}
+
+[name=VisioLogoInverse16]:before {
+  content: "";
+}
+
+[name=VisioLogo16]:before {
+  content: "";
+}
+
+[name=VisioLogoFill16]:before {
+  content: "";
+}
+
+[name=TestBeaker]:before {
+  content: "";
+}
+
+[name=TestBeakerSolid]:before {
+  content: "";
+}
+
+[name=TestExploreSolid]:before {
+  content: "";
+}
+
+[name=TestAutoSolid]:before {
+  content: "";
+}
+
+[name=TestUserSolid]:before {
+  content: "";
+}
+
+[name=TestImpactSolid]:before {
+  content: "";
+}
+
+[name=TestPlan]:before {
+  content: "";
+}
+
+[name=TestStep]:before {
+  content: "";
+}
+
+[name=TestParameter]:before {
+  content: "";
+}
+
+[name=TestSuite]:before {
+  content: "";
+}
+
+[name=TestCase]:before {
+  content: "";
+}
+
+[name=Sprint]:before {
+  content: "";
+}
+
+[name=SignOut]:before {
+  content: "";
+}
+
+[name=TriggerApproval]:before {
+  content: "";
+}
+
+[name=Rocket]:before {
+  content: "";
+}
+
+[name=AzureKeyVault]:before {
+  content: "";
+}
+
+[name=Onboarding]:before {
+  content: "";
+}
+
+[name=Transition]:before {
+  content: "";
+}
+
+[name=LikeSolid]:before {
+  content: "";
+}
+
+[name=DislikeSolid]:before {
+  content: "";
+}
+
+[name=CRMCustomerInsightsApp]:before {
+  content: "";
+}
+
+[name=EditCreate]:before {
+  content: "";
+}
+
+[name=PlayReverseResume]:before {
+  content: "";
+}
+
+[name=PlayReverse]:before {
+  content: "";
+}
+
+[name=SearchData]:before {
+  content: "";
+}
+
+[name=UnSetColor]:before {
+  content: "";
+}
+
+[name=DeclineCall]:before {
+  content: "";
+}
+
+[name=RectangularClipping]:before {
+  content: "";
+}
+
+[name=TeamsLogo16]:before {
+  content: "";
+}
+
+[name=TeamsLogoFill16]:before {
+  content: "";
+}
+
+[name=Spacer]:before {
+  content: "";
+}
+
+[name=SkypeLogo16]:before {
+  content: "";
+}
+
+[name=SkypeForBusinessLogo16]:before {
+  content: "";
+}
+
+[name=SkypeForBusinessLogoFill16]:before {
+  content: "";
+}
+
+[name=FilterSolid]:before {
+  content: "";
+}
+
+[name=MailUndelivered]:before {
+  content: "";
+}
+
+[name=MailTentative]:before {
+  content: "";
+}
+
+[name=MailTentativeMirrored]:before {
+  content: "";
+}
+
+[name=MailReminder]:before {
+  content: "";
+}
+
+[name=ReceiptUndelivered]:before {
+  content: "";
+}
+
+[name=ReceiptTentative]:before {
+  content: "";
+}
+
+[name=ReceiptTentativeMirrored]:before {
+  content: "";
+}
+
+[name=Inbox]:before {
+  content: "";
+}
+
+[name=IRMReply]:before {
+  content: "";
+}
+
+[name=IRMReplyMirrored]:before {
+  content: "";
+}
+
+[name=IRMForward]:before {
+  content: "";
+}
+
+[name=IRMForwardMirrored]:before {
+  content: "";
+}
+
+[name=VoicemailIRM]:before {
+  content: "";
+}
+
+[name=EventAccepted]:before {
+  content: "";
+}
+
+[name=EventTentative]:before {
+  content: "";
+}
+
+[name=EventTentativeMirrored]:before {
+  content: "";
+}
+
+[name=EventDeclined]:before {
+  content: "";
+}
+
+[name=IDBadge]:before {
+  content: "";
+}
+
+[name=BackgroundColor]:before {
+  content: "";
+}
+
+[name=OfficeFormsLogoInverse16]:before {
+  content: "";
+}
+
+[name=OfficeFormsLogo]:before {
+  content: "";
+}
+
+[name=OfficeFormsLogoFill]:before {
+  content: "";
+}
+
+[name=OfficeFormsLogo16]:before {
+  content: "";
+}
+
+[name=OfficeFormsLogoFill16]:before {
+  content: "";
+}
+
+[name=OfficeFormsLogoInverse24]:before {
+  content: "";
+}
+
+[name=OfficeFormsLogo24]:before {
+  content: "";
+}
+
+[name=OfficeFormsLogoFill24]:before {
+  content: "";
+}
+
+[name=PageLock]:before {
+  content: "";
+}
+
+[name=NotExecuted]:before {
+  content: "";
+}
+
+[name=NotImpactedSolid]:before {
+  content: "";
+}
+
+[name=FieldReadOnly]:before {
+  content: "";
+}
+
+[name=FieldRequired]:before {
+  content: "";
+}
+
+[name=BacklogBoard]:before {
+  content: "";
+}
+
+[name=ExternalBuild]:before {
+  content: "";
+}
+
+[name=ExternalTFVC]:before {
+  content: "";
+}
+
+[name=ExternalXAML]:before {
+  content: "";
+}
+
+[name=IssueSolid]:before {
+  content: "";
+}
+
+[name=DefectSolid]:before {
+  content: "";
+}
+
+[name=LadybugSolid]:before {
+  content: "";
+}
+
+[name=NugetLogo]:before {
+  content: "";
+}
+
+[name=TFVCLogo]:before {
+  content: "";
+}
+
+[name=ProjectLogo32]:before {
+  content: "";
+}
+
+[name=ProjectLogoFill32]:before {
+  content: "";
+}
+
+[name=ProjectLogo16]:before {
+  content: "";
+}
+
+[name=ProjectLogoFill16]:before {
+  content: "";
+}
+
+[name=SwayLogo32]:before {
+  content: "";
+}
+
+[name=SwayLogoFill32]:before {
+  content: "";
+}
+
+[name=SwayLogo16]:before {
+  content: "";
+}
+
+[name=SwayLogoFill16]:before {
+  content: "";
+}
+
+[name=ClassNotebookLogo32]:before {
+  content: "";
+}
+
+[name=ClassNotebookLogoFill32]:before {
+  content: "";
+}
+
+[name=ClassNotebookLogo16]:before {
+  content: "";
+}
+
+[name=ClassNotebookLogoFill16]:before {
+  content: "";
+}
+
+[name=ClassNotebookLogoInverse32]:before {
+  content: "";
+}
+
+[name=ClassNotebookLogoInverse16]:before {
+  content: "";
+}
+
+[name=StaffNotebookLogo32]:before {
+  content: "";
+}
+
+[name=StaffNotebookLogoFill32]:before {
+  content: "";
+}
+
+[name=StaffNotebookLogo16]:before {
+  content: "";
+}
+
+[name=StaffNotebookLogoFill16]:before {
+  content: "";
+}
+
+[name=StaffNotebookLogoInverted32]:before {
+  content: "";
+}
+
+[name=StaffNotebookLogoInverted16]:before {
+  content: "";
+}
+
+[name=KaizalaLogo]:before {
+  content: "";
+}
+
+[name=TaskLogo]:before {
+  content: "";
+}
+
+[name=ProtectionCenterLogo32]:before {
+  content: "";
+}
+
+[name=GallatinLogo]:before {
+  content: "";
+}
+
+[name=Globe2]:before {
+  content: "";
+}
+
+[name=Guitar]:before {
+  content: "";
+}
+
+[name=Breakfast]:before {
+  content: "";
+}
+
+[name=Brunch]:before {
+  content: "";
+}
+
+[name=BeerMug]:before {
+  content: "";
+}
+
+[name=Vacation]:before {
+  content: "";
+}
+
+[name=Teeth]:before {
+  content: "";
+}
+
+[name=Taxi]:before {
+  content: "";
+}
+
+[name=Chopsticks]:before {
+  content: "";
+}
+
+[name=SyncOccurence]:before {
+  content: "";
+}
+
+[name=UnsyncOccurence]:before {
+  content: "";
+}
+
+[name=GIF]:before {
+  content: "";
+}
+
+[name=PrimaryCalendar]:before {
+  content: "";
+}
+
+[name=SearchCalendar]:before {
+  content: "";
+}
+
+[name=VideoOff]:before {
+  content: "";
+}
+
+[name=MicrosoftFlowLogo]:before {
+  content: "";
+}
+
+[name=BusinessCenterLogo]:before {
+  content: "";
+}
+
+[name=ToDoLogoBottom]:before {
+  content: "";
+}
+
+[name=ToDoLogoTop]:before {
+  content: "";
+}
+
+[name=EditSolid12]:before {
+  content: "";
+}
+
+[name=EditSolidMirrored12]:before {
+  content: "";
+}
+
+[name=UneditableSolid12]:before {
+  content: "";
+}
+
+[name=UneditableSolidMirrored12]:before {
+  content: "";
+}
+
+[name=UneditableMirrored]:before {
+  content: "";
+}
+
+[name=AdminALogo32]:before {
+  content: "";
+}
+
+[name=AdminALogoFill32]:before {
+  content: "";
+}
+
+[name=ToDoLogoInverse]:before {
+  content: "";
+}
+
+[name=Snooze]:before {
+  content: "";
+}
+
+[name=WaffleOffice365]:before {
+  content: "";
+}
+
+[name=ImageSearch]:before {
+  content: "";
+}
+
+[name=NewsSearch]:before {
+  content: "";
+}
+
+[name=VideoSearch]:before {
+  content: "";
+}
+
+[name=R]:before {
+  content: "";
+}
+
+[name=FontColorA]:before {
+  content: "";
+}
+
+[name=FontColorSwatch]:before {
+  content: "";
+}
+
+[name=LightWeight]:before {
+  content: "";
+}
+
+[name=NormalWeight]:before {
+  content: "";
+}
+
+[name=SemiboldWeight]:before {
+  content: "";
+}
+
+[name=GroupObject]:before {
+  content: "";
+}
+
+[name=UngroupObject]:before {
+  content: "";
+}
+
+[name=AlignHorizontalLeft]:before {
+  content: "";
+}
+
+[name=AlignHorizontalCenter]:before {
+  content: "";
+}
+
+[name=AlignHorizontalRight]:before {
+  content: "";
+}
+
+[name=AlignVerticalTop]:before {
+  content: "";
+}
+
+[name=AlignVerticalCenter]:before {
+  content: "";
+}
+
+[name=AlignVerticalBottom]:before {
+  content: "";
+}
+
+[name=HorizontalDistributeCenter]:before {
+  content: "";
+}
+
+[name=VerticalDistributeCenter]:before {
+  content: "";
+}
+
+[name=Ellipse]:before {
+  content: "";
+}
+
+[name=Line]:before {
+  content: "";
+}
+
+[name=Octagon]:before {
+  content: "";
+}
+
+[name=Hexagon]:before {
+  content: "";
+}
+
+[name=Pentagon]:before {
+  content: "";
+}
+
+[name=RightTriangle]:before {
+  content: "";
+}
+
+[name=HalfCircle]:before {
+  content: "";
+}
+
+[name=QuarterCircle]:before {
+  content: "";
+}
+
+[name=ThreeQuarterCircle]:before {
+  content: "";
+}
+
+[name="6PointStar"]:before {
+  content: "";
+}
+
+[name="12PointStar"]:before {
+  content: "";
+}
+
+[name=ArrangeBringToFront]:before {
+  content: "";
+}
+
+[name=ArrangeSendToBack]:before {
+  content: "";
+}
+
+[name=ArrangeSendBackward]:before {
+  content: "";
+}
+
+[name=ArrangeBringForward]:before {
+  content: "";
+}
+
+[name=BorderDash]:before {
+  content: "";
+}
+
+[name=BorderDot]:before {
+  content: "";
+}
+
+[name=LineStyle]:before {
+  content: "";
+}
+
+[name=LineThickness]:before {
+  content: "";
+}
+
+[name=WindowEdit]:before {
+  content: "";
+}
+
+[name=HintText]:before {
+  content: "";
+}
+
+[name=MediaAdd]:before {
+  content: "";
+}
+
+[name=AnchorLock]:before {
+  content: "";
+}
+
+[name=AutoHeight]:before {
+  content: "";
+}
+
+[name=ChartSeries]:before {
+  content: "";
+}
+
+[name=ChartXAngle]:before {
+  content: "";
+}
+
+[name=ChartYAngle]:before {
+  content: "";
+}
+
+[name=Combobox]:before {
+  content: "";
+}
+
+[name=LineSpacing]:before {
+  content: "";
+}
+
+[name=Padding]:before {
+  content: "";
+}
+
+[name=PaddingTop]:before {
+  content: "";
+}
+
+[name=PaddingBottom]:before {
+  content: "";
+}
+
+[name=PaddingLeft]:before {
+  content: "";
+}
+
+[name=PaddingRight]:before {
+  content: "";
+}
+
+[name=NavigationFlipper]:before {
+  content: "";
+}
+
+[name=AlignJustify]:before {
+  content: "";
+}
+
+[name=TextOverflow]:before {
+  content: "";
+}
+
+[name=VisualsFolder]:before {
+  content: "";
+}
+
+[name=VisualsStore]:before {
+  content: "";
+}
+
+[name=PictureCenter]:before {
+  content: "";
+}
+
+[name=PictureFill]:before {
+  content: "";
+}
+
+[name=PicturePosition]:before {
+  content: "";
+}
+
+[name=PictureStretch]:before {
+  content: "";
+}
+
+[name=PictureTile]:before {
+  content: "";
+}
+
+[name=Slider]:before {
+  content: "";
+}
+
+[name=SliderHandleSize]:before {
+  content: "";
+}
+
+[name=DefaultRatio]:before {
+  content: "";
+}
+
+[name=NumberSequence]:before {
+  content: "";
+}
+
+[name=GUID]:before {
+  content: "";
+}
+
+[name=ReportAdd]:before {
+  content: "";
+}
+
+[name=DashboardAdd]:before {
+  content: "";
+}
+
+[name=MapPinSolid]:before {
+  content: "";
+}
+
+[name=WebPublish]:before {
+  content: "";
+}
+
+[name=PieSingleSolid]:before {
+  content: "";
+}
+
+[name=BlockedSolid]:before {
+  content: "";
+}
+
+[name=DrillDown]:before {
+  content: "";
+}
+
+[name=DrillDownSolid]:before {
+  content: "";
+}
+
+[name=DrillExpand]:before {
+  content: "";
+}
+
+[name=DrillShow]:before {
+  content: "";
+}
+
+[name=SpecialEvent]:before {
+  content: "";
+}
+
+[name=OneDriveFolder16]:before {
+  content: "";
+}
+
+[name=FunctionalManagerDashboard]:before {
+  content: "";
+}
+
+[name=BIDashboard]:before {
+  content: "";
+}
+
+[name=CodeEdit]:before {
+  content: "";
+}
+
+[name=RenewalCurrent]:before {
+  content: "";
+}
+
+[name=RenewalFuture]:before {
+  content: "";
+}
+
+[name=SplitObject]:before {
+  content: "";
+}
+
+[name=BulkUpload]:before {
+  content: "";
+}
+
+[name=DownloadDocument]:before {
+  content: "";
+}
+
+[name=GreetingCard]:before {
+  content: "";
+}
+
+[name=Flower]:before {
+  content: "";
+}
+
+[name=WaitlistConfirm]:before {
+  content: "";
+}
+
+[name=WaitlistConfirmMirrored]:before {
+  content: "";
+}
+
+[name=LaptopSecure]:before {
+  content: "";
+}
+
+[name=DragObject]:before {
+  content: "";
+}
+
+[name=EntryView]:before {
+  content: "";
+}
+
+[name=EntryDecline]:before {
+  content: "";
+}
+
+[name=ContactCardSettings]:before {
+  content: "";
+}
+
+[name=ContactCardSettingsMirrored]:before {
+  content: "";
+}
+
+[name=CalendarSettings]:before {
+  content: "";
+}
+
+[name=CalendarSettingsMirrored]:before {
+  content: "";
+}
+
+[name=HardDriveLock]:before {
+  content: "";
+}
+
+[name=HardDriveUnlock]:before {
+  content: "";
+}
+
+[name=AccountManagement]:before {
+  content: "";
+}
+
+[name=ReportWarning]:before {
+  content: "";
+}
+
+[name=TransitionPop]:before {
+  content: "";
+}
+
+[name=TransitionPush]:before {
+  content: "";
+}
+
+[name=TransitionEffect]:before {
+  content: "";
+}
+
+[name=LookupEntities]:before {
+  content: "";
+}
+
+[name=ExploreData]:before {
+  content: "";
+}
+
+[name=AddBookmark]:before {
+  content: "";
+}
+
+[name=SearchBookmark]:before {
+  content: "";
+}
+
+[name=DrillThrough]:before {
+  content: "";
+}
+
+[name=MasterDatabase]:before {
+  content: "";
+}
+
+[name=CertifiedDatabase]:before {
+  content: "";
+}
+
+[name=MaximumValue]:before {
+  content: "";
+}
+
+[name=MinimumValue]:before {
+  content: "";
+}
+
+[name=VisualStudioIDELogo32]:before {
+  content: "";
+}
+
+[name=PasteAsText]:before {
+  content: "";
+}
+
+[name=PasteAsCode]:before {
+  content: "";
+}
+
+[name=BrowserTab]:before {
+  content: "";
+}
+
+[name=BrowserTabScreenshot]:before {
+  content: "";
+}
+
+[name=DesktopScreenshot]:before {
+  content: "";
+}
+
+[name=FileYML]:before {
+  content: "";
+}
+
+[name=ClipboardSolid]:before {
+  content: "";
+}
+
+[name=FabricUserFolder]:before {
+  content: "";
+}
+
+[name=FabricNetworkFolder]:before {
+  content: "";
+}
+
+[name=BullseyeTarget]:before {
+  content: "";
+}
+
+[name=AnalyticsView]:before {
+  content: "";
+}
+
+[name=Video360Generic]:before {
+  content: "";
+}
+
+[name=Untag]:before {
+  content: "";
+}
+
+[name=Leave]:before {
+  content: "";
+}
+
+[name=Trending12]:before {
+  content: "";
+}
+
+[name=Blocked12]:before {
+  content: "";
+}
+
+[name=Warning12]:before {
+  content: "";
+}
+
+[name=CheckedOutByOther12]:before {
+  content: "";
+}
+
+[name=CheckedOutByYou12]:before {
+  content: "";
+}
+
+[name=CircleShapeSolid]:before {
+  content: "";
+}
+
+[name=SquareShapeSolid]:before {
+  content: "";
+}
+
+[name=TriangleShapeSolid]:before {
+  content: "";
+}
+
+[name=DropShapeSolid]:before {
+  content: "";
+}
+
+[name=RectangleShapeSolid]:before {
+  content: "";
+}
+
+[name=ZoomToFit]:before {
+  content: "";
+}
+
+[name=InsertColumnsLeft]:before {
+  content: "";
+}
+
+[name=InsertColumnsRight]:before {
+  content: "";
+}
+
+[name=InsertRowsAbove]:before {
+  content: "";
+}
+
+[name=InsertRowsBelow]:before {
+  content: "";
+}
+
+[name=DeleteColumns]:before {
+  content: "";
+}
+
+[name=DeleteRows]:before {
+  content: "";
+}
+
+[name=DeleteRowsMirrored]:before {
+  content: "";
+}
+
+[name=DeleteTable]:before {
+  content: "";
+}
+
+[name=AccountBrowser]:before {
+  content: "";
+}
+
+[name=VersionControlPush]:before {
+  content: "";
+}
+
+[name=StackedColumnChart2]:before {
+  content: "";
+}
+
+[name=TripleColumnWide]:before {
+  content: "";
+}
+
+[name=QuadColumn]:before {
+  content: "";
+}
+
+[name=WhiteBoardApp16]:before {
+  content: "";
+}
+
+[name=WhiteBoardApp32]:before {
+  content: "";
+}
+
+[name=PinnedSolid]:before {
+  content: "";
+}
+
+[name=InsertSignatureLine]:before {
+  content: "";
+}
+
+[name=ArrangeByFrom]:before {
+  content: "";
+}
+
+[name=Phishing]:before {
+  content: "";
+}
+
+[name=CreateMailRule]:before {
+  content: "";
+}
+
+[name=PublishCourse]:before {
+  content: "";
+}
+
+[name=DictionaryRemove]:before {
+  content: "";
+}
+
+[name=UserRemove]:before {
+  content: "";
+}
+
+[name=UserEvent]:before {
+  content: "";
+}
+
+[name=Encryption]:before {
+  content: "";
+}
+
+[name=PasswordField]:before {
+  content: "";
+}
+
+[name=OpenInNewTab]:before {
+  content: "";
+}
+
+[name=Hide3]:before {
+  content: "";
+}
+
+[name=VerifiedBrandSolid]:before {
+  content: "";
+}
+
+[name=MarkAsProtected]:before {
+  content: "";
+}
+
+[name=AuthenticatorApp]:before {
+  content: "";
+}
+
+[name=WebTemplate]:before {
+  content: "";
+}
+
+[name=DefenderTVM]:before {
+  content: "";
+}
+
+[name=MedalSolid]:before {
+  content: "";
+}
+
+[name=D365TalentLearn]:before {
+  content: "";
+}
+
+[name=D365TalentInsight]:before {
+  content: "";
+}
+
+[name=D365TalentHRCore]:before {
+  content: "";
+}
+
+[name=BacklogList]:before {
+  content: "";
+}
+
+[name=ButtonControl]:before {
+  content: "";
+}
+
+[name=TableGroup]:before {
+  content: "";
+}
+
+[name=MountainClimbing]:before {
+  content: "";
+}
+
+[name=TagUnknown]:before {
+  content: "";
+}
+
+[name=TagUnknownMirror]:before {
+  content: "";
+}
+
+[name=TagUnknown12]:before {
+  content: "";
+}
+
+[name=TagUnknown12Mirror]:before {
+  content: "";
+}
+
+[name=Link12]:before {
+  content: "";
+}
+
+[name=Presentation]:before {
+  content: "";
+}
+
+[name=Presentation12]:before {
+  content: "";
+}
+
+[name=Lock12]:before {
+  content: "";
+}
+
+[name=BuildDefinition]:before {
+  content: "";
+}
+
+[name=ReleaseDefinition]:before {
+  content: "";
+}
+
+[name=SaveTemplate]:before {
+  content: "";
+}
+
+[name=UserGauge]:before {
+  content: "";
+}
+
+[name=BlockedSiteSolid12]:before {
+  content: "";
+}
+
+[name=TagSolid]:before {
+  content: "";
+}
+
+[name=OfficeChat]:before {
+  content: "";
+}
+
+[name=OfficeChatSolid]:before {
+  content: "";
+}
+
+[name=MailSchedule]:before {
+  content: "";
+}
+
+[name=WarningSolid]:before {
+  content: "";
+}
+
+[name=Blocked2Solid]:before {
+  content: "";
+}
+
+[name=SkypeCircleArrow]:before {
+  content: "";
+}
+
+[name=SkypeArrow]:before {
+  content: "";
+}
+
+[name=SyncStatus]:before {
+  content: "";
+}
+
+[name=SyncStatusSolid]:before {
+  content: "";
+}
+
+[name=ProjectDocument]:before {
+  content: "";
+}
+
+[name=ToDoLogoOutline]:before {
+  content: "";
+}
+
+[name=VisioOnlineLogoFill32]:before {
+  content: "";
+}
+
+[name=VisioOnlineLogo32]:before {
+  content: "";
+}
+
+[name=VisioOnlineLogoCloud32]:before {
+  content: "";
+}
+
+[name=VisioDiagramSync]:before {
+  content: "";
+}
+
+[name=Event12]:before {
+  content: "";
+}
+
+[name=EventDateMissed12]:before {
+  content: "";
+}
+
+[name=UserOptional]:before {
+  content: "";
+}
+
+[name=ResponsesMenu]:before {
+  content: "";
+}
+
+[name=DoubleDownArrow]:before {
+  content: "";
+}
+
+[name=DistributeDown]:before {
+  content: "";
+}
+
+[name=BookmarkReport]:before {
+  content: "";
+}
+
+[name=FilterSettings]:before {
+  content: "";
+}
+
+[name=GripperDotsVertical]:before {
+  content: "";
+}
+
+[name=MailAttached]:before {
+  content: "";
+}
+
+[name=AddIn]:before {
+  content: "";
+}
+
+[name=LinkedDatabase]:before {
+  content: "";
+}
+
+[name=TableLink]:before {
+  content: "";
+}
+
+[name=PromotedDatabase]:before {
+  content: "";
+}
+
+[name=BarChartVerticalFilter]:before {
+  content: "";
+}
+
+[name=BarChartVerticalFilterSolid]:before {
+  content: "";
+}
+
+[name=MicOff2]:before {
+  content: "";
+}
+
+[name=MicrosoftTranslatorLogo]:before {
+  content: "";
+}
+
+[name=ShowTimeAs]:before {
+  content: "";
+}
+
+[name=FileRequest]:before {
+  content: "";
+}
+
+[name=WorkItemAlert]:before {
+  content: "";
+}
+
+[name=PowerBILogo16]:before {
+  content: "";
+}
+
+[name=PowerBILogoBackplate16]:before {
+  content: "";
+}
+
+[name=BulletedListText]:before {
+  content: "";
+}
+
+[name=BulletedListBullet]:before {
+  content: "";
+}
+
+[name=BulletedListTextMirrored]:before {
+  content: "";
+}
+
+[name=BulletedListBulletMirrored]:before {
+  content: "";
+}
+
+[name=NumberedListText]:before {
+  content: "";
+}
+
+[name=NumberedListNumber]:before {
+  content: "";
+}
+
+[name=NumberedListTextMirrored]:before {
+  content: "";
+}
+
+[name=NumberedListNumberMirrored]:before {
+  content: "";
+}
+
+[name=RemoveLinkChain]:before {
+  content: "";
+}
+
+[name=RemoveLinkX]:before {
+  content: "";
+}
+
+[name=FabricTextHighlight]:before {
+  content: "";
+}
+
+[name=ClearFormattingA]:before {
+  content: "";
+}
+
+[name=ClearFormattingEraser]:before {
+  content: "";
+}
+
+[name=Photo2Fill]:before {
+  content: "";
+}
+
+[name=IncreaseIndentText]:before {
+  content: "";
+}
+
+[name=IncreaseIndentArrow]:before {
+  content: "";
+}
+
+[name=DecreaseIndentText]:before {
+  content: "";
+}
+
+[name=DecreaseIndentArrow]:before {
+  content: "";
+}
+
+[name=IncreaseIndentTextMirrored]:before {
+  content: "";
+}
+
+[name=IncreaseIndentArrowMirrored]:before {
+  content: "";
+}
+
+[name=DecreaseIndentTextMirrored]:before {
+  content: "";
+}
+
+[name=DecreaseIndentArrowMirrored]:before {
+  content: "";
+}
+
+[name=CheckListText]:before {
+  content: "";
+}
+
+[name=CheckListCheck]:before {
+  content: "";
+}
+
+[name=CheckListTextMirrored]:before {
+  content: "";
+}
+
+[name=CheckListCheckMirrored]:before {
+  content: "";
+}
+
+[name=NumberSymbol]:before {
+  content: "";
+}
+
+[name=Coupon]:before {
+  content: "";
+}
+
+[name=VerifiedBrand]:before {
+  content: "";
+}
+
+[name=ReleaseGate]:before {
+  content: "";
+}
+
+[name=ReleaseGateCheck]:before {
+  content: "";
+}
+
+[name=ReleaseGateError]:before {
+  content: "";
+}
+
+[name=M365InvoicingLogo]:before {
+  content: "";
+}
+
+[name=RemoveFromShoppingList]:before {
+  content: "";
+}
+
+[name=ShieldAlert]:before {
+  content: "";
+}
+
+[name=FabricTextHighlightComposite]:before {
+  content: "";
+}
+
+[name=Dataflows]:before {
+  content: "";
+}
+
+[name=GenericScanFilled]:before {
+  content: "";
+}
+
+[name=DiagnosticDataBarTooltip]:before {
+  content: "";
+}
+
+[name=SaveToMobile]:before {
+  content: "";
+}
+
+[name=Orientation2]:before {
+  content: "";
+}
+
+[name=ScreenCast]:before {
+  content: "";
+}
+
+[name=ShowGrid]:before {
+  content: "";
+}
+
+[name=SnapToGrid]:before {
+  content: "";
+}
+
+[name=ContactList]:before {
+  content: "";
+}
+
+[name=NewMail]:before {
+  content: "";
+}
+
+[name=EyeShadow]:before {
+  content: "";
+}
+
+[name=FabricFolderConfirm]:before {
+  content: "";
+}
+
+[name=InformationBarriers]:before {
+  content: "";
+}
+
+[name=CommentActive]:before {
+  content: "";
+}
+
+[name=ColumnVerticalSectionEdit]:before {
+  content: "";
+}
+
+[name=WavingHand]:before {
+  content: "";
+}
+
+[name=ShakeDevice]:before {
+  content: "";
+}
+
+[name=SmartGlassRemote]:before {
+  content: "";
+}
+
+[name=Rotate90Clockwise]:before {
+  content: "";
+}
+
+[name=Rotate90CounterClockwise]:before {
+  content: "";
+}
+
+[name=CampaignTemplate]:before {
+  content: "";
+}
+
+[name=ChartTemplate]:before {
+  content: "";
+}
+
+[name=PageListFilter]:before {
+  content: "";
+}
+
+[name=SecondaryNav]:before {
+  content: "";
+}
+
+[name=ColumnVerticalSection]:before {
+  content: "";
+}
+
+[name=SkypeCircleSlash]:before {
+  content: "";
+}
+
+[name=SkypeSlash]:before {
+  content: "";
+}
+
+[name=CustomizeToolbar]:before {
+  content: "";
+}
+
+[name=DuplicateRow]:before {
+  content: "";
+}
+
+[name=RemoveFromTrash]:before {
+  content: "";
+}
+
+[name=MailOptions]:before {
+  content: "";
+}
+
+[name=Childof]:before {
+  content: "";
+}
+
+[name=Footer]:before {
+  content: "";
+}
+
+[name=Header]:before {
+  content: "";
+}
+
+[name=BarChartVerticalFill]:before {
+  content: "";
+}
+
+[name=StackedColumnChart2Fill]:before {
+  content: "";
+}
+
+[name=PlainText]:before {
+  content: "";
+}
+
+[name=AccessibiltyChecker]:before {
+  content: "";
+}
+
+[name=DatabaseSync]:before {
+  content: "";
+}
+
+[name=ReservationOrders]:before {
+  content: "";
+}
+
+[name=TabOneColumn]:before {
+  content: "";
+}
+
+[name=TabTwoColumn]:before {
+  content: "";
+}
+
+[name=TabThreeColumn]:before {
+  content: "";
+}
+
+[name=BulletedTreeList]:before {
+  content: "";
+}
+
+[name=MicrosoftTranslatorLogoGreen]:before {
+  content: "";
+}
+
+[name=MicrosoftTranslatorLogoBlue]:before {
+  content: "";
+}
+
+[name=InternalInvestigation]:before {
+  content: "";
+}
+
+[name=AddReaction]:before {
+  content: "";
+}
+
+[name=ContactHeart]:before {
+  content: "";
+}
+
+[name=VisuallyImpaired]:before {
+  content: "";
+}
+
+[name=EventToDoLogo]:before {
+  content: "";
+}
+
+[name=Variable2]:before {
+  content: "";
+}
+
+[name=ModelingView]:before {
+  content: "";
+}
+
+[name=DisconnectVirtualMachine]:before {
+  content: "";
+}
+
+[name=ReportLock]:before {
+  content: "";
+}
+
+[name=Uneditable2]:before {
+  content: "";
+}
+
+[name=Uneditable2Mirrored]:before {
+  content: "";
+}
+
+[name=BarChartVerticalEdit]:before {
+  content: "";
+}
+
+[name=GlobalNavButtonActive]:before {
+  content: "";
+}
+
+[name=PollResults]:before {
+  content: "";
+}
+
+[name=Rerun]:before {
+  content: "";
+}
+
+[name=QandA]:before {
+  content: "";
+}
+
+[name=QandAMirror]:before {
+  content: "";
+}
+
+[name=BookAnswers]:before {
+  content: "";
+}
+
+[name=AlertSettings]:before {
+  content: "";
+}
+
+[name=TrimStart]:before {
+  content: "";
+}
+
+[name=TrimEnd]:before {
+  content: "";
+}
+
+[name=TableComputed]:before {
+  content: "";
+}
+
+[name=DecreaseIndentLegacy]:before {
+  content: "";
+}
+
+[name=IncreaseIndentLegacy]:before {
+  content: "";
+}
+
+[name=SizeLegacy]:before {
+  content: "";
+}
+
+/*# sourceMappingURL=fabric-icons.css.map */

@@ -15,22 +15,24 @@
 ::slotted(x-tab) {
   margin: 0 .09em;
   padding: 10px 20px;
-  background-color: #EFEFEF;
+  background-color: rgb(243, 242, 241);
+  border-radius: var(--border-radius);
   cursor: pointer;
+  outline: transparent;
 }
 
 ::slotted(x-tab:focus) {
-  outline: 1px solid #5F8BF8;
+  outline: -webkit-focus-ring-color auto 2px;
+  outline-offset: -2px;
+  background: rgb(237, 235, 233);
 }
 
 ::slotted(x-tab:hover) {
-  opacity: .9;
+  background: rgb(237, 235, 233);
 }
 
 ::slotted([selected]) {
-  color: white;
   background-color: var(--selected-background-color);
-  box-shadow: none;
 }
 
 ::slotted(x-panel) {

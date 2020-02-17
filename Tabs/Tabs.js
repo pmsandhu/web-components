@@ -1,4 +1,10 @@
-const tabsTemplate = document.currentScript.ownerDocument.querySelector('#tabsTemplate')
+const tabsTemplate = document.createElement('template')
+
+tabsTemplate.innerHTML = `
+  <link rel="stylesheet" href="./Tabs.css">
+  <slot name="tab"></slot>
+  <slot name="panel"></slot>
+`
 
 class Tabs extends HTMLElement {
   constructor() {
@@ -10,7 +16,7 @@ class Tabs extends HTMLElement {
   connectedCallback() {
     this.addEventListener('click', this.onClick)
     this.addEventListener('keydown', this.onKeyDown)
-    this.linkPanels()
+
     Promise.all([
       customElements.whenDefined('x-tab'),
       customElements.whenDefined('x-panel'),
@@ -29,9 +35,10 @@ class Tabs extends HTMLElement {
   }
 
   selectTab(tab) {
+    if (!tab) return
     this.reset()
     tab.selected = true
-    tab.nextElementSibling.hidden = false
+    if (tab.nextElementSibling) tab.nextElementSibling.hidden = false
     tab.focus()
   }
 
@@ -66,7 +73,7 @@ class Tabs extends HTMLElement {
         break
 
       case KEYCODE.END:
-        newTab = this.tabs[this.tabs.length -1]
+        newTab = this.tabs[this.tabs.length - 1]
         break
 
       default:
@@ -88,8 +95,8 @@ class Tabs extends HTMLElement {
   }
 }
 
-
 let tabIndex = 0
+
 class Tab extends HTMLElement {
   constructor() { super() }
 
@@ -122,5 +129,3 @@ class Panel extends HTMLElement {
 customElements.define('x-tabs', Tabs)
 customElements.define('x-tab', Tab)
 customElements.define('x-panel', Panel)
-
-

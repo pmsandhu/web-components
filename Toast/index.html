@@ -39,7 +39,10 @@
 <body style="height: 90vh; width: 90vw;">
 <button>Click Here To Trigger Toast</button>
 <!--<x-toast position="bottom-center" message="Hello World"></x-toast>-->
-<script>
+
+<script type="module">
+  import Toast from './Toast.js'
+
   document.querySelector('button').addEventListener('click', e => {
     const toast = new Toast()
     toast.position = 'bottom-center'
@@ -47,7 +50,6 @@
     document.body.appendChild(toast)
   })
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.8/custom-elements.min.js"></script>
-<link rel="import" href="./Toast.html">
+
 </body>
 </html>

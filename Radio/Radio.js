@@ -1,4 +1,13 @@
-const radioTemplate = document.currentScript.ownerDocument.querySelector('#radioTemplate')
+const radioTemplate = document.createElement('template')
+
+radioTemplate.innerHTML = ` 
+<link rel="stylesheet" href="../Radio/Radio.css">
+
+<label class="control radio">
+  <input type="radio" class="control-input">
+  <span class="control-indicator"></span>
+  <span class="label"></span>
+</label>`
 
 class Radio extends HTMLElement {
   static get observedAttributes() {

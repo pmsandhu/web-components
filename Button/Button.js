@@ -1,9 +1,18 @@
+const buttonTemplate = document.createElement('template')
+buttonTemplate.innerHTML =  `
+<link rel="stylesheet" href="./Button.css">
+
+<div class="container">
+  <button>Label</button>
+</div>
+`
+
 class Button extends HTMLElement {
   constructor() {
     super()
 
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(getTemplate('#buttonTemplate').content.cloneNode(true))
+    this.shadowRoot.appendChild(buttonTemplate.content.cloneNode(true))
     this.button = this.shadowRoot.querySelector('button')
     this.container = this.shadowRoot.querySelector('.container')
 

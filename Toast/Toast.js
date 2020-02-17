@@ -1,6 +1,14 @@
-const template = document.currentScript.ownerDocument.querySelector('#toastTemplate')
+const toastTemplate = document.createElement('template')
+toastTemplate.innerHTML = `
+<link rel="stylesheet" href="./Toast.css">
 
-class Toast extends HTMLElement {
+  <div class="toast">
+    <div class="message"></div>
+    <div class="close"><span>X</span></div>
+  </div>
+`
+
+export default class Toast extends HTMLElement {
   static get observedAttributes() {
     return ['position', 'message']
   }
@@ -13,11 +21,11 @@ class Toast extends HTMLElement {
 
   constructor() {
     super()
-    this.root = this.createShadowRoot()
-    this.root.appendChild(template.content.cloneNode(true))
-    this.toast = this.root.querySelector('.toast')
-    this.close = this.root.querySelector('.close')
-    this.message_div = this.root.querySelector('.message')
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.appendChild(toastTemplate.content.cloneNode(true))
+    this.toast = this.shadowRoot.querySelector('.toast')
+    this.close = this.shadowRoot.querySelector('.close')
+    this.message_div = this.shadowRoot.querySelector('.message')
   }
 
   connectedCallback() {

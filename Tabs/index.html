@@ -1,6 +1,8 @@
 <html lang="en">
 <head>
   <title>Tabs</title>
+  <script src="../utils.js"></script>
+  <script type="module" src="Tabs.js"></script>
 
   <style>
     x-tabs {
@@ -12,10 +14,6 @@
       display: block;
     }
   </style>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.8/custom-elements.min.js"></script>
-  <link rel="import" href="Tabs.html">
-  <link rel="import" href="../Checkbox/Checkbox.html">
 </head>
 
 <body>
@@ -32,8 +30,8 @@
 
   <x-tab slot="tab">Tab 4</x-tab>
   <x-panel slot="panel">
-    <x-checkbox value="1" stacked checked>One</x-checkbox>
-    <x-checkbox value="2" stacked>Two</x-checkbox>
+<!--    <x-checkbox value="1" stacked checked>One</x-checkbox>-->
+<!--    <x-checkbox value="2" stacked>Two</x-checkbox>-->
   </x-panel>
 
 </x-tabs>
@@ -44,3 +42,4 @@
 
 </body>
 </html>
+

@@ -1,8 +1,26 @@
+const autoCompleteTemplate = document.createElement('template')
+autoCompleteTemplate.innerHTML = `
+<link rel="stylesheet" href="./AutoComplete.css">
+
+<div class="autocomplete">
+
+  <form onsubmit="return false;">
+    <input autofocus
+           type="text"
+           name="autocomplete"
+           placeholder="Select a Value ...">
+  </form>
+
+  <div class="dropdown"></div>
+
+</div>
+`
+
 class AutoComplete extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(getTemplate('#autoCompleteTemplate').content.cloneNode(true))
+    this.shadowRoot.appendChild(autoCompleteTemplate.content.cloneNode(true))
     this.minChars = 1
     this.delay = 150
     this.offsetleft = 0

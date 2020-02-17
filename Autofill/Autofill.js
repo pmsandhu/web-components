@@ -1,10 +1,14 @@
+export const autoFillTemplate = document.createElement('template')
+autoFillTemplate.innerHTML = `
+  <link rel="stylesheet" href="../Autofill/Autofill.css">
+  <input class="input" type="text" spellcheck="false" autocomplete="off">
+`
+
 class Autofill extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: 'open', delegatesFocus: true })
-    this.shadowRoot.appendChild(
-
-      getTemplate('#autofillTemplate').content.cloneNode(true))
+    this.shadowRoot.appendChild(autoFillTemplate.content.cloneNode(true))
 
     this.previousValue = ''
     this.input = this.shadowRoot.querySelector('input')
@@ -99,6 +103,10 @@ class Autofill extends HTMLElement {
     this.input.setSelectionRange(rangeStart, rangeEnd)
   }
 
+  disconnectedCallback() {
+    this.removeEventListener('keydown', this.inputKeyDown)
+    this.removeEventListener('keyup', this.inputKeyUp)
+  }
 
 }
 

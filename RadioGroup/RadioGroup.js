@@ -1,4 +1,10 @@
-const radioGroupTemplate = document.currentScript.ownerDocument.querySelector('#radioGroupTemplate')
+const radioGroupTemplate = document.createElement('template')
+
+radioGroupTemplate.innerHTML = `
+<link rel="stylesheet" href="./RadioGroup.css">
+<div class="radio-group">
+  <slot></slot>
+</div>`
 
 class RadioGroup extends HTMLElement {
   constructor() {

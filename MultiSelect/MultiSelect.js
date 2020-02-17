@@ -1,8 +1,28 @@
+import '../Autofill/Autofill.js'
+const multiSelectTemplate = document.createElement('template')
+multiSelectTemplate.innerHTML = `
+<link rel="stylesheet" href="./MultiSelect.css">
+
+<div class="multiselect">
+
+  <div class="container">
+    <x-autofill></x-autofill>
+  </div>
+
+  <div class="dropdown">
+    <ul class="options">
+      <slot></slot>
+    </ul>
+    <span class="no-results" style="display: none;">No results found.</span>
+  </div>
+
+</div>
+`
 class MultiSelect extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(document.importNode(getTemplate('#multiselectTemplate').content, true))
+    this.shadowRoot.appendChild(multiSelectTemplate.content.cloneNode(true))
 
     this.focusIndex = 0
     this.tagFocusIndex = 0
@@ -13,6 +33,7 @@ class MultiSelect extends HTMLElement {
 
     this.container = this.shadowRoot.querySelector('.container')
     this.input = this.shadowRoot.querySelector('x-autofill')
+    console.log(this.input)
     this.placeholder = this.getAttribute('placeholder') || 'Select'
 
     this.tags = this.shadowRoot.querySelectorAll('.tag')

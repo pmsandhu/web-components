@@ -90,6 +90,5 @@
 ::slotted(li:focus) {
   background-color: var(--neutralLight);
   outline: none;
-  /*outline-offset: -1px;*/
 }
 

@@ -1,13 +1,23 @@
-const checkboxTemplate = document.currentScript.ownerDocument.querySelector('#checkboxTemplate')
+const checkboxTemplate = document.createElement('template')
+
+checkboxTemplate.innerHTML = `
+<link rel="stylesheet" href="./Checkbox.css">
+
+<label class="control checkbox">
+  <input type="checkbox" class="control-input">
+  <span class="control-indicator"></span>
+  <span class="label"></span>
+</label>
+`
 
 class Checkbox extends HTMLElement {
   constructor() {
     super()
-    this.root = this.createShadowRoot()
-    this.root.appendChild(checkboxTemplate.content.cloneNode(true))
-    this.checkbox = this.root.querySelector('.checkbox')
-    this.label = this.root.querySelector('.label')
-    this.input = this.root.querySelector('input')
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.appendChild(checkboxTemplate.content.cloneNode(true))
+    this.checkbox = this.shadowRoot.querySelector('.checkbox')
+    this.label = this.shadowRoot.querySelector('.label')
+    this.input = this.shadowRoot.querySelector('input')
   }
 
   connectedCallback() {

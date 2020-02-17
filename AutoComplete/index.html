@@ -1,8 +1,9 @@
 <html lang="en">
 <head>
   <title>AutoComplete</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.8/custom-elements.min.js"></script>
-  <link rel="import" href="./AutoComplete.html">
+
+  <script src="../utils.js"></script>
+  <script type="module" src="AutoComplete.js"></script>
 </head>
 
 <body>
@@ -12,7 +13,7 @@
   placeholder="Programming languages ...">
 </x-auto-complete>
 
-<script>
+<script type="module">
   const data = [
     'ActionScript', 'AppleScript', 'Asp', 'Assembly',
     'BASIC', 'Batch', 'C', 'C++', 'CSS', 'Clojure', 'COBOL',

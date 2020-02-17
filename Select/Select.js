@@ -1,8 +1,35 @@
+const selectTemplate = document.createElement('template')
+
+selectTemplate.innerHTML = `
+<link rel="stylesheet" href="./Select.css">
+
+<div class="select">
+  <div class="container">
+    <div>
+      <span id="value" class="placeholder"></span>
+      <svg class="close_icon" width="9" height="9" viewBox="-1 -1 11 11">
+        <path d="M9 0 L 0 9 M9 9 L 0 0"/>
+      </svg>
+      <svg class="arrow_icon" width="10" height="6" viewBox="0 0 10 6">
+        <path d="M5 6 L 0 0 H 10 Z"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <ul class="options">
+      <slot></slot>
+    </ul>
+  </div>
+
+</div>
+`
+
 class Select extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(getTemplate('#selectTemplate').content.cloneNode(true))
+    this.shadowRoot.appendChild(selectTemplate.content.cloneNode(true))
     this.focusIndex = 0
     this.isOpen = false
 
@@ -37,11 +64,11 @@ class Select extends HTMLElement {
     this.addEventListener('keydown', this.handleKeyPress)
     this.dropdown.addEventListener('click', this.selectValue.bind(this))
     this.close_icon.addEventListener('click', this.deselectValue.bind(this))
-    document.addEventListener('click', e => this.isOpen ? this.close() : void(0))
+    document.addEventListener('click', e => this.isOpen ? this.close() : void (0))
 
   }
 
-  setUpSlotDefinedDefaults(){
+  setUpSlotDefinedDefaults() {
     const hasDefaultSelection = this.querySelector('li[selected]')
     if (!hasDefaultSelection) return this.updateValue(this.defaultValue)
     this.focusIndex = hasDefaultSelection.tabIndex
@@ -170,6 +197,7 @@ class Select extends HTMLElement {
     this.createLiElement(val)
     this.li = this.querySelectorAll('li')
   }
+
   addManyLi(array) {
     array.forEach((val, i) => this.createLiElement(val, this.li.length + i))
     this.li = this.querySelectorAll('li')

@@ -1,4 +1,14 @@
-const switchTemplate = document.currentScript.ownerDocument.querySelector('#switchTemplate')
+const switchTemplate = document.createElement('template')
+switchTemplate.innerHTML = `
+<link rel="stylesheet" href="./Switch.css">
+
+<label class="switch">
+  <input type="checkbox"/>
+  <span class="circle"></span>
+  <span class="label"></span>
+</label>
+
+`
 class Switch extends HTMLElement {
 
   static get observedAttributes() {

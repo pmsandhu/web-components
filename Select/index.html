@@ -2,12 +2,13 @@
 <head>
   <title>Select</title>
 
+  <script src="../utils.js"></script>
+  <script type="module" src="Select.js"></script>
+
   <style>
     x-select .special { color: red; }
   </style>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.8/custom-elements.min.js"></script>
-  <link rel="import" href="./Select.html">
 </head>
 
 
@@ -23,7 +24,7 @@
 </x-select>
 
 
-<script>
+<script type="module">
   const select = document.querySelector('x-select')
   select.addOneLi({ value: '9', textContent: 'Hi', className: 'special' })
   select.addManyLi([

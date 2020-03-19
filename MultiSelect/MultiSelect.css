@@ -1,5 +1,5 @@
 @import url(../common.css);
-@import url(../scss/fabric-icons.css);
+@import url(../__icons/fabric-icons.css);
 
 :host {
   position: relative;

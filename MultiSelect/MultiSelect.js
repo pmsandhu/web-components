@@ -1,4 +1,5 @@
 import '../Autofill/Autofill.js'
+
 const multiSelectTemplate = document.createElement('template')
 multiSelectTemplate.innerHTML = `
 <link rel="stylesheet" href="./MultiSelect.css">

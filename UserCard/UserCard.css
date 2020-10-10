@@ -1,22 +1,50 @@
-.card__user-card-container {
-  text-align: center;
-  display: inline-block;
-  border-radius: 5px;
-  border: 1px solid grey;
+.container {
+  font-family: 'Lato', sans-serif;
+  width: 250px;
   margin: 3px;
-  width: 30%;
+  padding: 1rem;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
-.card__user-card-container:hover {
-  box-shadow: 3px 3px 3px;
+.container:hover {
+  background-color: whitesmoke;
 }
 
-.card__hidden-content {
+.header {
+  font-size: 18px;
+}
+
+.header-subtext {
+  font-size: 14px;
+  margin-top: .25rem;
+  margin-bottom: 1rem;
+  color: #5f5e5e;
+}
+
+.hidden-content {
   display: none;
 }
 
-.card__details-btn {
-  background-color: #DEDEDE;
+.content {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.2rem;
+  margin-bottom: 1rem;
+  color: #5f5e5e;
+}
+
+.content-header {
+  font-weight: normal;
+  color: black;
+}
+
+.show {
+  font-weight: bold;
   padding: 6px;
-  margin-bottom: 8px;
+  color: white;
+  background-color: dodgerblue;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

@@ -1,8 +1,8 @@
 :host {
   --background: rgba(167, 182, 194, .5);
   --checked-background: #888888;
-  --disabled-background: #ECEEEF;
-  --disabled-label-color: #9CA3A9;
+  --disabled-background: #eceeef;
+  --disabled-label-color: #9ca3a9;
   --box-shadow: 0 0 0 1px rgba(16, 22, 26, .2), 0 1px 1px rgba(16, 22, 26, .2);
   --font-family: Arial, sans-serif;
   --font-size: 14px;
@@ -11,67 +11,67 @@
 .switch {
   font-family: var(--font-family);
   font-size: var(--font-size);
-  display: block;
+  line-height: 16px;
   position: relative;
   min-height: 16px;
-  line-height: 16px;
+  display: block;
   margin-bottom: 10px;
   padding-left: 38px;
   cursor: pointer;
 }
 
 input {
-  font-family: "Helvetica Neue", sans-serif;
   box-sizing: border-box;
+  font-family: "Helvetica Neue", sans-serif;
   position: absolute;
   top: 0;
   left: 0;
-  margin: 0;
-  opacity: 0;
   z-index: -1;
+  margin: 0;
   overflow: visible;
+  opacity: 0;
 }
 
 .circle {
-  position: absolute;
-  width: 28px;
-  height: 16px;
   line-height: 16px;
+  position: absolute;
   top: 0;
   left: 0;
+  width: 28px;
+  height: 16px;
   margin: 0;
   background: var(--background);
-  transition: background .1s cubic-bezier(.4, 1, .75, .9);
   border: none;
   border-radius: 28px;
   cursor: pointer;
   user-select: none;
+  transition: background .1s cubic-bezier(.4, 1, .75, .9);
 }
 
-.circle:before {
-  position: relative;
-  display: block;
+.circle::before {
   content: "";
-  width: 12px;
-  height: 12px;
+  position: relative;
   top: 2px;
   left: 2px;
-  background: #FFFFFF;
+  width: 12px;
+  height: 12px;
+  display: block;
+  background: #ffffff;
   background-clip: padding-box;
-  transition: left .1s cubic-bezier(.4, 1, .75, .9);
-  box-shadow: var(--box-shadow);
   border-radius: 16px;
+  box-shadow: var(--box-shadow);
+  transition: left .1s cubic-bezier(.4, 1, .75, .9);
 }
 
 input:checked ~ .circle {
   width: 28px;
   height: 16px;
+  color: #ffffff;
   background-color: var(--checked-background);
   background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, 0));
-  color: #FFFFFF;
 }
 
-input:checked ~ .circle:before {
+input:checked ~ .circle::before {
   left: 14px;
   box-shadow: var(--box-shadow);
 }

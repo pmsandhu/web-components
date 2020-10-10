@@ -2,16 +2,16 @@ const cardTemplate = document.createElement('template')
 cardTemplate.innerHTML = `
   <link rel="stylesheet" href="./UserCard.css">
 
-  <div class="card__user-card-container">
-    <h2 class="card__name">
-      <span class="card__full-name"></span> (
-      <span class="card__user-name"></span> )
-    </h2>
-    <p>Website: <a class="card__website"></a></p>
-    <div class="card__hidden-content">
-      <p class="card__address"></p>
+  <div class="container">
+    <div class="header">
+      <span class="fullname"></span> (
+      <span class="username"></span> )
+    <div class="header-subtext">Website: <a class="website"></a></div>
     </div>
-    <button class="card__details-btn">More Details</button>
+    <div class="hidden-content">
+      <div class="content"></div>
+    </div>
+    <button class="show">More Details</button>
   </div>
 `
 const END_POINT = 'https://jsonplaceholder.typicode.com/users'
@@ -20,7 +20,7 @@ class UserCard extends HTMLElement {
   constructor() {
     super()
     this.addEventListener('click', e => this.toggleCard())
-    this.details = null
+    this.showDetails = null
   }
 
   qs(selector) {
@@ -38,26 +38,26 @@ class UserCard extends HTMLElement {
   }
 
   render(userData) {
-    this.qs('.card__full-name').innerHTML = userData.name
-    this.qs('.card__user-name').innerHTML = userData.username
-    this.qs('.card__website').innerHTML = userData.website
-    this.qs('.card__address').innerHTML =
-      `<h4>Address</h4>
+    this.qs('.fullname').innerHTML = userData.name
+    this.qs('.username').innerHTML = userData.username
+    this.qs('.website').innerHTML = userData.website
+    this.qs('.content').innerHTML =
+      `<div class="content-header">Address</div>
         ${userData.address.suite}, <br />
         ${userData.address.street},<br />
         ${userData.address.city},<br />
         Zipcode: ${userData.address.zipcode}`
-    this.details = this.shadowRoot.querySelector('.card__details-btn')
+    this.showDetails = this.shadowRoot.querySelector('.show')
     this.toggleCard()
   }
 
   toggleCard() {
-    const elem = this.qs('.card__hidden-content')
-    const btn = this.qs('.card__details-btn')
+    const elem = this.qs('.hidden-content')
+    const btn = this.qs('.show')
     elem.style.display == 'none'
       ? (elem.style.display = 'block', btn.innerHTML = 'Less Details')
       : (elem.style.display = 'none', btn.innerHTML = 'More Details')
   }
 }
 
-customElements.define('user-card', UserCard)
+customElements.define('x-user-card', UserCard)

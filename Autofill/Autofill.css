@@ -1,12 +1,12 @@
 input {
-  display: flex;
+  height: 30px;
   min-width: 0;
+  display: flex;
   align-self: flex-end;
   flex: 1 0 50px;
-  height: 30px;
   padding: 0 6px;
-  outline: none;
   border: none;
+  outline: none;
 }
 
 input::placeholder {

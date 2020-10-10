@@ -1,80 +1,81 @@
 *::-webkit-scrollbar { width: 6px; }
 
 *::-webkit-scrollbar-track {
-  background-color: rgba(180, 180, 180, 0.3);
+  background-color: rgba(180, 180, 180, .3);
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(188, 188, 188, 0.6);
   width: 6px;
+  background-color: rgba(188, 188, 188, .6);
 }
 
 .autocomplete {
+  min-width: 320px;
   margin: 0;
   padding: 0;
-  border: 0;
-  min-width: 320px;
   color: #777777;
+  border: 0;
 }
 
-.autocomplete, input {
+.autocomplete,
+input {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.02em;
 }
 
 form {
-  border-top: 1px solid #EEEEEE;
-  border-bottom: 1px solid #EEEEEE;
-  background: #FAFAFA;
   margin: 30px 0;
   padding: 20px 10px;
   text-align: center;
+  background: #fafafa;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 input {
   width: 100%;
   max-width: 600px;
-  outline: 0;
   border-radius: 0 !important;
+  outline: 0;
 }
 
 .dropdown {
-  text-align: left;
-  cursor: default;
-  border: 1px solid #CCCCCC;
-  border-top: 0;
-  background: #FFFFFF;
-  box-shadow: -1px 1px 3px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
   position: absolute;
-  display: none;
   max-height: 254px;
+  display: none;
   overflow: hidden;
   overflow-y: auto;
-  box-sizing: border-box;
+  text-align: left;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-top: 0;
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, .1);
+  cursor: default;
 }
 
 .option {
+  font-size: 1.02em;
+  line-height: 23px;
   position: relative;
   padding: 0 .6em;
-  line-height: 23px;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.02em;
+  white-space: nowrap;
   color: #333333;
 }
 
 .option b {
   font-weight: normal;
-  color: #1F8DD6;
+  color: #1f8dd6;
 }
 
 .option.selected {
-  background: #F0F0F0;
+  background: #f0f0f0;
 }
 
 .option[selected] {
-  background: #F0F0F0;
+  background: #f0f0f0;
 }
 
 .option:hover {

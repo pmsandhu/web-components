@@ -50,5 +50,5 @@ class Button extends HTMLElement {
   }
 }
 
-window.customElements.define('my-button', Button)
+window.customElements.define('x-button', Button)
 

@@ -1,12 +1,13 @@
 @import url(../common.css);
 
 :host {
+  --selected-background-color: #0275d8;
+
+  max-width: 650px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 650px;
   color: var(--black);
   border: thin solid gainsboro;
-  --selected-background-color: #0275D8;
 }
 
 ::slotted(x-tab) {
@@ -14,8 +15,8 @@
   padding: 10px 20px;
   background-color: rgb(243, 242, 241);
   border-radius: var(--border-radius);
-  cursor: pointer;
   outline: transparent;
+  cursor: pointer;
 }
 
 ::slotted(x-tab:focus) {

@@ -1,13 +1,18 @@
 <html lang="en">
 <head>
   <script type="module" src="UserCard.js"></script>
+  <style>
+    x-user-card:not(:defined) {
+      visibility: hidden;
+    }
+  </style>
 </head>
 
 <body>
 
-<user-card user-id="1">
-  <div>MEOWWWW</div>
-</user-card>
+<x-user-card user-id="9">
+  <div>Hello</div>
+</x-user-card>
 
 </body>
 </html>

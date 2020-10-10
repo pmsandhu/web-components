@@ -1,28 +1,17 @@
 <html lang="en">
 <head>
   <title>Multi Select</title>
-  <script src="../utils.js"></script>
-  <link rel="stylesheet" href="../__icons/fabric-icons.css">
-
-  <script type="module" src="MultiSelect.js"></script>
-
-  <style>
-    x-multiselect {
-      --border-radius: 2px;
+    <style>
+    x-multiselect:not(:defined),
+    x-autofill:not(:defined) {
+      visibility: hidden;
     }
 
-    x-multiselect#dark-theme {
-      --white: #333333;
-      --black: #ffffff;
-      --neutralLight: #757575;
-      --neutralLighter: #616161;
-      --neutralDark: #fafafa;
-      --neutralDarker: #E6E6E6;
-      --border-radius: .2em;
-      --neutralSecondary: #757575;
-      --neutralSecondaryAlt: #616161;
-    }
+    x-multiselect { --border-radius: 2px; }
   </style>
+  <link rel="stylesheet" href="../__icons/fabric-icons.css">
+  <script src="../utils.js"></script>
+  <script type="module" src="MultiSelect.js"></script>
 </head>
 
 <body>
@@ -39,14 +28,6 @@
   <li value="9">Long Long Items jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</li>
 </x-multiselect>
 
-<!--<x-multiselect id="dark-theme" placeholder="Select Value">-->
-<!--  <li value="1">Dark Item 1</li>-->
-<!--  <li value="2">Dark Item 2</li>-->
-<!--  <li value="3">Dark Item 3</li>-->
-<!--  <li value="4">Dark Item 4</li>-->
-<!--  <li value="5">Dark Item 5</li>-->
-<!--</x-multiselect>-->
-
 <script type="module">
   const multiselect = document.querySelector('x-multiselect')
   multiselect.addElements([
@@ -55,7 +36,6 @@
     { value: '20', textContent: 'mmm', selected: false },
   ])
 
-  // multiselect.addEventListener('change', e => console.log('detail', e.detail))
 </script>
 
 </body>

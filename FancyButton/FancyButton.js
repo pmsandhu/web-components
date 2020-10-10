@@ -35,4 +35,4 @@ class FancyButton extends HTMLButtonElement {
   }
 }
 
-customElements.define('fancy-button', FancyButton, { extends: 'button' })
+customElements.define('x-fancy-button', FancyButton, { extends: 'button' })

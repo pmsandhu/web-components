@@ -110,8 +110,8 @@ class AutoComplete extends HTMLElement {
   keyUp(e) {
     let key = e.which
     if (!((key < KEYCODE.END || key > KEYCODE.DOWN)
-        && key != KEYCODE.ENTER
-        && key != KEYCODE.ESCAPE)) return
+      && key != KEYCODE.ENTER
+      && key != KEYCODE.ESCAPE)) return
 
     const value = this.input.value
 

@@ -1,16 +1,16 @@
 ::slotted {
-  --checked-color:#888888;
+  --checked-color: #888888;
 }
 
 .stacked {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .stacked .control {
-  margin-bottom: 0.25rem;
+  margin-bottom: .25rem;
 }
 
 .stacked .control + .control {

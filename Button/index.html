@@ -5,11 +5,16 @@
   <title>Button</title>
   <script src="../utils.js"></script>
   <script type="module" src="Button.js"></script>
+  <style>
+    x-button:not(:defined) {
+      visibility: hidden;
+    }
+  </style>
 </head>
 
 <body>
 
-<my-button label="Click Me"></my-button>
+<x-button label="Click Me"></x-button>
 
 <script>
   const button = document.querySelector('my-button')

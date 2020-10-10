@@ -2,22 +2,22 @@
   font-family: Arial, sans-serif;
   font-size: 14px;
   position: relative;
+  min-height: 1.5rem;
   display: inline-flex;
   align-items: center;
-  min-height: 1.5rem;
-  padding-left: 1.5rem;
   margin-right: 1rem;
+  padding-left: 1.5rem;
 }
- 
+
 .stacked {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .stacked .control {
-  margin-bottom: 0.25rem;
+  margin-bottom: .25rem;
 }
 
 .stacked .control + .control {
@@ -27,10 +27,10 @@
 .control-indicator {
   position: absolute;
   left: 0;
-  display: block;
   width: 1rem;
   height: 1rem;
-  background: #DDDDDD center center no-repeat;
+  display: block;
+  background: #dddddd center center no-repeat;
   background-size: 50% 50%;
 }
 
@@ -41,30 +41,30 @@
 }
 
 .control-input:checked ~ .control-indicator {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #888888;
 }
 
 .control-input:focus ~ .control-indicator {
-  box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 .2rem rgba(0, 123, 255, .25);
 }
 
 .control-input:active ~ .control-indicator {
-  color: #FFFFFF;
-  background-color: #B3D7FF;
+  color: #ffffff;
+  background-color: #b3d7ff;
 }
 
 .control-input:disabled ~ .control-indicator {
+  background-color: #eceeef;
   cursor: not-allowed;
-  background-color: #ECEEEF;
 }
 
 .control-input:disabled ~ .label {
-  color: #9CA3A9;
+  color: #9ca3a9;
 }
 
 .checkbox .control-indicator {
-  border-radius: 0.25rem;
+  border-radius: .25rem;
 }
 
 .checkbox .control-input:checked ~ .control-indicator {

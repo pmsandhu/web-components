@@ -2,8 +2,8 @@
 
 :host {
   position: relative;
-  display: inline-block;
   width: 20em;
+  display: inline-block;
   color: var(--black);
   background-color: var(--white);
   cursor: pointer;
@@ -34,7 +34,7 @@
 
 .close_icon:hover {
   opacity: .7;
-  stroke: #C41A16;
+  stroke: #c41a16;
 }
 
 .arrow_icon {

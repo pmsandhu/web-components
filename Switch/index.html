@@ -6,18 +6,21 @@
   <script type="module" src="Switch.js"></script>
 
   <style>
+    x-switch:not(:defined) { visibility: hidden; }
+
     x-switch {
-      --checked-background: #0275D8;
+      --checked-background: #0275d8;
       --font-family: "Helvetica Neue";
       --font-size: 12px;
     }
 
-    .one, .two {
-      margin-left: 2.5em;
-      margin-bottom: 1em;
-      color: #0275D8;
+    .one,
+    .two {
       font-family: Arial, sans-serif;
       font-size: 12px;
+      margin-bottom: 1em;
+      margin-left: 2.5em;
+      color: #0275d8;
     }
   </style>
 </head>

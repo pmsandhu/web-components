@@ -1,13 +1,18 @@
 <html lang="en">
 <head>
   <title>Fancy Button Is</title>
-  <link rel="stylesheet" href="FancyButton.css">
+  <link href="FancyButton.css" rel="stylesheet">
   <script src="FancyButton.js"></script>
+  <style>
+    x-fancy-button:not(:defined) {
+      visibility: hidden;
+    }
+  </style>
 </head>
 
 <body>
 
-<button is="fancy-button" class="bg-blue">CLICK ME</button>
+<button class="blue" is="x-fancy-button">CLICK ME</button>
 
 </body>
 </html>

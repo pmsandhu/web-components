@@ -8,35 +8,36 @@
     }
 
     body {
+      box-sizing: border-box;
       width: 90vw;
       height: 90vh;
-      box-sizing: border-box;
     }
 
     button {
-      border: none;
-      border-radius: 2px;
-      background-color: var(--background-color);
-      color: #FFFFFF;
-      cursor: pointer;
-      display: inline-block;
       font-family: 'Roboto', 'Helvetica', sans-serif;
       font-size: calc(2 * var(--spacing-unit));
-      padding: calc(2 * var(--spacing-unit));
       position: relative;
+      display: inline-block;
+      padding: calc(2 * var(--spacing-unit));
       overflow: hidden;
-      text-decoration: none;
       text-transform: uppercase;
-      transition: background-color 0.2s;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: var(--background-color);
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background-color .2s;
     }
 
     button:focus { outline: none; }
 
-    button:active, button:hover { background-color: #DDDDDD; }
+    button:active,
+    button:hover { background-color: #dddddd; }
   </style>
 </head>
 
-<body style="height: 90vh; width: 90vw;">
+<body style=" width: 90vw; height: 90vh;">
 <button>Click Here To Trigger Toast</button>
 <!--<x-toast position="bottom-center" message="Hello World"></x-toast>-->
 

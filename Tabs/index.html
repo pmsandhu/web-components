@@ -5,7 +5,11 @@
   <script type="module" src="Tabs.js"></script>
 
   <style>
-    x-tabs {
+    x-tabs:unresolved { 
+      visibility: hidden;
+    }
+    
+    x-tabs: {
       --selected-background-color: red;
     }
     x-tabs:not(:defined),

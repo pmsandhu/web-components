@@ -1,6 +1,10 @@
 @import url(../common.css);
 
-:host {
+:host:unresolved { 
+  visibility: hidden;
+}
+
+:host:unresolved:after {
   display: flex;
   flex-wrap: wrap;
   max-width: 650px;

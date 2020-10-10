@@ -125,7 +125,8 @@ class Tab extends HTMLElement {
 class Panel extends HTMLElement {
   constructor() { super() }
 }
-
+setTimeout(() => {
 customElements.define('x-tabs', Tabs)
 customElements.define('x-tab', Tab)
 customElements.define('x-panel', Panel)
+}, 3000)

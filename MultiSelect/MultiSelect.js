@@ -3,6 +3,8 @@ import '../Autofill/Autofill.js'
 const multiSelectTemplate = document.createElement('template')
 multiSelectTemplate.innerHTML = `
 <link rel="stylesheet" href="./MultiSelect.css">
+<link rel="stylesheet" href="../__icons/fabric-icons.css">
+
 
 <div class="multiselect">
 
